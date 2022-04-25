@@ -28,7 +28,7 @@ function taina_scripts() {
 	/**
 	 * Typography from Google fonts
 	 */
-	wp_enqueue_style( 'MontserratAndMuliFonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,600i,700,700i,800,900,900i|Muli:400,400i,600i,700,700i&display=swap'  );
+	wp_enqueue_style( 'MontserratAndMulishFonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,600i,700,700i,800,900,900i|Mulish:400,400i,600i,700,700i&display=swap'  );
 
 }
 
