@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+    "title": "Red",
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#A0303A",
+					"name": "Primary",
+					"slug": "primary"
+				}
+			]
+		}
+	},
+	"version": 2
+}
