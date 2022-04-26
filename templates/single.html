@@ -2,7 +2,7 @@
 
 <!-- wp:group {"layout":{"inherit":true}} -->
 <div class="wp-block-group">
-  <!-- wp:post-title {"align":"wide"} /-->
+  <!-- wp:post-title {"level":1,"align":"wide"} /-->
 
   <!-- wp:group {"align":"wide","textColor":"primary","layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"tiny"} -->
   <div
@@ -18,11 +18,7 @@
 
 <!-- wp:post-content {"layout":{"inherit":true}} /-->
 
-<!-- wp:group {"layout":{"inherit":true}} -->
-<div class="wp-block-group">
-  <!-- wp:post-author {"showBio":true,"style":{"color":{"duotone":["#df834e","#342116"]}},"backgroundColor":"background-alt"} /-->
-</div>
-<!-- /wp:group -->
+<!-- wp:template-part {"slug":"author-section","tagName":"section"} /-->
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 <div class="wp-block-group">
@@ -30,90 +26,10 @@
   <h3>Categorias:</h3>
   <!-- /wp:heading -->
 
-  <!-- wp:post-terms {"term":"category","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"}},"backgroundColor":"background-alt","textColor":"foreground"} /-->
+  <!-- wp:post-terms {"term":"category","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"backgroundColor":"background-alt","textColor":"foreground"} /-->
 </div>
 <!-- /wp:group -->
 
-<!-- wp:group {"backgroundColor":"background-alt"} -->
-<div class="wp-block-group has-background-alt-background-color has-background">
-  <!-- wp:group {"layout":{"inherit":true}} -->
-  <div class="wp-block-group">
-    <!-- wp:heading -->
-    <h2>Comentários</h2>
-    <!-- /wp:heading -->
-
-    <!-- wp:comments-query-loop -->
-    <div class="wp-block-comments-query-loop">
-      <!-- wp:comment-template -->
-      <!-- wp:columns {"style":{"spacing":{"blockGap":"0px"}}} -->
-      <div class="wp-block-columns">
-        <!-- wp:column {"width":"80px","style":{"spacing":{"blockGap":"0px"}}} -->
-        <div class="wp-block-column" style="flex-basis: 80px">
-          <!-- wp:avatar {"size":80,"style":{"border":{"radius":"0px"},"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
-        </div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"style":{"spacing":{"blockGap":"0px"}}} -->
-        <div class="wp-block-column">
-          <!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"5px","right":"12px","bottom":"5px","left":"12px"}}},"backgroundColor":"background","textColor":"primary","layout":{"type":"flex"}} -->
-          <div
-            class="wp-block-group has-primary-color has-background-background-color has-text-color has-background"
-            style="
-              margin-top: 0px;
-              margin-bottom: 0px;
-              padding-top: 5px;
-              padding-right: 12px;
-              padding-bottom: 5px;
-              padding-left: 12px;
-            "
-          >
-            <!-- wp:comment-author-name {"fontSize":"tiny","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /-->
-
-            <!-- wp:comment-date {"fontSize":"tiny"} /-->
-
-            <!-- wp:comment-edit-link {"fontSize":"tiny"} /-->
-          </div>
-          <!-- /wp:group -->
-
-          <!-- wp:group {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}}} -->
-          <div
-            class="wp-block-group"
-            style="
-              padding-top: 5px;
-              padding-right: 5px;
-              padding-bottom: 5px;
-              padding-left: 5px;
-            "
-          >
-            <!-- wp:comment-content /-->
-
-            <!-- wp:comment-reply-link {"fontSize":"tiny"} /-->
-          </div>
-          <!-- /wp:group -->
-        </div>
-        <!-- /wp:column -->
-      </div>
-      <!-- /wp:columns -->
-      <!-- /wp:comment-template -->
-
-      <!-- wp:comments-pagination -->
-      <!-- wp:comments-pagination-previous /-->
-
-      <!-- wp:comments-pagination-numbers /-->
-
-      <!-- wp:comments-pagination-next /-->
-      <!-- /wp:comments-pagination -->
-    </div>
-    <!-- /wp:comments-query-loop -->
-
-    <!-- wp:heading -->
-    <h2>Adicionar comentários</h2>
-    <!-- /wp:heading -->
-
-    <!-- wp:post-comments-form /-->
-  </div>
-  <!-- /wp:group -->
-</div>
-<!-- /wp:group -->
+<!-- wp:template-part {"slug":"comments-section","tagName":"section"} /-->
 
 <!-- wp:template-part {"slug":"footer-full","tagName":"footer"} /-->

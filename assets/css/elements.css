@@ -1,0 +1,46 @@
+/* Styling <code>, <kbd> <var> inline elements */
+code,
+kbd,
+var {
+    background-color: var(--wp--preset--color--background-alt);
+    font-size: 0.875em;
+    padding: 3px 3px;
+}
+
+/* This is odd, but for some reason the padding in the code block
+ * is applied to both its <pre> wrapper and its inner <code> tag,
+ * so...*/
+pre.wp-block-code {
+    padding: 0px !important;
+}
+
+/* Lists have some special styling in Tainá */
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+ul ul ul {
+    list-style-type: circle;
+}
+ul>li::marker,
+ul>li ul>li ul>li::marker {
+    color: var(--wp--preset--color--primary);
+}
+ul>li ul>li::marker,
+ul>li ul>li ul>li ul>li::marker {
+    color: var(--wp--preset--color--foreground);
+}
+ol {
+    list-style-type: none;
+    counter-reset: item;
+}
+ol>li:before {
+    color: var(--wp--preset--color--primary);
+    font-weight: bold;
+    font-family: var(--wp--preset--font-family--headings);
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+ol>li ol>li ol>li:before {
+    font-weight: normal;
+}

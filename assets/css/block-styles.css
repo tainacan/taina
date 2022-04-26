@@ -1,0 +1,42 @@
+/* Detached style for heading and paragraph block */
+h1.is-style-taina-detached,
+h2.is-style-taina-detached,
+h3.is-style-taina-detached,
+h4.is-style-taina-detached,
+h5.is-style-taina-detached,
+h6.is-style-taina-detached,
+p.is-style-taina-detached {
+    position: relative;
+    left: calc(-1 * var(--wp--custom--spacing--one-column));
+    padding-left: 19px;
+}
+h2.is-style-taina-detached:not(.has-text-color),
+h3.is-style-taina-detached:not(.has-text-color),
+h4.is-style-taina-detached:not(.has-text-color) {
+    color: var(--wp--preset--color--primary);
+}
+h1.is-style-taina-detached::before,
+h2.is-style-taina-detached::before,
+h3.is-style-taina-detached::before,
+h4.is-style-taina-detached::before {
+    height: 15px;
+    width: 30px;
+    position: absolute;
+    border-left-color: var(--wp--preset--color--foreground);
+    border-bottom-color: var(--wp--preset--color--foreground);
+    border-left-style: solid;
+    border-bottom-style: solid;
+    left: 0;
+    content: '';
+}
+h2.is-style-taina-detached::before {
+    border-left-width: 4px;
+    border-bottom-width: 4px;
+    bottom: -4px;
+}
+h3.is-style-taina-detached::before,
+h4.is-style-taina-detached::before {
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    bottom: -2px;
+}

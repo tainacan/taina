@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-    "title": "Dark green",
+    "title": "Dark pink",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
 			"palette": [
 				{
-					"color": "#17331E",
+					"color": "#cd928e",
 					"name": "Primary",
 					"slug": "primary"
 				},
@@ -31,6 +31,22 @@
 					"slug": "background"
 				}
 			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/site-title": {
+				"color": {
+					"text": "var:preset|color|foreground"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|foreground"
+						}
+					}
+				}
+			}
 		}
 	},
 	"version": 2

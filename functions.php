@@ -33,3 +33,22 @@ function taina_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'taina_scripts' );
+
+/**
+ * Editor-side styles and scripts
+ */
+function taina_enqueue_block_editor_assets_scripts() {
+
+	/**
+	 * Editor styles
+	 */
+	wp_enqueue_style( 'taina-editor-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+}
+add_action( 'enqueue_block_editor_assets', 'taina_enqueue_block_editor_assets_scripts' );
+
+
+/* Block styles */
+require get_template_directory() . '/inc/block-styles.php';
+
+/* Block patterns */
+require get_template_directory() . '/inc/block-patterns.php';
