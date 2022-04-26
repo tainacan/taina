@@ -9,6 +9,26 @@
 					"color": "#3780A6",
 					"name": "Primary",
 					"slug": "primary"
+				},
+				{
+					"color": "#f2f2f2",
+					"name": "Alternative background",
+					"slug": "background-alt"
+				},
+				{
+					"color": "#4f4f4f",
+					"name": "Foreground",
+					"slug": "foreground"
+				},
+				{
+					"color": "#262626",
+					"name": "Alternative foreground",
+					"slug": "foreground-alt"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Background",
+					"slug": "background"
 				}
 			]
 		}

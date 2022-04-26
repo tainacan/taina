@@ -62,23 +62,18 @@
 				},
 				{
 					"color": "#f2f2f2",
-					"name": "Gray 1",
-					"slug": "gray-1"
+					"name": "Alternative background",
+					"slug": "background-alt"
 				},
 				{
 					"color": "#4f4f4f",
-					"name": "Gray 2",
-					"slug": "gray-2"
+					"name": "Foreground",
+					"slug": "foreground"
 				},
 				{
 					"color": "#262626",
-					"name": "Gray 3",
-					"slug": "gray-3"
-				},
-				{
-					"color": "#1e1e1e",
-					"name": "Gray 4",
-					"slug": "gray-4"
+					"name": "Alternative foreground",
+					"slug": "foreground-alt"
 				},
 				{
 					"color": "#ffffff",
@@ -187,7 +182,7 @@
 			},
 			"core/site-tagline": {
 				"color": {
-					"background": "var:preset|color|gray-1"
+					"background": "var:preset|color|background-alt"
 				},
 				"spacing": {
 					"padding": {
@@ -235,7 +230,7 @@
 		"color": {
 			"background": "var:preset|color|background",
 			"gradient": "",
-			"text": "var(--wp--preset--color--gray-2, #4f4f4f)"
+			"text": "var(--wp--preset--color--foreground, #4f4f4f)"
 		},
 		"elements": {
 			"h1": {

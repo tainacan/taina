@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-    "title": "Red",
+    "title": "Dark red",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -11,22 +11,22 @@
 					"slug": "primary"
 				},
 				{
-					"color": "#f2f2f2",
-					"name": "Alternative background",
-					"slug": "background-alt"
-				},
-				{
-					"color": "#4f4f4f",
+					"color": "#ffffff",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
 				{
-					"color": "#262626",
+					"color": "#f2f2f2",
 					"name": "Alternative foreground",
 					"slug": "foreground-alt"
 				},
 				{
-					"color": "#ffffff",
+					"color": "#262626",
+					"name": "Alternative background",
+					"slug": "background-alt"
+				},
+				{
+					"color": "#1e1e1e",
 					"name": "Background",
 					"slug": "background"
 				}
