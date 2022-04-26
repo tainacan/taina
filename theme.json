@@ -277,6 +277,20 @@
 				"typography": {
 					"fontSize": "var:preset|font-size|small"
 				}
+			},
+			"core/pullquote": {
+				"border": {
+					"width": "1px",
+					"color": "var:preset|color|primary"
+				},
+				"spacing": {
+					"padding": {
+						"top": "42px)",
+						"left": "0px",
+						"bottom": "42px",
+						"right": "0px"
+					}
+				}
 			}
 		},
 		"color": {

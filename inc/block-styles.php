@@ -28,6 +28,16 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Detached', 'taina' ),
 			)
 		);
+
+
+        // Quotes with big commas around
+		register_block_style(
+			'core/quote',
+			array(
+				'name'  => 'taina-quoted',
+				'label' => esc_html__( 'Quoted', 'taina' ),
+			)
+		);
 	}
 	add_action( 'init', 'taina_register_block_styles' );
 }
