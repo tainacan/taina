@@ -1,0 +1,10 @@
+/* WordPress Core blocks styles and tweaks */
+@import url('blocks/figcaptions.css');
+@import url('blocks/heading.css');
+@import url('blocks/pullquote.css');
+@import url('blocks/quote.css');
+@import url('blocks/table.css');
+
+
+/* Tainacan plugin blocks */
+@import url('blocks/tainacan-blocks.css');

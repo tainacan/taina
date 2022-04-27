@@ -16,7 +16,7 @@ Tainá is distributed under the terms of the GNU GPL.
 */
 
 /* Block styles */
-@import url('assets/css/block-styles.css');
+@import url('assets/css/blocks.css');
 
 /* HTML elements */
 @import url('assets/css/elements.css');

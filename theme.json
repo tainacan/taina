@@ -49,34 +49,26 @@
 			"duotone": [
 				{
 					"colors": [
-						"#df834e",
-						"#342116"
+						"#762b00",
+						"#df834e"
 					],
 					"name": "Primary variations",
 					"slug": "primary-variations"
 				},
 				{
 					"colors": [
-						"var:preset|color|foreground",
-						"var:preset|color|background"
+						"#262626",
+						"#d9560b"
 					],
-					"slug": "foreground-and-background",
-					"name": "Foreground and background"
+					"slug": "foreground-alt-and-primary",
+					"name": "Alternative Foreground and primary"
 				},
 				{
 					"colors": [
-						"var:preset|color|foreground",
-						"var:preset|color|primary"
+						"#d9560b",
+						"#ffffff"
 					],
-					"slug": "foreground-and-primary",
-					"name": "Foreground and primary"
-				},
-				{
-					"colors": [
-						"var:preset|color|primary",
-						"var:preset|color|background"
-					],
-					"slug": "foreground-and-primary",
+					"slug": "primary-and-background",
 					"name": "Primary and background"
 				}
 			],
@@ -257,6 +249,27 @@
 					}
 				}
 			},
+			"core/button": {
+				"color": {
+					"background": "var:preset|color|primary"
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|normal",
+					"fontWeight": "700"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.6875em",
+						"left": "2.625em",
+						"right": "2.625em",
+						"top": "0.6875em"
+					}
+				},
+				"border": {
+					"color": "var:preset|color|primary"
+				}
+			},
 			"core/code": {
 				"border": {
 					"width": "0px",
@@ -264,9 +277,9 @@
 				},
 				"spacing": {
 					"padding": {
-						"bottom": "42px",
+						"bottom": "2.265em",
 						"left": "var(--wp--custom--spacing--one-column)",
-						"top": "42px",
+						"top": "2.265em",
 						"right": "var(--wp--custom--spacing--one-column)"
 					}
 				},
@@ -285,7 +298,7 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "42px)",
+						"top": "42px",
 						"left": "0px",
 						"bottom": "42px",
 						"right": "0px"
