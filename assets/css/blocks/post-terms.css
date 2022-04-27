@@ -1,0 +1,10 @@
+/* Trickery to make post terms look like separated tags */
+.wp-block-post-terms .wp-block-post-terms__separator {
+    color: transparent;
+    padding: 2px;
+    background-color: var(--wp--preset--color--background);
+}
+.wp-block-post-terms a {
+    padding: 6px 12px;
+    background-color: var(--wp--preset--color--background-alt);
+}

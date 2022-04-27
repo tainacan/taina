@@ -68,8 +68,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
         )
     );
 
-     // Banner with boxed column
-     register_block_pattern(
+    // Banner with boxed column
+    register_block_pattern(
         'taina/banner-boxed-column',
         array(
             'title'         => esc_html__( 'Banner with boxed column', 'taina' ),
@@ -106,4 +106,117 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                 <!-- /wp:cover -->'
         )
     );
+    
+    // Post author box.
+	register_block_pattern(
+		'taina/post-author-box',
+		array(
+			'title'         => esc_html__( 'Post author box', 'taina' ),
+			'categories'    => array( 'taina'),
+			'viewportWidth' => 980,
+			'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+                                    <div class="wp-block-group"><!-- wp:avatar {"size":240,"isLink":true,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}},"color":{"duotone":["#262626","#d9560b"]}}} /-->
+                                        <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"backgroundColor":"background-alt","layout":{"type":"flex","orientation":"vertical"}} -->
+                                            <div class="wp-block-group has-background-alt-background-color has-background">
+                                                <!-- wp:heading {"textColor":"primary"} -->
+                                                    <h2 class="has-primary-color has-text-color">' . esc_html__( 'About the author', 'taina' ) . '</h2>
+                                                <!-- /wp:heading -->
+                                                <!-- wp:post-author {"showAvatar":false,"showBio":true,"style":{"color":{"duotone":["#df834e","#342116"]}}} /-->
+                                            </div>
+                                        <!-- /wp:group -->
+                                    </div>
+                                <!-- /wp:group -->'
+                                
+		)
+	);
+
+    // Post categories list
+	register_block_pattern(
+		'taina/post-categories-list',
+		array(
+			'title'         => esc_html__( 'Post categories list', 'taina' ),
+			'categories'    => array( 'taina'),
+			'viewportWidth' => 980,
+			'content'       => '<!-- wp:group {"layout":{"inherit":true}} -->
+                                    <div class="wp-block-group">
+                                        <!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+                                        <div class="wp-block-group">
+                                            <!-- wp:heading {"level":2} -->
+                                                <h2>' . esc_html__( 'Categories', 'taina' ) . ':</h2>
+                                            <!-- /wp:heading -->
+                                        
+                                            <!-- wp:post-terms {"term":"category"} /-->
+                                        </div>
+                                        <!-- /wp:group -->
+                                    </div>
+                                <!-- /wp:group -->'
+                                
+		)
+	);
+
+    // Comments Section
+	register_block_pattern(
+		'taina/comments-section',
+		array(
+			'title'         => esc_html__( 'Comments section', 'taina' ),
+			'categories'    => array( 'taina'),
+			'viewportWidth' => 980,
+			'content'       => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"56px","bottom":"56px","right":"4.2%","left":"4.2%"}}},"backgroundColor":"background-alt"} -->
+                                    <div class="wp-block-group has-background-alt-background-color has-background" style="padding-top:56px;padding-right:4.2%;padding-bottom:56px;padding-left:4.2%">
+                                        <!-- wp:group {"layout":{"inherit":true}} -->
+                                            <div class="wp-block-group">
+                                                <!-- wp:heading -->
+                                                    <h2>' . esc_html__( 'Comments', 'taina' ) . '</h2>
+                                                <!-- /wp:heading -->
+                                                <!-- wp:comments-query-loop -->
+                                                    <div class="wp-block-comments-query-loop">
+                                                        <!-- wp:comment-template -->
+                                                            <!-- wp:columns {"style":{"spacing":{"blockGap":"0px"}}} -->
+                                                                <div class="wp-block-columns">
+                                                                    <!-- wp:column {"width":"80px","style":{"spacing":{"blockGap":"0px"}}} -->
+                                                                        <div class="wp-block-column" style="flex-basis:80px">
+                                                                            <!-- wp:avatar {"size":80,"style":{"border":{"radius":"0px"},"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
+                                                                    </div>
+                                                                    <!-- /wp:column -->
+                                                                    <!-- wp:column {"style":{"spacing":{"blockGap":"0px"}}} -->
+                                                                        <div class="wp-block-column">
+                                                                            <!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"0px","right":"20px","bottom":"0px","left":"20px"},"blockGap":"1rem"}},"backgroundColor":"background","textColor":"primary","layout":{"type":"flex"}} -->
+                                                                                <div class="wp-block-group has-primary-color has-background-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:20px;padding-bottom:0px;padding-left:20px">
+                                                                                    <!-- wp:comment-author-name {"fontSize":"tiny","style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /-->
+                                                                                    
+                                                                                    <!-- wp:comment-date {"fontSize":"tiny"} /-->
+                                                                                    
+                                                                                    <!-- wp:comment-edit-link {"fontSize":"tiny"} /-->
+                                                                                </div>
+                                                                            <!-- /wp:group -->
+                                                                            
+                                                                            <!-- wp:group {"style":{"spacing":{"padding":{"top":"8px","right":"20px","bottom":"8px","left":"20px"},"blockGap":"0px"}}} -->
+                                                                                <div class="wp-block-group" style="padding-top:8px;padding-right:20px;padding-bottom:8px;padding-left:20px">
+                                                                                    <!-- wp:comment-content /-->
+                                                                                    <!-- wp:comment-reply-link {"fontSize":"tiny"} /-->
+                                                                                </div>
+                                                                            <!-- /wp:group -->
+                                                                        </div>
+                                                                    <!-- /wp:column -->
+                                                                </div>
+                                                            <!-- /wp:columns -->
+                                                        <!-- /wp:comment-template -->
+                                                        <!-- wp:comments-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"space-between"}} -->
+                                                            <!-- wp:comments-pagination-previous /-->
+                                                            <!-- wp:comments-pagination-numbers /-->
+                                                            <!-- wp:comments-pagination-next /-->
+                                                        <!-- /wp:comments-pagination -->
+                                                    </div>
+                                                <!-- /wp:comments-query-loop -->
+                                                <!-- wp:heading -->
+                                                    <h2>' . esc_html__( 'Add a comment', 'taina' ) . '</h2>
+                                                <!-- /wp:heading -->
+                                                <!-- wp:post-comments-form /-->
+                                            </div>
+                                        <!-- /wp:group -->
+                                    </div>
+                                <!-- /wp:group -->'
+                                
+		)
+	);
 }

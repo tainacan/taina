@@ -1,3 +1,24 @@
+/*----RESETING-------------------------------*
+/ The following lines are copied from TwentyTwentyOne theme
+/**
+* Apply generic border-box to all elements.
+* See:
+* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+    /* Apply border-box across the entire page. */
+    box-sizing: border-box;
+}
+
+/**
+* Relax the definition a bit, to allow components to override it manually.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 /* Styling <code>, <kbd> <var> inline elements */
 code,
 kbd,
@@ -43,4 +64,9 @@ ol>li:before {
 }
 ol>li ol>li ol>li:before {
     font-weight: normal;
+}
+
+/* Always change cursor when hovering buttons */
+button {
+    cursor: pointer;
 }

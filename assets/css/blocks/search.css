@@ -1,0 +1,8 @@
+/* Search should be flat flat flat */
+.wp-block-search .wp-block-search__inside-wrapper input,
+.wp-block-search .wp-block-search__inside-wrapper button {
+    border-width: 0px;
+}
+.wp-block-search .wp-block-search__inside-wrapper button {
+    margin-left: 0px;
+}

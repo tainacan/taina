@@ -1,8 +1,10 @@
 /* Image, gallery and cover blocks figcaptions have an alternative background */
-.wp-block-image figcaption {
-    margin: 0;
+figure figcaption {
+    margin-top: 0 !important;
     padding: 10px 36px;
     max-width: 750px;
     background-color: var(--wp--preset--color--background-alt);
+}
+figure:not(.alignleft):not(.alignright) figcaption {
     float: right;
 }

@@ -57,7 +57,7 @@
 .wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-name h3,
 .wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-name h3 {
     color: var(--wp--preset--color--primary) !important;
-    font-size: var(--wp--preset--font-size--large);
+    font-size: var(--wp--preset--font-size--large) !important;
 }
 .wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-header-image,
 .wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-header-image {
