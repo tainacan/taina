@@ -32,7 +32,7 @@ function taina_scripts() {
 
 	// If the Tainacan plugin is enabled, enqueues style related to it
 	if ( defined ('TAINACAN_VERSION') ) {
-		wp_enqueue_style( 'taina-style-tainacan', get_template_directory_uri() . '/assets/css/tainacan.css', array('taina-style'), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/assets/css/tainacan.css', array(), wp_get_theme()->get( 'Version' ) );
 	}
 
 }

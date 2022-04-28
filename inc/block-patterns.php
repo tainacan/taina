@@ -153,4 +153,28 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                 
 		)
 	);
+
+    // Post tags list
+	register_block_pattern(
+		'taina/post-tags-list',
+		array(
+			'title'         => esc_html__( 'Post tags list', 'taina' ),
+			'categories'    => array( 'taina'),
+			'viewportWidth' => 980,
+			'content'       => '<!-- wp:group {"layout":{"inherit":true}} -->
+                                    <div class="wp-block-group">
+                                        <!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+                                        <div class="wp-block-group">
+                                            <!-- wp:heading {"level":2} -->
+                                                <h2>' . esc_html__( 'Tags', 'taina' ) . ':</h2>
+                                            <!-- /wp:heading -->
+                                        
+                                            <!-- wp:post-terms {"term":"post_tag"} /-->
+                                        </div>
+                                        <!-- /wp:group -->
+                                    </div>
+                                <!-- /wp:group -->'
+                                
+		)
+	);
 }

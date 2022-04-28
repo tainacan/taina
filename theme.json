@@ -388,6 +388,57 @@
 						"right": "0px"
 					}
 				}
+			},
+			"core/avatar": {
+				"border": {
+					"radius": "0px",
+					"bottom": {
+						"width": "4px",
+						"color": "var:preset|color|primary",
+						"style": "solid",
+						"radius": "0px"
+					}
+				}
+			},
+			"core/query-pagination-numbers": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|tiny",
+					"fontWeight": "700"
+				},
+				"color": {
+					"background": "var:preset|color|background",
+					"text": "var:preset|color|foreground"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|foreground"
+						}
+					}
+				}
+			},
+			"core/query-pagination-next": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|tiny",
+					"fontWeight": "700"
+				},
+				"color": {
+					"background": "var:preset|color|background-alt",
+					"text": "var:preset|color|foreground"
+				}
+			},
+			"core/query-pagination-previous": {
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|tiny",
+					"fontWeight": "600"
+				},
+				"color": {
+					"background": "var:preset|color|background-alt",
+					"text": "var:preset|color|foreground"
+				}
 			}
 		},
 		"color": {

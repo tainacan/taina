@@ -1,0 +1,28 @@
+/* Makes sure widget blocks follow the same list type pattern */
+.wp-block-categories-list,
+.wp-block-archives-list,
+.wp-block-page-list,
+.wp-block-latest-posts.wp-block-latest-posts__list,
+.wp-block-rss:not(.is-grid) {
+    list-style-type: square;
+    list-style-position: outside;
+}
+
+/* Makes comments list more consistent with the comments loop */
+.wp-block-latest-comments .wp-block-latest-comments__comment::before {
+    display: none;
+}
+.wp-block-latest-comments__comment-date {
+    display: inline-block;
+    margin-left: 12px;
+}
+.wp-block-latest-comments .avatar,
+.wp-block-latest-comments__comment-avatar {
+    border-radius: 0px;
+    border-bottom: 3px solid var(--wp--preset--color--primary);
+}
+.wp-block-latest-comments.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+    margin-left: 0;
+    padding: 4px 3.25em;
+    background-color: var(--wp--preset--color--background-alt);
+}

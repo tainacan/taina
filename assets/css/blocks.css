@@ -1,6 +1,7 @@
 /* WordPress Core blocks styles and tweaks */
 @import url('blocks/figcaptions.css');
 @import url('blocks/heading.css');
+@import url('blocks/pagination.css');
 @import url('blocks/post-meta.css');
 @import url('blocks/post-comments-form.css');
 @import url('blocks/post-template.css');
@@ -9,3 +10,4 @@
 @import url('blocks/search.css');
 @import url('blocks/quote.css');
 @import url('blocks/table.css');
+@import url('blocks/widgets.css');
