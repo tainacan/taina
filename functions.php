@@ -30,8 +30,12 @@ function taina_scripts() {
 	 */
 	wp_enqueue_style( 'MontserratAndMulishFonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,600i,700,700i,800,900,900i|Mulish:400,400i,600i,700,700i&display=swap'  );
 
-}
+	// If the Tainacan plugin is enabled, enqueues style related to it
+	if ( defined ('TAINACAN_VERSION') ) {
+		wp_enqueue_style( 'taina-style-tainacan', get_template_directory_uri() . '/assets/css/tainacan.css', array('taina-style'), wp_get_theme()->get( 'Version' ) );
+	}
 
+}
 add_action( 'wp_enqueue_scripts', 'taina_scripts' );
 
 /**
