@@ -6,6 +6,7 @@
 .wp-block-rss:not(.is-grid) {
     list-style-type: square;
     list-style-position: outside;
+    padding-left: 1em;
 }
 
 /* Makes comments list more consistent with the comments loop */

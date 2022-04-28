@@ -3,6 +3,9 @@
 .wp-block-search .wp-block-search__inside-wrapper button {
     border-width: 0px;
 }
+.wp-block-search .wp-block-search__inside-wrapper input {
+    padding: 0em .5em !important;
+}
 .wp-block-search .wp-block-search__inside-wrapper button {
     margin-left: 0px;
 }
