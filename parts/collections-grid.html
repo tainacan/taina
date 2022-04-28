@@ -9,16 +9,18 @@
   </div>
   <!-- /wp:group -->
 
-  <!-- wp:group {"style":{"spacing":{"padding":{"top":"24px","right":"58px","bottom":"24px","left":"58px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
+  <!-- wp:group {"style":{"spacing":{"padding":{"top":"24px","bottom":"24px","left":"0px","right":"0px"},"margin":{"top":"0px","bottom":"0px"}},"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
   <div
     class="wp-block-group has-background-alt-background-color has-background"
     style="
+      border-bottom-color: var(--wp--preset--color--primary);
+      border-bottom-width: 4px;
       margin-top: 0px;
       margin-bottom: 0px;
       padding-top: 24px;
-      padding-right: 58px;
+      padding-right: 0px;
       padding-bottom: 24px;
-      padding-left: 58px;
+      padding-left: 0px;
     "
   >
     <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}}},"fontSize":"normal"} /-->
@@ -35,7 +37,7 @@
 
     <!-- wp:query-pagination-next /-->
     <!-- /wp:query-pagination -->
-  </div>
+  </div> 
   <!-- /wp:group -->
 </div>
 <!-- /wp:query -->

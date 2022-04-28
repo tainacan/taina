@@ -9,20 +9,19 @@ html {
     /* Apply border-box across the entire page. */
     box-sizing: border-box;
 }
-
-/**
-* Relax the definition a bit, to allow components to override it manually.
-*/
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
 
+/*----ELEMENTS-----------------------------*
+/* We try to wrap most of them inside .wp-site-blocks to avoid conflicts */
+
 /* Styling <code>, <kbd> <var> inline elements */
-code,
-kbd,
-var {
+.wp-site-blocks code,
+.wp-site-blocks kbd,
+.wp-site-blocks var {
     background-color: var(--wp--preset--color--background-alt);
     font-size: 0.875em;
     padding: 3px 3px;
@@ -35,38 +34,54 @@ pre.wp-block-code {
     padding: 0px !important;
 }
 
-/* Lists have some special styling in Tainá */
-ul {
+/* Lists have some special styling in Tainá
+ * The way we style theme side is wrapping inside .wp-site-blocks.
+ * For editor side, we can rely on the .wp-block-list
+ */
+.wp-site-blocks ul,
+ul.wp-block-list {
     list-style-type: square;
-    list-style-position: inside;
+    list-style-position: outside;
 }
-ul ul ul {
+.wp-site-blocks ul ul ul,
+ul.wp-block-list ul ul {
     list-style-type: circle;
 }
-ul>li::marker,
-ul>li ul>li ul>li::marker {
+.wp-site-blocks ul>li::marker,
+.wp-site-blocks ul>li ul>li ul>li::marker,
+ul.wp-block-list>li::marker,
+ul.wp-block-list>li ul>li ul>li::marker {
     color: var(--wp--preset--color--primary);
 }
-ul>li ul>li::marker,
-ul>li ul>li ul>li ul>li::marker {
+.wp-site-blocks ul>li ul>li::marker,
+.wp-site-blocks ul>li ul>li ul>li ul>li::marker,
+ul.wp-block-list>li ul>li::marker,
+ul.wp-block-list>li ul>li ul>li ul>li::marker {
     color: var(--wp--preset--color--foreground);
 }
-ol {
+.wp-site-blocks ol,
+ol.wp-block-list {
     list-style-type: none;
     counter-reset: item;
 }
-ol>li:before {
+.wp-site-blocks ol>li:before,
+ol.wp-block-list>li:before {
     color: var(--wp--preset--color--primary);
     font-weight: bold;
     font-family: var(--wp--preset--font-family--headings);
     content: counters(item, ".") ". ";
     counter-increment: item;
 }
-ol>li ol>li ol>li:before {
+.wp-site-blocks ol>li ol>li ol>li:before,
+ol.wp-block-list>li ol>li ol>li:before {
     font-weight: normal;
+}
+/* Lastly, a hack to fix linebreaks on the editor side... may exist a better solution */
+.wp-block-list li>.block-editor-rich-text__editable {
+    display: initial;
 }
 
 /* Always change cursor when hovering buttons */
-button {
+.wp-site-blocks button {
     cursor: pointer;
 }

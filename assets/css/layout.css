@@ -1,0 +1,36 @@
+/*----ALIGNMENT ISSUES-------------------------------*
+/*
+ * Alignment styles.
+ * The following is a copy from TwentyTwentyTwo solution
+ * For allowing full alignments to win over site padding.
+ * We're hoping that a better solution come over
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+ 
+ .wp-site-blocks .alignfull,
+ .wp-site-blocks > .wp-block-group.has-background,
+ .wp-site-blocks > .wp-block-cover,
+ .wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+ .wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+ body > .is-root-container > .wp-block-cover,
+ body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+ .is-root-container .wp-block[data-align="full"] {
+     margin-left: calc(-1 * var(--wp--custom--spacing--one-column)) !important;
+     margin-right: calc(-1 * var(--wp--custom--spacing--one-column)) !important;
+     width: unset;
+ }
+ 
+ /* Blocks inside columns don't have negative margins. */
+ .wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+ .is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+ /* We also want to avoid stacking negative margins. */
+ .wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+ .is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+     margin-left: auto !important;
+     margin-right: auto !important;
+     width: inherit;
+ }
