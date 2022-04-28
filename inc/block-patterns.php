@@ -208,9 +208,6 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                                         <!-- /wp:comments-pagination -->
                                                     </div>
                                                 <!-- /wp:comments-query-loop -->
-                                                <!-- wp:heading -->
-                                                    <h2>' . esc_html__( 'Add a comment', 'taina' ) . '</h2>
-                                                <!-- /wp:heading -->
                                                 <!-- wp:post-comments-form /-->
                                             </div>
                                         <!-- /wp:group -->
