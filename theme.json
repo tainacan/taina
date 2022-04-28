@@ -481,6 +481,10 @@
 			"title": "Collections list" 	
 		},
 		{
+			"name": "comments-section",
+			"title": "Comments section" 	
+		},
+		{
 			"name": "footer-social",
 			"title": "Social Footer",
 			"area": "footer"
