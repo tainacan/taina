@@ -1,0 +1,10 @@
+.wp-block-post-author-name::before {
+    background-image: url('../../icons/user.svg');
+    display: inline-block;
+    content: '';
+    width: 1.25em;
+    height: 1.25em;
+    background-size: cover;
+    position: absolute;
+    margin-left: -1.5em;
+}
