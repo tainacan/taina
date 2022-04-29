@@ -29,7 +29,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		array(
 			'title'         => esc_html__( 'Title and description', 'taina' ),
 			'categories'    => array( 'taina', 'headings'),
-			'viewportWidth' => 980,
+			'viewportWidth' => 860,
 			'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                                     <div class="wp-block-group">
                                         <!-- wp:heading {"className":"is-style-taina-detached"} -->
@@ -184,13 +184,13 @@ if ( function_exists( 'register_block_pattern' ) ) {
 		array(
 			'title'         => esc_html__( 'Widgets sidebar', 'taina' ),
 			'categories'    => array( 'taina'),
-			'viewportWidth' => 450,
+			'viewportWidth' => 426,
 			'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"1.5em","padding":{"top":"42px","right":"4.167vw","bottom":"42px","left":"4.167vw"}}},"layout":{"type":"flex","orientation":"vertical"},"backgroundColor":"background-alt"} -->
                                     <div class="wp-block-group has-background-alt-background-color has-background" style="padding-top: 42px; padding-right: 4.167vw; padding-bottom: 42px; padding-left: 4.167vw;">
                                         <!-- wp:search {"label":"' . esc_html__( 'Search', 'taina' ) . '","showLabel":false,"placeholder":"' . esc_html__( 'Search for...', 'taina') .'","buttonText":"' . esc_html__( 'Search', 'taina' ) . '","buttonPosition":"button-inside","buttonUseIcon":true,"style":{"border":{"radius":"0px","width":"0px","style":"none"}},"backgroundColor":"background","textColor":"foreground"} /-->
                                         <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                                             <div class="wp-block-group">
-                                                <!-- wp:heading {"fontSize":"medium"} -->
+                                                <!-- wp:heading {"fontSize":"medium", "placeholder": "' . esc_html__( 'Latest posts', 'taina' ) . '"} -->
                                                     <h2 class="has-medium-font-size">' . esc_html__( 'Latest posts', 'taina' ) . '</h2>
                                                 <!-- /wp:heading -->
                                                 <!-- wp:latest-posts /-->
@@ -198,7 +198,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                             <!-- /wp:group -->
                                             <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                                             <div class="wp-block-group">
-                                                <!-- wp:heading {"fontSize":"medium"} -->
+                                                <!-- wp:heading {"fontSize":"medium", "placeholder": "' . esc_html__( 'Categories', 'taina' ) . '"} -->
                                                     <h2 class="has-medium-font-size">' . esc_html__( 'Categories', 'taina' ) . '</h2>
                                                 <!-- /wp:heading -->
                                                 <!-- wp:categories /-->
@@ -206,12 +206,68 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                             <!-- /wp:group -->
                                             <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                                             <div class="wp-block-group">
-                                                <!-- wp:heading {"fontSize":"medium"} -->
+                                                <!-- wp:heading {"fontSize":"medium", "placeholder": "' . esc_html__( 'Archive', 'taina' ) . '"} -->
                                                     <h2 class="has-medium-font-size">' . esc_html__( 'Archive', 'taina' ) . '</h2>
                                                 <!-- /wp:heading -->
                                                 <!-- wp:archives /-->
                                             </div>
                                         <!-- /wp:group -->
+                                    </div>
+                                <!-- /wp:group -->'
+		)
+	);
+
+
+    // Widgets footer
+	register_block_pattern(
+		'taina/widgets-footer',
+		array(
+			'title'         => esc_html__( 'Widgets footer', 'taina' ),
+			'categories'    => array( 'taina'),
+			'viewportWidth' => 1366,
+			'content'       => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"42px","right":"32px","bottom":"42px","left":"32px"}}},"layout":{"inherit":true}} -->
+                                    <div class="wp-block-group" style="padding-top: 42px;padding-right: 32px;padding-bottom: 42px;padding-left: 32px;">
+                                        <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"24px"}}} -->
+                                            <div class="wp-block-columns alignwide">
+                                                <!-- wp:column {"width":"33.34%"} -->
+                                                    <div class="wp-block-column" style="flex-basis: 33.34%">
+                                                        <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+                                                            <div class="wp-block-group">
+                                                                <!-- wp:heading {"fontSize":"normal","level":3, "placeholder": "' . esc_html__( 'Latest posts', 'taina' ) . '"} -->
+                                                                    <h3>' . esc_html__( 'Latest posts', 'taina' ) . '</h3>
+                                                                <!-- /wp:heading -->
+                                                        
+                                                                <!-- wp:latest-posts /-->
+                                                            </div>
+                                                        <!-- /wp:group -->
+                                                    </div>
+                                                <!-- /wp:column -->
+                                                <!-- wp:column {"width":"33.34%"} -->
+                                                    <div class="wp-block-column" style="flex-basis: 33.34%">
+                                                        <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+                                                            <div class="wp-block-group">
+                                                                <!-- wp:heading {"fontSize":"normal","level":3, "placeholder": "' . esc_html__( 'Archive', 'taina' ) . '"} -->
+                                                                    <h3>' . esc_html__( 'Archive', 'taina' ) . '</h3>
+                                                                <!-- /wp:heading -->
+                                                                <!-- wp:archives {"showPostCounts":true,"type":"yearly"} /-->
+                                                            </div>
+                                                        <!-- /wp:group -->
+                                                    </div>
+                                                <!-- /wp:column -->
+                                                <!-- wp:column {"width":"33.33%"} -->
+                                                    <div class="wp-block-column" style="flex-basis: 33.33%">
+                                                        <!-- wp:group {"style":{"spacing":{"blockGap":"0.5em"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+                                                            <div class="wp-block-group">
+                                                                <!-- wp:heading {"fontSize":"normal","level":3, "placeholder": "' . esc_html__( 'Categories', 'taina' ) . '"} -->
+                                                                    <h3>' . esc_html__( 'Categories', 'taina' ) . '</h3>
+                                                                <!-- /wp:heading -->
+                                                                <!-- wp:categories {"showPostCounts":true} /-->
+                                                            </div>
+                                                        <!-- /wp:group -->
+                                                    </div>
+                                                <!-- /wp:column -->
+                                            </div>
+                                        <!-- /wp:columns -->
                                     </div>
                                 <!-- /wp:group -->'
 		)
