@@ -50,6 +50,8 @@ function taina_enqueue_block_editor_assets_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'taina_enqueue_block_editor_assets_scripts' );
 
+/* Block filters */
+require get_template_directory() . '/inc/block-filters.php';
 
 /* Block styles */
 require get_template_directory() . '/inc/block-styles.php';

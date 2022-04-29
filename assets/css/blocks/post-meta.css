@@ -15,11 +15,19 @@
     bottom: 100%;
     left: 0;
 }
+.post-meta-icon {
+    padding: 6px 0.25em 6px 1.5em;
+}
+.post-meta-icon svg {
+    fill: var(--wp--preset--color--primary);
+}
 /* These next should be handled by theme.json but is not working yet */
 .wp-block-post-author-name {
     color: var(--wp--preset--color--primary);
 }
-.wp-block-post-author-name,
+.wp-block-post-author-name {
+    padding: 10px  1.25em 10px 0.125em;
+}
 .wp-block-post-comments-count {
-    padding: 10px 20px;
+    padding: 10px 1.25em;
 }

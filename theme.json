@@ -70,6 +70,14 @@
 					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
+				},
+				{
+					"colors": [
+						"#ffffff",
+						"#d9560b"						
+					],
+					"slug": "background-and-primary",
+					"name": "Background and primary"
 				}
 			],
 			"gradients": []
@@ -248,7 +256,7 @@
 					},
 					"padding": {
 						"bottom": "10px",
-						"left": "2.25em",
+						"left": "0.125em",
 						"right": "1.25em",
 						"top": "10px"
 					}
@@ -267,7 +275,7 @@
 					},
 					"padding": {
 						"bottom": "10px",
-						"left": "2.25em",
+						"left": "0.125em",
 						"right": "1.25em",
 						"top": "10px"
 					}
