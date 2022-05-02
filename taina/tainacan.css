@@ -83,4 +83,23 @@
   max-width: 42px;
 }
 
+.wp-site-blocks .wp-block-tainacan-faceted-search {
+  font-size: var(--wp--preset--font-size--normal);
+  --tainacan-base-font-size: var(--wp--preset--font-size--normal);
+  --tainacan-background-color: #ffffff;
+  --tainacan-filter-menu-width-theme: 20%;
+  --tainacan-input-color: #1d1d1d;
+  --tainacan-input-background-color: #ffffff;
+  --tainacan-input-border-color: #dbdbdb;
+  --tainacan-label-color: #454647;
+  --tainacan-info-color: #555758;
+  --tainacan-heading-color: #000000;
+  --tainacan-skeleton-color: #eeeeee;
+  --tainacan-item-background-color: #ffffff;
+  --tainacan-item-hover-background-color: #f2f2f2;
+  --tainacan-item-heading-hover-background-color: #dbdbdb;
+  --tainacan-primary: #d9eced;
+  --tainacan-secondary: #298596;
+}
+
 /*# sourceMappingURL=tainacan.css.map */

@@ -77,3 +77,20 @@
     --tainacan-block-primary: var(--wp--preset--color--foreground-alt);
     max-width: 42px;
 }
+
+.wp-block-tainacan-faceted-search {
+    .search-control .search-control-item:first-child {
+        order: 1;
+    }
+    .tainacan-masonry-item {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .tainacan-record,
+    .tainacan-card,
+    .tainacan-list {
+        .metadata-title {
+            font-weight: bold;
+        }
+    }
+}

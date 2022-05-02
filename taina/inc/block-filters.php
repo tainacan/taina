@@ -50,3 +50,62 @@ function taina_append_icon_to_post_comments_count( $block_content, $block ) {
     return $content;
 }
 add_filter( 'render_block_data_core/post-comments-count', 'taina_append_icon_to_post_comments_count', 10, 2 );
+
+
+/**
+ * Filter tainacan/faceted-search block metadata to set custom defaults
+ *
+ * @param array  $metadata         The block metadata from block.json
+ * @return string Modified block metadata.
+ */
+function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
+    if ( 'tainacan/faceted-search' === $metadata['name'] ) {
+        $metadata['attributes']["secondaryColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--primary)'
+        );
+        $metadata['attributes']["backgroundColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background-alt)'
+        );
+        $metadata['attributes']["itemBackgroundColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background)'
+        );
+        $metadata['attributes']["headingColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--foreground)'
+        );
+        $metadata['attributes']["labelColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--foreground)'
+        );
+        $metadata['attributes']["infoColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--foreground)'
+        );
+        $metadata['attributes']['align'] = array(
+            'type' => 'String',
+            'default' => 'full'
+        );
+        $metadata['attributes']['showFiltersButtonInsideSearchControl'] = array(
+            'type' => 'Boolean',
+            'default' => true
+        );
+        $metadata['attributes']['startWithFiltersHidden'] = array(
+            'type' => 'Boolean',
+            'default' => true
+        );
+        $metadata['attributes']['baseFontSize'] = array(
+            'type' => 'Number',
+            'default' => 18
+        );
+        $metadata['attributes']['filtersAsModal'] = array(
+            'type' => 'Boolean',
+            'default' => true
+        );
+        
+    }
+    return $metadata;
+};
+add_filter( 'block_type_metadata', 'taina_filter_tainacan_faceted_search_block_defaults' );
