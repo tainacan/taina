@@ -3,11 +3,11 @@ Theme Name: Tainá
 Theme URI: https://tainacan.org
 Author: wetah
 Contributors: daltonmartins, leogermani, ravipassos, omarceloavila
-Description: A block theme for Tainacan & WordPress.
+Description: A block theme for WordPress & Tainacan.
 Requires at least: 5.8
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 0.0.4
+Version: 0.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -16,10 +16,10 @@ Tainá is distributed under the terms of the GNU GPL.
 */
 
 /* Block styles */
-@import url('assets/css/blocks.css');
+@import 'assets/scss/blocks.scss';
 
 /* HTML elements */
-@import url('assets/css/elements.css');
+@import 'assets/scss/elements.scss';
 
 /* Layout and alignment issues */
-@import url('assets/css/layout.css');
+@import 'assets/scss/layout.scss';

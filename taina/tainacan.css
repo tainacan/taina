@@ -1,0 +1,86 @@
+/* Settings the colors used by most Tainacan blocks */
+:root {
+  --tainacan-block-primary: var(--wp--preset--color--primary);
+  --tainacan-block-gray0: var(--wp--preset--color--background-alt);
+  --tainacan-block-gray1: var(--wp--preset--color--background-alt);
+  --tainacan-block-gray2: var(--wp--preset--color--foreground);
+  --tainacan-block-gray3: var(--wp--preset--color--foreground);
+  --tainacan-block-gray4: var(--wp--preset--color--foreground-alt);
+  --tainacan-block-gray5: var(--wp--preset--color--foreground-alt);
+}
+
+/* Tainacan listing bloks have smaller font sizes by default and alternative background */
+.wp-block-tainacan-dynamic-items-list .item-list-item,
+.wp-block-tainacan-collections-list .collection-list-item,
+.wp-block-tainacan-terms-list .termm-list-item,
+.wp-block-tainacan-carousel-items-list .item-list-item,
+.wp-block-tainacan-carousel-collections-list .collection-list-item,
+.wp-block-tainacan-carousel-terms-list .term-list-item {
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+.wp-block-tainacan-dynamic-items-list .item-list-item a span,
+.wp-block-tainacan-collections-list .collection-list-item a span,
+.wp-block-tainacan-terms-list .termm-list-item a span,
+.wp-block-tainacan-carousel-items-list .item-list-item a span,
+.wp-block-tainacan-carousel-collections-list .collection-list-item a span,
+.wp-block-tainacan-carousel-terms-list .term-list-item a span {
+  font-weight: normal !important;
+  font-size: var(--wp--preset--font-size--tiny);
+  text-decoration: none;
+  padding: 3px 7px;
+}
+
+/* Collection headers have an alternative styles as well */
+.wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header,
+.wp-block-tainacan-carousel-items-list .carousel-items-collection-header {
+  flex-direction: row-reverse !important;
+  min-height: 158px !important;
+}
+
+.wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-thumbnail,
+.wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-thumbnail {
+  border-radius: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  height: 158px !important;
+  width: 158px !important;
+  position: unset !important;
+}
+
+.wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-name,
+.wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-name {
+  justify-content: flex-start !important;
+  padding: 1em 1em 1em 100px !important;
+  min-height: 118px !important;
+  flex-grow: 2 !important;
+  background-color: var(--wp--preset--color--background-alt) !important;
+  color: var(--wp--preset--color--primary) !important;
+}
+
+.wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-name h3,
+.wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-name h3 {
+  color: var(--wp--preset--color--primary) !important;
+  font-size: var(--wp--preset--font-size--large) !important;
+}
+
+.wp-block-tainacan-dynamic-items-list .dynamic-items-collection-header .collection-header-image,
+.wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-header-image {
+  flex-grow: 1 !important;
+  min-height: 158px !important;
+  /* filter: url('#wp-duotone-262626-d9560b-17') !important; */
+}
+
+/* Carousel arrows are squared */
+.wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper-button-next,
+.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-button-next,
+.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-button-next,
+.wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper-button-prev,
+.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-button-prev,
+.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-button-prev {
+  background-color: var(--wp--preset--color--background-alt) !important;
+  --tainacan-block-primary: var(--wp--preset--color--foreground-alt);
+  max-width: 42px;
+}
+
+/*# sourceMappingURL=tainacan.css.map */

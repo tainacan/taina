@@ -1,0 +1,12 @@
+/* Core table has custom head and lighter borders...*/
+.wp-block-table table {
+    thead {
+        background-color: var(--wp--preset--color--background-alt);
+        border-bottom: 2px solid var(--wp--preset--color--primary);
+    }
+    td,
+    th {
+        border-color: var(--wp--preset--color--background-alt);
+        padding: .5em 1em;
+    }
+}

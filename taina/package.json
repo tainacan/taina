@@ -1,0 +1,34 @@
+{
+  "name": "taina",
+  "version": "0.0.5",
+  "description": "A block theme for WordPress & Tainacan.",
+  "main": "style.css",
+  "scripts": {
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/style.scss style.css",
+    "compile-styles-tainacan": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/tainacan.scss tainacan.css",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output style.min.css style.css",
+    "css-minify-tainacan": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output tainacan.min.css tainacan.css",
+    "build-theme": "npm run compile-styles && npm run css-minify",
+    "build-tainacan": "npm run compile-styles-tainacan && npm run css-minify-tainacan",
+    "build": "npm run build-theme && npm run build-tainacan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tainacan/taina.git"
+  },
+  "keywords": [
+    "wordpress",
+    "block-theme",
+    "tainacan"
+  ],
+  "author": "wetah",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tainacan/taina/issues"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.14.1"
+  },
+  "homepage": "https://github.com/tainacan/taina#readme"
+}

@@ -23,11 +23,11 @@ endif;
  */
 function taina_scripts() {
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'taina-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'taina-style', get_template_directory_uri() . '/style.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	// If the Tainacan plugin is enabled, enqueues style related to it
 	if ( defined ('TAINACAN_VERSION') ) {
-		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/assets/css/tainacan.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/tainacan.min.css', array(), wp_get_theme()->get( 'Version' ) );
 	}
 
 }
@@ -41,7 +41,7 @@ function taina_enqueue_block_editor_assets_scripts() {
 	/**
 	 * Editor styles
 	 */
-	wp_enqueue_style( 'taina-editor-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'taina-editor-style', get_template_directory_uri() . '/style.min.css', array(), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'enqueue_block_editor_assets', 'taina_enqueue_block_editor_assets_scripts' );
 

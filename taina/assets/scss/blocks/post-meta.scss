@@ -1,0 +1,43 @@
+/* In single and page title, the post author and date are wrapped by this class */
+.post-meta-container {
+    &>* {
+        border-top: 3px solid var(--wp--preset--color--background-alt);
+    }
+    &>:first-child {
+        position: relative;
+    }
+    &>:first-child::before {
+        content: '';
+        height: var(--wp--custom--spacing--one-column);
+        width: 3px;
+        display: block;
+        background-color: var(--wp--preset--color--background-alt);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+    }
+}
+.post-meta-icon {
+    padding: 6px 0.25em 6px 1.5em;
+
+    svg {
+        fill: var(--wp--preset--color--primary);
+    }
+    &.post-meta-icon--comments {
+        margin-bottom: -0.5em !important;
+        margin-right: -2.6em !important;
+        z-index: 1;
+    }
+    &.post-meta-icon--comments svg {
+        fill: var(--wp--preset--color--background);
+    }
+} 
+
+/* These next should be handled by theme.json but is not working yet */
+.wp-block-post-author-name {
+    color: var(--wp--preset--color--primary);
+    padding: 10px  1.25em 10px 0.125em;
+}
+.wp-block-post-comments-count {
+    padding: 10px 1.25em;
+}

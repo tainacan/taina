@@ -30,3 +30,23 @@ function taina_append_icon_to_post_author_name( $block_content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/post-author-name', 'taina_append_icon_to_post_author_name', 10, 2 );
+
+
+
+/**
+ * Add an svg icon to all core/post-comments-count blocks.
+ *
+ * @param string $block_content The block content about to be appended.
+ * @param array  $block         The full block, including name and attributes.
+ * @return string Modified block content.
+ */
+function taina_append_icon_to_post_comments_count( $block_content, $block ) {
+    // if ($block_content == '0')
+    //     return '';
+    
+    $content  = '<div class="post-meta-icon post-meta-icon--comments">
+                <svg aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.865 2.169H4.135a1.97 1.97 0 0 0-1.966 1.966v11.798a1.97 1.97 0 0 0 1.966 1.966h13.764l3.932 3.932V4.135a1.97 1.97 0 0 0-1.966-1.966m0 14.916-1.152-1.152H4.135V4.135h15.73zm0 0"/></svg>
+            </div>' . $block_content;
+    return $content;
+}
+add_filter( 'render_block_data_core/post-comments-count', 'taina_append_icon_to_post_comments_count', 10, 2 );

@@ -19,12 +19,14 @@ html {
 /* We try to wrap most of them inside .wp-site-blocks to avoid conflicts */
 
 /* Styling <code>, <kbd> <var> inline elements */
-.wp-site-blocks code,
-.wp-site-blocks kbd,
-.wp-site-blocks var {
-    background-color: var(--wp--preset--color--background-alt);
-    font-size: 0.875em;
-    padding: 3px 3px;
+.wp-site-blocks {
+    code,
+    kbd,
+    var {
+        background-color: var(--wp--preset--color--background-alt);
+        font-size: 0.875em;
+        padding: 3px 3px;
+    }
 }
 
 /* This is odd, but for some reason the padding in the code block

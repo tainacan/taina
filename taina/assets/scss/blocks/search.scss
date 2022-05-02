@@ -1,0 +1,11 @@
+/* Search should be flat flat flat */
+.wp-block-search .wp-block-search__inside-wrapper {
+    input {
+        border-width: 0px;
+        padding: 0em .5em !important;
+    }
+    button {
+        border-width: 0px;
+        margin-left: 0px;
+    }
+}

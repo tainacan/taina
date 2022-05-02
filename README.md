@@ -19,6 +19,36 @@ The idea is to deliver it in three phases:
 
 Feel free to contribute with suggestions, pull requests and ideas. We are all new to the block-theme development world here, and we're still trying to learn the best practices. A good way to help is to take a look at our development board: (link missing)
 
+### How to build it
+
+Make the script executable:
+
+```sh
+chmod u+x build.sh
+```
+
+We use sass to build our css files, so it needs to be compiled. To simply build the necessary `.scss` files into bundled `.css`:
+
+```sh
+./build.sh
+```
+
+To, besides that, move the necessary theme files to your wordpress theme directory:
+
+```sh
+./build.sh /var/www/html/wp-content/theme/
+```
+
+If you don't like the script you can bundle things by yourself:
+
+```sh
+cd taina
+npm install
+npm run build
+```
+
+But keep in mind that the script also takes care of removing some source files not necessary for the theme to work, such as `.scss` and `.package.json`.
+
 ## F.A.Q.
 
 **Will it Work only on latest WordPress versions?**

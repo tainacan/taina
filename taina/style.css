@@ -1,0 +1,526 @@
+@charset "UTF-8";
+/*
+Theme Name: Tainá
+Theme URI: https://tainacan.org
+Author: wetah
+Contributors: daltonmartins, leogermani, ravipassos, omarceloavila
+Description: A block theme for WordPress & Tainacan.
+Requires at least: 5.8
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 0.0.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: taina
+
+Tainá is distributed under the terms of the GNU GPL.
+*/
+/* Block styles */
+/* WordPress Core blocks styles and tweaks */
+/* Image, gallery and cover blocks figcaptions have an alternative background */
+figure figcaption {
+  margin-top: 0 !important;
+  padding: 10px 36px;
+  max-width: 750px;
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+figure:not(.alignleft):not(.alignright) figcaption {
+  float: right;
+}
+
+/* Detached style for heading and paragraph block */
+h1.is-style-taina-detached,
+h2.is-style-taina-detached,
+h3.is-style-taina-detached,
+h4.is-style-taina-detached,
+h5.is-style-taina-detached,
+h6.is-style-taina-detached,
+p.is-style-taina-detached {
+  position: relative;
+  left: calc(-1 * var(--wp--custom--spacing--one-column));
+  padding-left: 20px;
+}
+
+h2.is-style-taina-detached:not(.has-text-color),
+h3.is-style-taina-detached:not(.has-text-color),
+h4.is-style-taina-detached:not(.has-text-color) {
+  color: var(--wp--preset--color--primary);
+}
+
+h1.is-style-taina-detached::before,
+h2.is-style-taina-detached::before,
+h3.is-style-taina-detached::before,
+h4.is-style-taina-detached::before {
+  height: 15px;
+  width: 30px;
+  position: absolute;
+  border-left-color: var(--wp--preset--color--foreground);
+  border-bottom-color: var(--wp--preset--color--foreground);
+  border-left-style: solid;
+  border-bottom-style: solid;
+  left: 10px;
+  content: '';
+}
+
+h2.is-style-taina-detached::before {
+  border-left-width: 4px;
+  border-bottom-width: 4px;
+  bottom: -4px;
+}
+
+h3.is-style-taina-detached::before,
+h4.is-style-taina-detached::before {
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  bottom: -2px;
+}
+
+/* Pagination is heavily tweaked */
+.wp-block-query-pagination .wp-block-query-pagination-numbers,
+.wp-block-comments-pagination .wp-block-comments-pagination-numbers {
+  display: flex;
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers,
+.wp-block-comments-pagination .wp-block-comments-pagination-numbers .page-numbers {
+  height: 2.5em;
+  width: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers:not(.dots),
+.wp-block-comments-pagination .wp-block-comments-pagination-numbers .page-numbers:not(.dots) {
+  border: 2px solid var(--wp--preset--color--background-alt);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0 0 var(--wp--preset--color--background-alt);
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers.current,
+.wp-block-comments-pagination .wp-block-comments-pagination-numbers .page-numbers.current {
+  background-color: var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--background);
+  border-color: var(--wp--preset--color--foreground);
+}
+
+.wp-block-query-pagination .wp-block-query-pagination-numbers a.page-numbers:hover,
+.wp-block-comments-pagination .wp-block-comments-pagination-numbers a.page-numbers:hover {
+  border-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--primary);
+  box-shadow: 0 0 0 2px var(--wp--preset--color--primary);
+}
+
+.wp-block-query-pagination-next,
+.wp-block-query-pagination-previous,
+.wp-block-comments-pagination-next,
+.wp-block-comments-pagination-previous {
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  padding: 0.5em 0.875em;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.wp-block-query-pagination-next:hover,
+.wp-block-query-pagination-previous:hover,
+.wp-block-comments-pagination-next:hover,
+.wp-block-comments-pagination-previous:hover {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
+}
+
+/* In single and page title, the post author and date are wrapped by this class */
+.post-meta-container > * {
+  border-top: 3px solid var(--wp--preset--color--background-alt);
+}
+
+.post-meta-container > :first-child {
+  position: relative;
+}
+
+.post-meta-container > :first-child::before {
+  content: '';
+  height: var(--wp--custom--spacing--one-column);
+  width: 3px;
+  display: block;
+  background-color: var(--wp--preset--color--background-alt);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
+.post-meta-icon {
+  padding: 6px 0.25em 6px 1.5em;
+}
+
+.post-meta-icon svg {
+  fill: var(--wp--preset--color--primary);
+}
+
+.post-meta-icon.post-meta-icon--comments {
+  margin-bottom: -0.5em !important;
+  margin-right: -2.6em !important;
+  z-index: 1;
+}
+
+.post-meta-icon.post-meta-icon--comments svg {
+  fill: var(--wp--preset--color--background);
+}
+
+/* These next should be handled by theme.json but is not working yet */
+.wp-block-post-author-name {
+  color: var(--wp--preset--color--primary);
+  padding: 10px  1.25em 10px 0.125em;
+}
+
+.wp-block-post-comments-count {
+  padding: 10px 1.25em;
+}
+
+.wp-block-post-comments-form {
+  font-size: 0.875em;
+}
+
+.wp-block-post-comments-form input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-post-comments-form textarea {
+  border: none;
+  padding: 0.5em calc(.667em + 2px);
+}
+
+.wp-block-post-comments-form label {
+  margin: 10px calc(.667em + 2px);
+}
+
+.wp-block-post-comments-form .form-submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.75em;
+}
+
+ul.wp-block-post-template {
+  list-style-type: none !important;
+}
+
+/* Trickery to make post terms look like separated tags */
+.wp-block-post-terms .wp-block-post-terms__separator {
+  color: transparent;
+  padding: 2px;
+  background-color: var(--wp--preset--color--background);
+}
+
+.wp-block-post-terms a {
+  padding: 6px 12px;
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+/* Pullquote block has some particularities
+ * that are not possible to set in themes.json
+ * so far... */
+.wp-block-pullquote {
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.wp-block-pullquote:not(.alignfull):not(.alignwide) {
+  max-width: calc(750px - (2 * var(--wp--custom--spacing--one-column)));
+}
+
+.wp-block-pullquote.alignwide {
+  max-width: calc(1100px - (2 * var(--wp--custom--spacing--one-column)));
+}
+
+.wp-block-pullquote.alignfull {
+  max-width: calc(100% - (2 * var(--wp--custom--spacing--one-column)));
+}
+
+.wp-block-pullquote blockquote {
+  margin-left: -42px;
+  margin-right: -42px;
+  padding-left: var(--wp--custom--spacing--one-column);
+  padding-right: var(--wp--custom--spacing--one-column);
+}
+
+.wp-block-pullquote blockquote p {
+  margin-top: 0px;
+  font-family: var(--wp--preset--font-family--headings);
+}
+
+.wp-block-pullquote blockquote cite {
+  text-transform: none;
+}
+
+.wp-block-pullquote:not(.has-background) blockquote {
+  background-color: var(--wp--preset--color--background);
+}
+
+.wp-block-pullquote.has-background blockquote {
+  background-color: inherit;
+}
+
+.wp-block-pullquote:not(.has-text-color) blockquote p {
+  color: var(--wp--preset--color--primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .wp-block-pullquote blockquote {
+    padding-left: calc(3 * var(--wp--custom--spacing--one-column));
+    padding-right: calc(3 * var(--wp--custom--spacing--one-column));
+  }
+}
+
+/* Search should be flat flat flat */
+.wp-block-search .wp-block-search__inside-wrapper input {
+  border-width: 0px;
+  padding: 0em .5em !important;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper button {
+  border-width: 0px;
+  margin-left: 0px;
+}
+
+/* Quote block with 'quoted' style */
+.wp-block-quote.is-style-taina-quoted {
+  padding-left: var(--wp--custom--spacing--one-column);
+  padding-right: var(--wp--custom--spacing--one-column);
+  border: none;
+  position: relative;
+  text-align: center;
+  margin-block-start: calc(var( --wp--style--block-gap ) * 2) !important;
+}
+
+.wp-block-quote.is-style-taina-quoted cite {
+  font-family: var(--wp--preset--font-family--headings);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+}
+
+.wp-block-quote.is-style-taina-quoted::after, .wp-block-quote.is-style-taina-quoted::before {
+  font-size: 220px;
+  line-height: 100px;
+  font-family: var(--wp--preset--font-family--headings);
+  font-style: italic;
+  font-weight: 900;
+  position: absolute;
+  color: var(--wp--preset--color--background);
+}
+
+.wp-block-quote.is-style-taina-quoted::before {
+  content: '“';
+  left: -100px;
+  top: 0px;
+  bottom: 50%;
+  text-align: start;
+  text-shadow: -1px -1px 0px var(--wp--preset--color--primary), 1px -1px 0px var(--wp--preset--color--primary), -1px 1px 0px var(--wp--preset--color--primary), 1px 1px 0px var(--wp--preset--color--primary);
+}
+
+.wp-block-quote.is-style-taina-quoted::after {
+  content: '”';
+  right: -100px;
+  bottom: 0px;
+  top: 50%;
+  text-align: end;
+  text-shadow: -1px -1px 0px var(--wp--preset--color--background-alt), 1px -1px 0px var(--wp--preset--color--background-alt), -1px 1px 0px var(--wp--preset--color--background-alt), 1px 1px 0px var(--wp--preset--color--background-alt);
+}
+
+@media screen and (max-width: 1024px) {
+  .wp-block-quote.is-style-taina-quoted::after, .wp-block-quote.is-style-taina-quoted::before {
+    font-size: 160px;
+    line-height: 60px;
+  }
+  .wp-block-quote.is-style-taina-quoted::before {
+    left: -50px;
+    top: calc(var( --wp--style--block-gap ) * -1);
+    bottom: 0%;
+  }
+  .wp-block-quote.is-style-taina-quoted::after {
+    right: -50px;
+    top: 100%;
+    bottom: calc(var( --wp--style--block-gap ) * -1);
+  }
+}
+
+/* Core table has custom head and lighter borders...*/
+.wp-block-table table thead {
+  background-color: var(--wp--preset--color--background-alt);
+  border-bottom: 2px solid var(--wp--preset--color--primary);
+}
+
+.wp-block-table table td,
+.wp-block-table table th {
+  border-color: var(--wp--preset--color--background-alt);
+  padding: .5em 1em;
+}
+
+/* Makes sure widget blocks follow the same list type pattern */
+.wp-block-categories-list,
+.wp-block-archives-list,
+.wp-block-page-list,
+.wp-block-latest-posts.wp-block-latest-posts__list,
+.wp-block-rss:not(.is-grid) {
+  list-style-type: square;
+  list-style-position: outside;
+  padding-left: 1em;
+}
+
+/* Makes comments list more consistent with the comments loop */
+.wp-block-latest-comments .wp-block-latest-comments__comment::before {
+  display: none;
+}
+
+.wp-block-latest-comments__comment-date {
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.wp-block-latest-comments .avatar,
+.wp-block-latest-comments__comment-avatar {
+  border-radius: 0px;
+  border-bottom: 3px solid var(--wp--preset--color--primary);
+}
+
+.wp-block-latest-comments.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+  margin-left: 0;
+  padding: 4px 3.25em;
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+/* HTML elements */
+/*----RESETING-------------------------------*
+/ The following lines are copied from TwentyTwentyOne theme
+/**
+* Apply generic border-box to all elements.
+* See:
+* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+html {
+  /* Apply border-box across the entire page. */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*----ELEMENTS-----------------------------*
+/* We try to wrap most of them inside .wp-site-blocks to avoid conflicts */
+/* Styling <code>, <kbd> <var> inline elements */
+.wp-site-blocks code,
+.wp-site-blocks kbd,
+.wp-site-blocks var {
+  background-color: var(--wp--preset--color--background-alt);
+  font-size: 0.875em;
+  padding: 3px 3px;
+}
+
+/* This is odd, but for some reason the padding in the code block
+ * is applied to both its <pre> wrapper and its inner <code> tag,
+ * so...*/
+pre.wp-block-code {
+  padding: 0px !important;
+}
+
+/* Lists have some special styling in Tainá
+ * The way we style theme side is wrapping inside .wp-site-blocks.
+ * For editor side, we can rely on the .wp-block-list
+ */
+.wp-site-blocks ul,
+ul.wp-block-list {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+.wp-site-blocks ul ul ul,
+ul.wp-block-list ul ul {
+  list-style-type: circle;
+}
+
+.wp-site-blocks ul > li::marker,
+.wp-site-blocks ul > li ul > li ul > li::marker,
+ul.wp-block-list > li::marker,
+ul.wp-block-list > li ul > li ul > li::marker {
+  color: var(--wp--preset--color--primary);
+}
+
+.wp-site-blocks ul > li ul > li::marker,
+.wp-site-blocks ul > li ul > li ul > li ul > li::marker,
+ul.wp-block-list > li ul > li::marker,
+ul.wp-block-list > li ul > li ul > li ul > li::marker {
+  color: var(--wp--preset--color--foreground);
+}
+
+.wp-site-blocks ol,
+ol.wp-block-list {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.wp-site-blocks ol > li:before,
+ol.wp-block-list > li:before {
+  color: var(--wp--preset--color--primary);
+  font-weight: bold;
+  font-family: var(--wp--preset--font-family--headings);
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+
+.wp-site-blocks ol > li ol > li ol > li:before,
+ol.wp-block-list > li ol > li ol > li:before {
+  font-weight: normal;
+}
+
+/* Lastly, a hack to fix linebreaks on the editor side... may exist a better solution */
+.wp-block-list li > .block-editor-rich-text__editable {
+  display: initial;
+}
+
+/* Always change cursor when hovering buttons */
+.wp-site-blocks button {
+  cursor: pointer;
+}
+
+/* Layout and alignment issues */
+/*----ALIGNMENT ISSUES-------------------------------*
+/*
+ * Alignment styles.
+ * The following is a copy from TwentyTwentyTwo solution
+ * For allowing full alignments to win over site padding.
+ * We're hoping that a better solution come over
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+  margin-left: calc(-1 * var(--wp--custom--spacing--one-column)) !important;
+  margin-right: calc(-1 * var(--wp--custom--spacing--one-column)) !important;
+  width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: inherit;
+}
+
+/*# sourceMappingURL=style.css.map */

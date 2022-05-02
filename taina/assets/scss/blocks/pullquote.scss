@@ -1,0 +1,49 @@
+
+/* Pullquote block has some particularities
+ * that are not possible to set in themes.json
+ * so far... */
+.wp-block-pullquote {
+    border-left-style: solid;
+    border-right-style: solid;
+
+    &:not(.alignfull):not(.alignwide) {
+        max-width: calc(750px - (2 * var(--wp--custom--spacing--one-column)));
+    }
+    &.alignwide {
+        max-width: calc(1100px - (2 * var(--wp--custom--spacing--one-column)));
+    }
+    &.alignfull {
+        max-width: calc(100% - (2 * var(--wp--custom--spacing--one-column)));
+    }
+    
+    blockquote {
+        margin-left: -42px;
+        margin-right: -42px;
+        padding-left: var(--wp--custom--spacing--one-column);
+        padding-right: var(--wp--custom--spacing--one-column);
+
+        p {
+            margin-top: 0px;
+            font-family: var(--wp--preset--font-family--headings);
+        }
+        cite {
+            text-transform: none;
+        }
+    }
+    &:not(.has-background) blockquote {
+        background-color: var(--wp--preset--color--background);
+    }
+    &.has-background blockquote {
+        background-color: inherit;
+    }
+    &:not(.has-text-color) blockquote p {
+        color: var(--wp--preset--color--primary);
+    }
+    
+    @media screen and (max-width: 1024px) {
+        blockquote {
+            padding-left: calc(3 * var(--wp--custom--spacing--one-column));
+            padding-right: calc(3 * var(--wp--custom--spacing--one-column));
+        }
+    }
+}

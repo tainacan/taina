@@ -1,0 +1,61 @@
+/* Quote block with 'quoted' style */
+.wp-block-quote.is-style-taina-quoted {
+    padding-left: var(--wp--custom--spacing--one-column);
+    padding-right: var(--wp--custom--spacing--one-column);
+    border: none;
+    position: relative;
+    text-align: center;
+    margin-block-start: calc(var( --wp--style--block-gap ) * 2) !important;
+
+    cite {
+        font-family: var(--wp--preset--font-family--headings);
+        font-style: italic;
+        font-weight: 600;
+        color: var(--wp--preset--color--primary);
+    }
+
+    &::after,
+    &::before {
+        font-size: 220px;
+        line-height: 100px;
+        font-family: var(--wp--preset--font-family--headings);
+        font-style: italic;
+        font-weight: 900;
+        position: absolute;
+        color: var(--wp--preset--color--background);
+    }
+    &::before {
+        content: '“';
+        left: -100px;
+        top: 0px;
+        bottom: 50%;
+        text-align: start;
+        text-shadow: -1px -1px 0px var(--wp--preset--color--primary), 1px -1px 0px var(--wp--preset--color--primary), -1px 1px 0px var(--wp--preset--color--primary), 1px 1px 0px var(--wp--preset--color--primary);
+    }
+    &::after {
+        content: '”';
+        right: -100px;
+        bottom: 0px;
+        top: 50%;
+        text-align: end;
+        text-shadow: -1px -1px 0px var(--wp--preset--color--background-alt), 1px -1px 0px var(--wp--preset--color--background-alt), -1px 1px 0px var(--wp--preset--color--background-alt), 1px 1px 0px var(--wp--preset--color--background-alt);
+    }
+    
+    @media screen and (max-width: 1024px) {
+        &::after,
+        &::before {
+            font-size: 160px;
+            line-height: 60px;
+        }
+        &::before {
+            left: -50px;
+            top: calc(var( --wp--style--block-gap ) * -1);
+            bottom: 0%;
+        }
+        &::after {
+            right: -50px;
+            top: 100%;
+            bottom: calc(var( --wp--style--block-gap ) * -1);
+        }
+    }
+}
