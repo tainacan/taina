@@ -25,11 +25,6 @@ function taina_scripts() {
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'taina-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
-	/**
-	 * Typography from Google fonts
-	 */
-	wp_enqueue_style( 'MontserratAndMulishFonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,600i,700,700i,800,900,900i|Mulish:400,400i,600i,700,700i&display=swap'  );
-
 	// If the Tainacan plugin is enabled, enqueues style related to it
 	if ( defined ('TAINACAN_VERSION') ) {
 		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/assets/css/tainacan.css', array(), wp_get_theme()->get( 'Version' ) );

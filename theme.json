@@ -119,12 +119,44 @@
 				{
 					"fontFamily": "\"Montserrat\", sans-serif",
 					"name": "Headings (Montserrat)",
-					"slug": "headings"
+					"slug": "headings",
+					"fontFace": [
+						{
+							"fontFamily": "\"Montserrat\"",
+							"fontWeight": "300 400 600 800 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/Montserrat-VariableFont_wght.ttf" ]
+						},
+						{
+							"fontFamily": "Source Serif Pero",
+							"fontWeight": "300 400 600 800 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/Montserrat-Italic-VariableFont_wght" ]
+						}
+					]
 				},
 				{
 					"fontFamily": "\"Mulish\", sans-serif",
 					"name": "Default (Mulish)",
-					"slug": "default"
+					"slug": "default",
+					"fontFace": [
+						{
+							"fontFamily": "\"Mulish\"",
+							"fontWeight": "300 400 600 800 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/Mulish-VariableFont_wght.ttf" ]
+						},
+						{
+							"fontFamily": "Source Serif Pero",
+							"fontWeight": "300 400 600 800 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./assets/fonts/Mulish-Italic-VariableFont_wght" ]
+						}
+					]
 				}
 			],
 			"fontSizes": [
@@ -282,6 +314,9 @@
 				}
 			},
 			"core/post-comments-count": {
+				"typography": {
+					"fontSize": "var:preset|font-size|tiny"
+				},
 				"color": {
 					"text": "var:preset|color|background",
 					"background": "var:preset|color|primary"
