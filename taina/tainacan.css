@@ -83,23 +83,32 @@
   max-width: 42px;
 }
 
-.wp-site-blocks .wp-block-tainacan-faceted-search {
-  font-size: var(--wp--preset--font-size--normal);
-  --tainacan-base-font-size: var(--wp--preset--font-size--normal);
-  --tainacan-background-color: #ffffff;
-  --tainacan-filter-menu-width-theme: 20%;
-  --tainacan-input-color: #1d1d1d;
-  --tainacan-input-background-color: #ffffff;
-  --tainacan-input-border-color: #dbdbdb;
-  --tainacan-label-color: #454647;
-  --tainacan-info-color: #555758;
-  --tainacan-heading-color: #000000;
-  --tainacan-skeleton-color: #eeeeee;
-  --tainacan-item-background-color: #ffffff;
-  --tainacan-item-hover-background-color: #f2f2f2;
-  --tainacan-item-heading-hover-background-color: #dbdbdb;
-  --tainacan-primary: #d9eced;
-  --tainacan-secondary: #298596;
+/* The items list, with a faceted search */
+.wp-block-tainacan-faceted-search {
+  /* Textual search should be the last control */
+  /* Masonry items show title bellow the image */
+  /* Some view modes have bold title */
+  /* These view modes escape from the variable as they have different backgorunds */
+}
+
+.wp-block-tainacan-faceted-search .search-control .search-control-item:first-of-type {
+  order: 1;
+}
+
+.wp-block-tainacan-faceted-search .tainacan-masonry-item {
+  display: flex !important;
+  flex-direction: column-reverse;
+}
+
+.wp-block-tainacan-faceted-search .tainacan-record .metadata-title,
+.wp-block-tainacan-faceted-search .tainacan-card .metadata-title,
+.wp-block-tainacan-faceted-search .tainacan-list .metadata-title {
+  font-weight: bold;
+}
+
+.wp-block-tainacan-faceted-search .tainacan-record,
+.wp-block-tainacan-faceted-search .tainacan-list {
+  background-color: var(--tainacan-item-background-color) !important;
 }
 
 /*# sourceMappingURL=tainacan.css.map */

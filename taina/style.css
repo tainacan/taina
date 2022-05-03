@@ -76,6 +76,22 @@ h4.is-style-taina-detached::before {
   bottom: -2px;
 }
 
+/* Since block gap attribute is for both axis, we add a bit more on the side */
+.wp-block-navigation .wp-block-navigation-item {
+  padding-right: 0.5em;
+  /* Active state of menu items */
+}
+
+.wp-block-navigation .wp-block-navigation-item.current-menu-item.wp-block-navigation-link {
+  font-weight: bold;
+  color: var(--wp--preset--color--primary);
+  border-bottom: 4px solid var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation .wp-block-navigation-item:hover {
+  font-weight: bold;
+}
+
 /* Pagination is heavily tweaked */
 .wp-block-query-pagination .wp-block-query-pagination-numbers,
 .wp-block-comments-pagination .wp-block-comments-pagination-numbers {

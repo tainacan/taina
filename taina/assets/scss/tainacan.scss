@@ -78,19 +78,29 @@
     max-width: 42px;
 }
 
+/* The items list, with a faceted search */
 .wp-block-tainacan-faceted-search {
-    .search-control .search-control-item:first-child {
+    
+    /* Textual search should be the last control */
+    .search-control .search-control-item:first-of-type {
         order: 1;
     }
+    /* Masonry items show title bellow the image */
     .tainacan-masonry-item {
-        display: flex;
+        display: flex !important;
         flex-direction: column-reverse;
     }
+    /* Some view modes have bold title */
     .tainacan-record,
     .tainacan-card,
     .tainacan-list {
         .metadata-title {
             font-weight: bold;
         }
+    }
+    /* These view modes escape from the variable as they have different backgorunds */
+    .tainacan-record,
+    .tainacan-list {
+        background-color: var(--tainacan-item-background-color) !important;
     }
 }
