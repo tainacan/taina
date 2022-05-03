@@ -72,6 +72,14 @@ function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
             'type' => 'String',
             'default' => 'var(--wp--preset--color--background)'
         );
+        $metadata['attributes']["itemHoverBackgroundColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background)'
+        );
+        $metadata['attributes']["itemHeadingHoverBackgroundColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background)'
+        );
         $metadata['attributes']["headingColor"] = array(
             'type' => 'String',
             'default' => 'var(--wp--preset--color--foreground)'
@@ -83,6 +91,22 @@ function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
         $metadata['attributes']["infoColor"] = array(
             'type' => 'String',
             'default' => 'var(--wp--preset--color--foreground)'
+        );
+        $metadata['attributes']["inputColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--foreground)'
+        );
+        $metadata['attributes']["inputBorderColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background-alt)'
+        );
+        $metadata['attributes']["inputBackgroundColor"] = array(
+            'type' => 'String',
+            'default' => 'var(--wp--preset--color--background)'
+        );
+        $metadata['attributes']['baseFontSize'] = array(
+            'type' => 'Number',
+            'default' => 18
         );
         $metadata['attributes']['align'] = array(
             'type' => 'String',
@@ -96,15 +120,14 @@ function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
             'type' => 'Boolean',
             'default' => true
         );
-        $metadata['attributes']['baseFontSize'] = array(
-            'type' => 'Number',
-            'default' => 18
-        );
         $metadata['attributes']['filtersAsModal'] = array(
             'type' => 'Boolean',
             'default' => true
         );
-        
+        $metadata['attributes']['defaultItemsPerPage'] = array(
+            'type' => 'Number',
+            'default' => 24
+        );
     }
     return $metadata;
 };

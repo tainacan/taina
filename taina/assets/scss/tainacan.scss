@@ -79,12 +79,45 @@
 }
 
 /* The items list, with a faceted search */
-.wp-block-tainacan-faceted-search {
-    
+.wp-block-tainacan-faceted-search .theme-items-list {
+    --tainacan-font-family: var(--wp--preset--font-family--default);
+
     /* Textual search should be the last control */
-    .search-control .search-control-item:first-of-type {
-        order: 1;
+    .search-control {
+        font-family: var(--wp--preset--font-family--headings);
+        --tainacan-font-family: var(--wp--preset--font-family--headings);
+        font-weight: 500;
+
+        .search-control-item:first-of-type {
+            order: 1;
+            margin-right: 0px;
+            padding-right: 0px;
+        }
+
+        .button,
+        .label {
+            font-weight: 500 !important;
+        }
     }
+
+    /* Filter tags have different style */
+    .filter-tags-list .filter-tag {
+        background-color: var(--wp--preset--color--background-alt) !important;
+        border-radius: 0px !important;
+        border-color: var(--wp--preset--color--background-alt) !important;
+    }
+
+    /* Dual tone to images on hover */
+    // .tainacan-record,
+    // .tainacan-card,
+    // .tainacan-list,
+    // .tainacan-card,
+    // .tainacan-masonry-item {
+    //     &:hover img {
+    //         filter: url('#wp-duotone-262626-d9560b-16');
+    //     }
+    // }
+
     /* Masonry items show title bellow the image */
     .tainacan-masonry-item {
         display: flex !important;
@@ -100,7 +133,132 @@
     }
     /* These view modes escape from the variable as they have different backgorunds */
     .tainacan-record,
-    .tainacan-list {
+    .tainacan-list,
+    .tainacan-card {
         background-color: var(--tainacan-item-background-color) !important;
+    }
+    .tainacan-cards-container .tainacan-card {
+        display: block;
+
+        img {
+            width: 166px !important;
+            height: 166px !important;
+        }
+    }
+
+    /* Table view mode */
+    .table-container .table-wrapper table.tainacan-table {
+
+        thead th {
+            border-bottom-color: var(--wp--preset--color--primary);
+            
+            .th-wrap {
+                font-weight: bold !important;
+                font-family: var(--wp--preset--font-family--headings);
+                font-size: var(--wp--preset--font-size--tiny) !important;
+                text-align: left !important;
+            }
+        }
+        .thumbnail-cell {
+            padding: 0px;
+            min-width: 60px;
+            width: 60px;
+            text-align: left;
+
+            .th-wrap {
+                visibility: hidden;
+            }
+            img {
+                min-height: 60px;
+                min-width: 60px;
+            }
+        }
+        td,
+        th {
+            padding: 10px 1.25em;
+            
+            &.column-main-content {
+                font-weight: bold;
+            }
+        }
+        tbody {
+            tr:hover {
+                font-style: italic;
+                --tainacan-input-color: var(--wp--preset--color--foreground-alt);
+                --tainacan-info-color: var(--wp--preset--color--foreground-alt);
+            }
+            tr td {
+                border-top: 3px solid var(--wp--preset--color--background-alt) !important;
+                border-bottom: 2px solid var(--wp--preset--color--background-alt) !important;
+
+                p {
+                    font-size: 0.875em;
+                }
+            }
+        }
+    }
+
+    /* Tainacan Records view mode */
+    .tainacan-records-container .tainacan-record {
+        .metadata-title p {
+            white-space: pre-wrap !important;
+        }
+        .media .list-metadata {
+            padding: 0.25em 0.875em 0.75em 0.875em;
+            
+            .tainacan-record-thumbnail {
+                margin: 0 -0.875em var(--tainacan-container-padding) var(--tainacan-container-padding);
+            }
+        }
+    }
+
+    /* Pagination */
+    .pagination-area {
+        font-family: var(--wp--preset--font-family--headings);
+        --tainacan-font-family: var(--wp--preset--font-family--headings);
+        font-weight: 500;
+        border-top: none;
+        margin: 3.125rem var(--wp--custom--spacing--one-column);
+
+        .button,
+        .label {
+            font-weight: 500 !important;
+        }
+
+        .pagination {
+            li {
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 4px !important;
+            }
+            .pagination-link {
+                border-radius: 0px !important;
+                border: 2px solid var(--wp--preset--color--background) !important;
+                width: 2.75em !important;
+                margin: 1px !important;
+                font-weight: bold;
+                color: var(--wp--preset--color--foreground) !important;
+                box-shadow: 0 0 0 0px var(--wp--preset--color--background);
+                transition: border 0.2s ease, box-shadow 0.2s ease;
+
+                &:hover:not(.is-current) {
+                    border-color: var(--wp--preset--color--primary) !important;
+                    box-shadow: 0 0 0 2px var(--wp--preset--color--primary);
+                    color: var(--wp--preset--color--primary) !important;
+                }
+
+                &.is-current {
+                    border-color: var(--wp--preset--color--foreground) !important;
+                    background-color: var(--wp--preset--color--foreground) !important;
+                    color: var(--wp--preset--color--background) !important;
+                    text-decoration: none !important;
+                }
+
+                &.pagination-previous,
+                &.pagination-next {
+                    background-color: var(--wp--preset--color--background) !important;
+                }
+            }
+        }
     }
 }
