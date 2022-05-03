@@ -210,6 +210,9 @@
 					"fontSize": "var:preset|font-size|tiny",
 					"fontStyle": "normal",
 					"fontWeight": "600"
+				},
+				"spacing": {
+					"blockGap": "1.125em"
 				}
 			},
 			"core/site-tagline": {

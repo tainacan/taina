@@ -1,0 +1,14 @@
+/* Since block gap attribute is for both axis, we add a bit more on the side */
+.wp-block-navigation .wp-block-navigation-item {
+    padding-right: 0.5em;
+
+    /* Active state of menu items */
+    &.current-menu-item.wp-block-navigation-link {
+        font-weight: bold;
+        color: var(--wp--preset--color--primary);
+        border-bottom: 4px solid var(--wp--preset--color--primary);
+    }
+    &:hover {
+        font-weight: bold;
+    }
+}
