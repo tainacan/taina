@@ -213,6 +213,9 @@
 				},
 				"spacing": {
 					"blockGap": "1.125em"
+				},
+				"color": {
+					"text": "var:preset|color|foreground"
 				}
 			},
 			"core/site-tagline": {
@@ -241,6 +244,9 @@
 				},
 				"elements": {
 					"link": {
+						"typography": {
+							"textDecoration": "none"
+						},
 						"color": {
 							"text": "var:preset|color|background"
 						}
@@ -413,7 +419,8 @@
 					}
 				},
 				"border": {
-					"color": "var:preset|color|primary"
+					"color": "var:preset|color|primary",
+					"radius": "0px"
 				}
 			},
 			"core/code": {
@@ -592,7 +599,10 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--primary, #d9560b)"
+					"text": "inherit"
+				},
+				"typography": {
+					"textDecoration": "solid underline var(--wp--preset--color--primary) 2px"
 				}
 			}
 		},
@@ -636,6 +646,10 @@
 		{
 			"name": "comments-section",
 			"title": "Comments section" 	
+		},
+		{
+			"name": "sidebar",
+			"title": "Sidebar" 	
 		},
 		{
 			"name": "footer-social",

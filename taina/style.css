@@ -8,7 +8,7 @@ Description: A block theme for WordPress & Tainacan.
 Requires at least: 5.8
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 0.0.5
+Version: 0.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -76,20 +76,25 @@ h4.is-style-taina-detached::before {
   bottom: -2px;
 }
 
-/* Since block gap attribute is for both axis, we add a bit more on the side */
+/* Since block gap attribute is for both axis, we add a bit more on the right side */
 .wp-block-navigation .wp-block-navigation-item {
   padding-right: 0.5em;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom-color 0.2s ease;
   /* Active state of menu items */
 }
 
 .wp-block-navigation .wp-block-navigation-item.current-menu-item.wp-block-navigation-link {
-  font-weight: bold;
   color: var(--wp--preset--color--primary);
-  border-bottom: 4px solid var(--wp--preset--color--primary);
+  border-bottom-color: var(--wp--preset--color--primary);
 }
 
 .wp-block-navigation .wp-block-navigation-item:hover {
-  font-weight: bold;
+  border-bottom-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation .wp-block-navigation-item:hover a {
+  color: currentColor;
 }
 
 /* Pagination is heavily tweaked */
@@ -218,8 +223,38 @@ h4.is-style-taina-detached::before {
   margin-top: 1.75em;
 }
 
+/* As we customized the list style, we need to this somewhere */
 ul.wp-block-post-template {
   list-style-type: none !important;
+}
+
+/* Tainá 'Clickable cards' template style */
+.wp-block-post-template.is-style-taina-card > li {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px var(--wp--preset--color--primary);
+  transition: box-shadow 0.2s ease;
+}
+
+.wp-block-post-template.is-style-taina-card > li:hover {
+  box-shadow: 0px -2px 0px 4px var(--wp--preset--color--primary);
+}
+
+.wp-block-post-template.is-style-taina-card > li .wp-block-post-title a {
+  position: static;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.wp-block-post-template.is-style-taina-card > li .wp-block-post-title a::before {
+  cursor: pointer;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Trickery to make post terms look like separated tags */
@@ -290,6 +325,10 @@ ul.wp-block-post-template {
 }
 
 /* Search should be flat flat flat */
+.wp-block-search {
+  max-width: 100%;
+}
+
 .wp-block-search .wp-block-search__inside-wrapper input {
   border-width: 0px;
   padding: 0em .5em !important;
@@ -409,7 +448,7 @@ ul.wp-block-post-template {
 
 /* HTML elements */
 /*----RESETING-------------------------------*
-/ The following lines are copied from TwentyTwentyOne theme
+/ The following two rules are copied from TwentyTwentyOne theme
 /**
 * Apply generic border-box to all elements.
 * See:
@@ -427,7 +466,32 @@ html {
 }
 
 /*----ELEMENTS-----------------------------*
-/* We try to wrap most of them inside .wp-site-blocks to avoid conflicts */
+/* We try to wrap some of them inside .wp-site-blocks to avoid conflicts */
+/* Links change their thickness and color only on hover. */
+a {
+  transition: text-decoration 0.2s ease, color 0.1s linear;
+}
+
+a:hover {
+  color: var(--wp--preset--color--primary);
+  text-decoration-thickness: 3px;
+}
+
+/* Header and Widget-like links have a cleaner style
+ * before hover, as we already expect them to be clickable.
+ */
+header a:not(:hover),
+aside a:not(:hover),
+footer a:not(:hover) {
+  text-decoration: none;
+}
+
+header a:hover,
+aside a:hover,
+footer a:hover {
+  color: inherit;
+}
+
 /* Styling <code>, <kbd> <var> inline elements */
 .wp-site-blocks code,
 .wp-site-blocks kbd,
@@ -435,13 +499,6 @@ html {
   background-color: var(--wp--preset--color--background-alt);
   font-size: 0.875em;
   padding: 3px 3px;
-}
-
-/* This is odd, but for some reason the padding in the code block
- * is applied to both its <pre> wrapper and its inner <code> tag,
- * so...*/
-pre.wp-block-code {
-  padding: 0px !important;
 }
 
 /* Lists have some special styling in Tainá

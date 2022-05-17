@@ -38,6 +38,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Quoted', 'taina' ),
 			)
 		);
+
+		// Post template where the clickable area is the whole post item
+		register_block_style(
+			'core/post-template',
+			array(
+				'name'  => 'taina-cards',
+				'label' => esc_html__( 'Cards', 'taina' ),
+			)
+		);
 	}
 	add_action( 'init', 'taina_register_block_styles' );
 }

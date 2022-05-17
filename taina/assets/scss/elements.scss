@@ -1,5 +1,5 @@
 /*----RESETING-------------------------------*
-/ The following lines are copied from TwentyTwentyOne theme
+/ The following two rules are copied from TwentyTwentyOne theme
 /**
 * Apply generic border-box to all elements.
 * See:
@@ -16,7 +16,30 @@ html {
 }
 
 /*----ELEMENTS-----------------------------*
-/* We try to wrap most of them inside .wp-site-blocks to avoid conflicts */
+/* We try to wrap some of them inside .wp-site-blocks to avoid conflicts */
+
+/* Links change their thickness and color only on hover. */
+a {
+    transition: text-decoration 0.2s ease, color 0.1s linear;
+}
+a:hover {
+    color: var(--wp--preset--color--primary);
+    text-decoration-thickness: 3px;
+}
+
+/* Header and Widget-like links have a cleaner style
+ * before hover, as we already expect them to be clickable.
+ */
+header,
+aside,
+footer {
+    a:not(:hover) {
+        text-decoration: none;
+    }
+    a:hover {
+        color: inherit;
+    }
+}
 
 /* Styling <code>, <kbd> <var> inline elements */
 .wp-site-blocks {
@@ -27,13 +50,6 @@ html {
         font-size: 0.875em;
         padding: 3px 3px;
     }
-}
-
-/* This is odd, but for some reason the padding in the code block
- * is applied to both its <pre> wrapper and its inner <code> tag,
- * so...*/
-pre.wp-block-code {
-    padding: 0px !important;
 }
 
 /* Lists have some special styling in Tainá
