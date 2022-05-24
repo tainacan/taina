@@ -9,7 +9,7 @@
     --tainacan-block-gray5: var(--wp--preset--color--foreground-alt);
 }
 
-/* Tainacan listing bloks have smaller font sizes by default and alternative background */
+/* Tainacan listing blocks have smaller font sizes by default and alternative background */
 .wp-block-tainacan-dynamic-items-list .item-list-item,
 .wp-block-tainacan-collections-list .collection-list-item,
 .wp-block-tainacan-terms-list .termm-list-item,
@@ -18,16 +18,19 @@
 .wp-block-tainacan-carousel-terms-list .term-list-item {
     background-color: var(--wp--preset--color--background-alt);
 }
-.wp-block-tainacan-dynamic-items-list .item-list-item a span,
-.wp-block-tainacan-collections-list .collection-list-item a span,
-.wp-block-tainacan-terms-list .termm-list-item a span,
-.wp-block-tainacan-carousel-items-list .item-list-item a span,
-.wp-block-tainacan-carousel-collections-list .collection-list-item a span,
-.wp-block-tainacan-carousel-terms-list .term-list-item a span {
-    font-weight: normal !important;
-    font-size: var(--wp--preset--font-size--tiny);
+.wp-block-tainacan-dynamic-items-list .item-list-item a,
+.wp-block-tainacan-collections-list .collection-list-item a,
+.wp-block-tainacan-terms-list .termm-list-item a,
+.wp-block-tainacan-carousel-items-list .item-list-item a,
+.wp-block-tainacan-carousel-collections-list .collection-list-item a,
+.wp-block-tainacan-carousel-terms-list .term-list-item a {
     text-decoration: none;
-    padding: 3px 7px;
+
+    span {
+        font-weight: normal !important;
+        font-size: var(--wp--preset--font-size--tiny);
+        padding: 3px 7px;
+    }
 }
 
 /* Collection headers have an alternative styles as well */
@@ -63,19 +66,45 @@
 .wp-block-tainacan-carousel-items-list .carousel-items-collection-header .collection-header-image {
     flex-grow: 1 !important;
     min-height: 158px !important;
-    /* filter: url('#wp-duotone-262626-d9560b-17') !important; */
+    /* filter: url('#wp-duotone-262626-A0303A-17') !important; */
+}
+
+/* Search bar pagination */
+.wp-block-tainacan-dynamic-items-list .dynamic-items-search-bar button,
+.wp-block-tainacan-carousel-items-list .dynamic-items-search-bar button {
+    background-color: var(--wp--preset--color--background-alt) !important;
+    padding: 0.25em !important;
+    min-width: 3em;
+    min-height: 3em !important;
+
+    svg {
+        fill: var(--wp--preset--color--foreground) !important;
+    }
+}
+
+/* Carousel blocks depend on the box-sizing */
+.wp-block-tainacan-carousel-items-list .swiper-wrapper,
+.wp-block-tainacan-carousel-collections-list .swiper-wrapper,
+.wp-block-tainacan-carousel-terms-list .swiper-wrapper {
+    box-sizing: border-box;
 }
 
 /* Carousel arrows are squared */
-.wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper-button-next,
-.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-button-next,
-.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-button-next,
-.wp-block-tainacan-carousel-items-list .tainacan-carousel .swiper-button-prev,
-.wp-block-tainacan-carousel-collections-list .tainacan-carousel .swiper-button-prev,
-.wp-block-tainacan-carousel-terms-list .tainacan-carousel .swiper-button-prev {
-    background-color: var(--wp--preset--color--background-alt) !important;
-    --tainacan-block-primary: var(--wp--preset--color--foreground-alt);
-    max-width: 42px;
+.wp-block-tainacan-carousel-items-list,
+.wp-block-tainacan-carousel-collections-list,
+.wp-block-tainacan-carousel-terms-list {
+
+    .tainacan-carousel,
+    .items-list-edit-container,
+    .collections-list-edit-container,
+    .terms-list-edit-container {
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: var(--wp--preset--color--background-alt) !important;
+            --tainacan-block-primary: var(--wp--preset--color--foreground-alt);
+            max-width: 42px;
+        }
+    }
 }
 
 /* The items list, with a faceted search */
@@ -114,7 +143,7 @@
     // .tainacan-card,
     // .tainacan-masonry-item {
     //     &:hover img {
-    //         filter: url('#wp-duotone-262626-d9560b-16');
+    //         filter: url('#wp-duotone-262626-A0303A-16');
     //     }
     // }
 

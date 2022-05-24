@@ -21,7 +21,7 @@
 			"text": true,
 			"palette": [
 				{
-					"color": "#d9560b",
+					"color": "#A0303A",
 					"name": "Primary",
 					"slug": "primary"
 				},
@@ -58,14 +58,14 @@
 				{
 					"colors": [
 						"#262626",
-						"#d9560b"
+						"#A0303A"
 					],
 					"slug": "foreground-alt-and-primary",
 					"name": "Alternative Foreground and primary"
 				},
 				{
 					"colors": [
-						"#d9560b",
+						"#A0303A",
 						"#ffffff"
 					],
 					"slug": "primary-and-background",
@@ -74,7 +74,7 @@
 				{
 					"colors": [
 						"#ffffff",
-						"#d9560b"						
+						"#A0303A"						
 					],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
@@ -218,6 +218,22 @@
 					"text": "var:preset|color|foreground"
 				}
 			},
+			"core/navigation-link": {
+				"color": {
+					"text": "var:preset|color|foreground"
+				},
+				"spacing": {
+					"blockGap": "1.125em"
+				}
+			},
+			"core/navigation-submenu": {
+				"color": {
+					"text": "var:preset|color|foreground"
+				},
+				"spacing": {
+					"blockGap": "1.125em"
+				}
+			},
 			"core/site-tagline": {
 				"color": {
 					"background": "var:preset|color|background-alt"
@@ -278,7 +294,7 @@
 					}
 				},
 				"typography": {
-					"lineHeight": "2"
+					"lineHeight": "2.75"
 				},
 				"border": {
 					"width": "0px"
@@ -345,14 +361,61 @@
 					}
 				}
 			},
+			"core/comment-author-name": {
+				"typography": {
+					"lineHeight": "2.5",
+					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			},
+			"core/comment-date": {
+				"typography": {
+					"lineHeight": "2.5",
+					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			},
+			"core/comment-edit-link": {
+				"typography": {
+					"lineHeight": "2.5",
+					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			},
 			"core/post-terms": {
 				"typography": {
 					"textTransform": "uppercase",
-					"fontSize": "var:preset|font-size|small"
+					"fontSize": "var:preset|font-size|small",
+					"textDecoration": "none"
 				},
 				"color": {
 					"text": "var:preset|color|foreground",
 					"background": "var:preset|color|background-alt"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
 				}
 			},
 			"core/post-title": {
@@ -467,6 +530,9 @@
 						"style": "solid",
 						"radius": "0px"
 					}
+				},
+				"typography": {
+					"lineHeight": "0px"
 				}
 			},
 			"core/query-pagination-numbers": {

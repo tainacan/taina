@@ -4,6 +4,8 @@ An open source, modern [**block theme**](https://developer.wordpress.org/themes/
 
 > Tainá is made for museums, libraries and galleries for sharing their stories with the World.
 
+![Demonstration image](/taina/screenshot.png)
+
 This project aims to implement this _A-M-A-Z-I-N-G_ design by Marcelo Ávila:
 [Check Tainá design proposal on Behance](https://www.behance.net/gallery/83704559/Taina-Tema-Wordpress)
 

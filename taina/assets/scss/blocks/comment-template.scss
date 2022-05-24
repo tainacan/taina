@@ -1,0 +1,4 @@
+/* As we customized the list style, we need to this somewhere */
+ol.wp-block-comment-template > li:before {
+    content: '' !important;
+}

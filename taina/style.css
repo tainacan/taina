@@ -5,13 +5,14 @@ Theme URI: https://tainacan.org
 Author: wetah
 Contributors: daltonmartins, leogermani, ravipassos, omarceloavila
 Description: A block theme for WordPress & Tainacan.
-Requires at least: 5.8
-Tested up to: 5.9
-Requires PHP: 5.6
+Requires at least: 6.0
+Tested up to: 6.0
+Requires PHP: 5.7
 Version: 0.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
+Tags: full-site-editing, block-patterns, block-styles, wide-blocks, right-sidebar, custom-colors, editor-style, translation-ready
 
 Tainá is distributed under the terms of the GNU GPL.
 */
@@ -27,6 +28,11 @@ figure figcaption {
 
 figure:not(.alignleft):not(.alignright) figcaption {
   float: right;
+}
+
+/* As we customized the list style, we need to this somewhere */
+ol.wp-block-comment-template > li:before {
+  content: '' !important;
 }
 
 /* Detached style for heading and paragraph block */
@@ -77,10 +83,14 @@ h4.is-style-taina-detached::before {
 }
 
 /* Since block gap attribute is for both axis, we add a bit more on the right side */
+.wp-block-navigation {
+  /* Submenus have small differences */
+}
+
 .wp-block-navigation .wp-block-navigation-item {
   padding-right: 0.5em;
   border-bottom: 4px solid transparent;
-  transition: border-bottom-color 0.2s ease;
+  transition: border 0.2s ease;
   /* Active state of menu items */
 }
 
@@ -89,12 +99,26 @@ h4.is-style-taina-detached::before {
   border-bottom-color: var(--wp--preset--color--primary);
 }
 
-.wp-block-navigation .wp-block-navigation-item:hover {
+.wp-block-navigation .wp-block-navigation-item:not(.wp-block-navigation-submenu):hover {
   border-bottom-color: var(--wp--preset--color--primary);
 }
 
-.wp-block-navigation .wp-block-navigation-item:hover a {
+.wp-block-navigation .wp-block-navigation-item:not(.wp-block-navigation-submenu):hover a {
   color: currentColor;
+}
+
+.wp-block-navigation .wp-block-navigation-item:not(.wp-block-navigation-submenu) .wp-block-navigation-link {
+  border-bottom: none;
+  border-left: 4px solid transparent;
+}
+
+.wp-block-navigation .wp-block-navigation-item:not(.wp-block-navigation-submenu) .wp-block-navigation-link:hover {
+  border-left-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+  padding-top: 1.125em;
+  border-right: 1px solid var(--wp--preset--color--primary);
 }
 
 /* Pagination is heavily tweaked */

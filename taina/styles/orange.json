@@ -1,12 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-    "title": "Red",
+    "title": "Orange",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
 			"palette": [
 				{
-					"color": "#A0303A",
+					"color": "#d9560b",
 					"name": "Primary",
 					"slug": "primary"
 				},

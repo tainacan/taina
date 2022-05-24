@@ -50,9 +50,9 @@ if ( function_exists( 'register_block_pattern' ) ) {
             'title'         => esc_html__( 'Banner with text overlay', 'taina' ),
 			'categories'    => array( 'taina', 'headings'),
 			'viewportWidth' => 1400,
-            'content'       => '<!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png","id":184325,"dimRatio":50,"focalPoint":{"x":"0.66","y":"0.27"},"minHeight":464,"minHeightUnit":"px","isDark":true,"align":"full","style":{"color":{"duotone":["#262626","#d9560b"]}}} -->
+            'content'       => '<!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png","id":184325,"dimRatio":0,"focalPoint":{"x":"0.66","y":"0.27"},"minHeight":464,"minHeightUnit":"px","isDark":true,"align":"full","style":{"color":{"duotone":["#262626","#A0303A"]}}} -->
                                     <div class="wp-block-cover alignfull is-dark" style="min-height:464px">
-                                        <span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span>
+                                        <span aria-hidden="true" class="wp-block-cover__background has-background-dim has-background-dim-0"></span>
                                         <img class="wp-block-cover__image-background wp-image-184325" alt="" src="http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png" style="object-position:66% 27%" data-object-fit="cover" data-object-position="66% 27%"/>
                                         <div class="wp-block-cover__inner-container">
                                             <!-- wp:group {"layout":{"inherit":true}} -->
@@ -75,7 +75,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
             'title'         => esc_html__( 'Banner with boxed column', 'taina' ),
 			'categories'    => array( 'taina', 'headings'),
 			'viewportWidth' => 1400,
-            'content'       => '<!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png","id":184325,"customGradient":"linear-gradient(0deg,rgb(255,255,255) 15%,rgba(255,255,225,0) 15%,rgba(255,255,255,0) 85%,rgb(255,255,255) 85%)","align":"full","style":{"color":{"duotone":["#262626","#d9560b"]}}} -->
+            'content'       => '<!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png","id":184325,"customGradient":"linear-gradient(0deg,rgb(255,255,255) 15%,rgba(255,255,225,0) 15%,rgba(255,255,255,0) 85%,rgb(255,255,255) 85%)","align":"full","style":{"color":{"duotone":["#262626","#A0303A"]}}} -->
                                     <div class="wp-block-cover alignfull"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(0deg,rgb(255,255,255) 15%,rgba(255,255,225,0) 15%,rgba(255,255,255,0) 85%,rgb(255,255,255) 85%)"></span>
                                         <img class="wp-block-cover__image-background wp-image-184325" alt="" src="http://localhost/wp-content/uploads/2022/04/image-2-1280x854.png" data-object-fit="cover"/>
                                         <div class="wp-block-cover__inner-container">
@@ -115,7 +115,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 			'categories'    => array( 'taina'),
 			'viewportWidth' => 980,
 			'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
-                                    <div class="wp-block-group"><!-- wp:avatar {"size":240,"isLink":true,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}},"color":{"duotone":["#262626","#d9560b"]}}} /-->
+                                    <div class="wp-block-group"><!-- wp:avatar {"size":240,"isLink":true,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}},"color":{"duotone":["#262626","#A0303A"]}}} /-->
                                         <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"backgroundColor":"background-alt","layout":{"type":"flex","orientation":"vertical"}} -->
                                             <div class="wp-block-group has-background-alt-background-color has-background">
                                                 <!-- wp:heading {"textColor":"primary"} -->
