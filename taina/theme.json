@@ -223,7 +223,7 @@
 					"text": "var:preset|color|foreground"
 				},
 				"spacing": {
-					"blockGap": "1.125em"
+					"blockGap": "1.0em"
 				}
 			},
 			"core/navigation-submenu": {
@@ -232,6 +232,16 @@
 				},
 				"spacing": {
 					"blockGap": "1.125em"
+				}
+			},
+			"core/site-logo": {
+				"spacing": {
+					"padding": {
+						"bottom": "0.875em",
+						"left": "0px",
+						"top": "0.875em",
+						"right": "0px"
+					}
 				}
 			},
 			"core/site-tagline": {
@@ -294,10 +304,17 @@
 					}
 				},
 				"typography": {
-					"lineHeight": "2.75"
+					"fontFamily": "var:preset|font-family|headings",
+					"fontStyle": "normal",
+					"fontWeight": "600",
+					"lineHeight": "1.75",
+					"textTransform": "uppercase"
 				},
 				"border": {
 					"width": "0px"
+				},
+				"color": {
+					"background": "var:preset|color|background-alt"
 				}
 			},
 			"core/post-date": {

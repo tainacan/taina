@@ -2,7 +2,7 @@
 .wp-block-navigation {
 
     .wp-block-navigation-item {
-        padding-right: 0.5em;
+        padding-right: 1.25em;
         border-bottom: 4px solid transparent;
         transition: border 0.2s ease;
 
@@ -35,4 +35,10 @@
         padding-top: 1.125em;     
         border-right: 1px solid var(--wp--preset--color--primary);   
     }
+}
+
+/* This is a bit hacky, but while we 
+ * can't have padding control to navigation block, we need it...*/
+.wp-block-group.is-style-taina-group-align-items_stretch>.wp-block-navigation {
+    padding-top: 0.875em;
 }

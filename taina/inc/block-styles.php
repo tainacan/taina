@@ -47,6 +47,24 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Cards', 'taina' ),
 			)
 		);
+
+		// Search bar with a collapsable input
+		register_block_style(
+			'core/search',
+			array(
+				'name'  => 'taina-collapsable-search',
+				'label' => esc_html__( 'Collapsable', 'taina' ),
+			)
+		);
+
+		// Columns vertical align
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'taina-group-align-items_stretch',
+				'label' => esc_html__( 'Stretch vertically', 'taina' ),
+			)
+		);
 	}
 	add_action( 'init', 'taina_register_block_styles' );
 }

@@ -18,6 +18,11 @@ Tainá is distributed under the terms of the GNU GPL.
 */
 /* Block styles */
 /* WordPress Core blocks styles and tweaks */
+/* As we customized the list style, we need to this somewhere */
+ol.wp-block-comment-template > li:before {
+  content: '' !important;
+}
+
 /* Image, gallery and cover blocks figcaptions have an alternative background */
 figure figcaption {
   margin-top: 0 !important;
@@ -30,9 +35,8 @@ figure:not(.alignleft):not(.alignright) figcaption {
   float: right;
 }
 
-/* As we customized the list style, we need to this somewhere */
-ol.wp-block-comment-template > li:before {
-  content: '' !important;
+.wp-block-group.is-style-taina-group-align-items_stretch {
+  align-items: stretch;
 }
 
 /* Detached style for heading and paragraph block */
@@ -88,7 +92,7 @@ h4.is-style-taina-detached::before {
 }
 
 .wp-block-navigation .wp-block-navigation-item {
-  padding-right: 0.5em;
+  padding-right: 1.25em;
   border-bottom: 4px solid transparent;
   transition: border 0.2s ease;
   /* Active state of menu items */
@@ -119,6 +123,12 @@ h4.is-style-taina-detached::before {
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
   padding-top: 1.125em;
   border-right: 1px solid var(--wp--preset--color--primary);
+}
+
+/* This is a bit hacky, but while we 
+ * can't have padding control to navigation block, we need it...*/
+.wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
+  padding-top: 0.875em;
 }
 
 /* Pagination is heavily tweaked */
@@ -353,14 +363,48 @@ ul.wp-block-post-template {
   max-width: 100%;
 }
 
-.wp-block-search .wp-block-search__inside-wrapper input {
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
+  background-color: inherit;
   border-width: 0px;
-  padding: 0em .5em !important;
+  padding: 0em 1em !important;
+  font-weight: inherit;
+  text-transform: inherit;
+  font-size: 0.75em;
+  line-height: inherit;
 }
 
-.wp-block-search .wp-block-search__inside-wrapper button {
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button {
   border-width: 0px;
   margin-left: 0px;
+  line-height: inherit;
+}
+
+.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button svg {
+  height: 100%;
+}
+
+.wp-block-search.is-style-taina-collapsable-search {
+  position: relative;
+}
+
+.wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper {
+  background-color: inherit;
+  position: absolute;
+  height: auto;
+  min-height: 100%;
+  min-width: 368px;
+  right: 0;
+  overflow: hidden;
+  transition: min-width 0.2s ease, max-width 0.2s ease;
+}
+
+.wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper .wp-block-search__button {
+  order: -1;
+}
+
+.wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper:not(:hover):not(:focus):not(:focus-within) {
+  max-width: calc(.625em + .625em + 1.5em);
+  min-width: 0px !important;
 }
 
 /* Quote block with 'quoted' style */

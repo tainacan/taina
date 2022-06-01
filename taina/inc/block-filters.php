@@ -134,18 +134,3 @@ function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
     return $metadata;
 };
 add_filter( 'block_type_metadata', 'taina_filter_tainacan_faceted_search_block_defaults' );
-
-/**
- * Add group block to new pages.
- * 
- * @link https://developer.wordpress.org/block-editor/developers/block-api/block-templates/
- */
-function tnc_col_130957_item_template() {
-	$page_type_object = get_post_type_object( 'tnc_col_130957_item' );
-	$page_type_object->template = [
-		[ 'core/group', [ 'backgroundColor' => 'light' ], [
-			[ 'core/paragraph' ],
-		] ],
-	];
-}
-add_action( 'init', 'tnc_col_130957_item_template' );

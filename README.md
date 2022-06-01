@@ -4,10 +4,12 @@ An open source, modern [**block theme**](https://developer.wordpress.org/themes/
 
 > Tainá is made for museums, libraries and galleries for sharing their stories with the World.
 
-![Demonstration image](/taina/screenshot.png)
+## Project design
 
 This project aims to implement this _A-M-A-Z-I-N-G_ design by Marcelo Ávila:
 [Check Tainá design proposal on Behance](https://www.behance.net/gallery/83704559/Taina-Tema-Wordpress)
+
+[![Demonstration image](/taina/screenshot.png)](https://www.behance.net/gallery/83704559/Taina-Tema-Wordpress)
 
 It was designed with [Tainacan plugin](https://wordpress.org/plugins/tainacan/) in mind but should be an awesome theme for anyone using WordPress.
 
@@ -29,16 +31,16 @@ Make the script executable:
 chmod u+x build.sh
 ```
 
-We use sass to build our css files, so it needs to be compiled. To simply build the necessary `.scss` files into bundled `.css`:
+We use _sass_ to build our style files, so it needs to be compiled. To simply build the necessary `.scss` files into bundled `.css`:
 
 ```sh
 ./build.sh
 ```
 
-To, besides that, move the necessary theme files to your wordpress theme directory:
+To, besides that, move the necessary theme files to your WordPress themes directory:
 
 ```sh
-./build.sh /var/www/html/wp-content/theme/
+./build.sh /var/www/html/wp-content/themes/
 ```
 
 If you don't like the script you can bundle things by yourself:
@@ -51,20 +53,28 @@ npm run build
 
 But keep in mind that the script also takes care of removing some source files not necessary for the theme to work, such as `.scss` and `.package.json`.
 
+## Just install
+
+If things are already bundled, just move the `taina` folder to your WordPress themes directory.
+
 ## F.A.Q.
 
-**Will it Work only on latest WordPress versions?**
+### Will it Work only on latest WordPress versions?
 
-The idea is to make it compatible with >= 6.0, since we're using the latest features from the block editor.
+The idea is to make it compatible with **WP >= 6.0**, since we're using the latest features from the block editor.
 
-**What is Tainacan and do I need it to use this theme?**
+### What is Tainacan and do I need it to use this theme?
 
-Tainacan is a plugin that extends WordPress functionalities to create a digital repository management and expositions system. While this theme will have templates dedicated to it, you DO NOT need Tainacan to use it, just keep in mind that some screens in the design proposal are related to its collections and items. If you want more information about Tainacan, here are three golden links:
+Tainacan is a plugin that extends WordPress functionalities to create a digital repository management and expositions system. While this theme will have templates dedicated to it, _you DO NOT need Tainacan to use it_, just keep in mind that some screens in the design proposal are related to its collections and items (kinda custom post types). If you want more information about Tainacan, here are three golden links:
 
-- [Oficial Site](https://tainacan.org/en)
+- [Official Site](https://tainacan.org/en)
 - [Community Forum](https://tainacan.discourse.group/)
 - [Wiki](https://wiki.tainacan.org/)
 
-**What does _Tainá_ stand for?**
+### What does _Tainá_ stand for?
 
 While the Tainacan plugin [had its name inspired](https://tainacan.org/en/visual-identity/) by the way that some native people from Brazil call the morning star (Venus), Tainá is a common female name in Brazil, also rooted in indigenous culture.
+
+### How about WooCommerce, bbPress, _etc_ integration... ?
+
+Other plugins integration are a bit out of our scope, but feel free to open pull requests and bring some ideas!
