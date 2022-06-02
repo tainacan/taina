@@ -631,6 +631,16 @@
 					"background": "var:preset|color|background-alt",
 					"text": "var:preset|color|foreground"
 				}
+			},
+			"core/image": {
+				"spacing": {
+					"margin": {
+						"top": "0px",
+						"bottom": "0px",
+						"left": "0px",
+						"right": "0px"
+					}
+				}
 			}
 		},
 		"color": {

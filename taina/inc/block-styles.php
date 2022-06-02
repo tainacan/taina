@@ -57,7 +57,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			)
 		);
 
-		// Columns vertical align
+		// Group vertical align
 		register_block_style(
 			'core/group',
 			array(
