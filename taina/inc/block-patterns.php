@@ -109,7 +109,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
 
     // Collection banner with thumbnail and cover
     register_block_pattern(
-        'taina/banner-boxed-column',
+        'taina/collection-header-thumb-cover',
         array(
             'title'         => esc_html__( 'Collection header (thumb and cover)', 'taina' ),
 			'categories'    => array( 'taina', 'headings'),
@@ -146,6 +146,111 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                             </div>
                                         </div>
                                         <!-- /wp:cover -->
+                                    </div>
+                                    <!-- /wp:column -->
+                                </div>
+                                <!-- /wp:columns -->'
+        )
+    );
+
+    // Collection banner with cover
+    register_block_pattern(
+        'taina/collection-header-cover',
+        array(
+            'title'         => esc_html__( 'Collection header (only cover)', 'taina' ),
+			'categories'    => array( 'taina', 'headings'),
+			'viewportWidth' => 1400,
+            'content'       => '<!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/06/g74.png","id":185611,"focalPoint":{"x":"0.26","y":"0.50"},"customGradient":"linear-gradient(180deg,rgba(7,146,227,0) 79%,rgb(255,255,255) 79%)","contentPosition":"center center","align":"full","style":{"color":{"duotone":["#262626","#A0303A"]},"spacing":{"padding":{"top":"0px","right":"0%","bottom":"0px","left":"0px"}}}} -->
+                                <div class="wp-block-cover alignfull" style="padding-top:0px;padding-right:0%;padding-bottom:0px;padding-left:0px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(7,146,227,0) 79%,rgb(255,255,255) 79%)"></span>
+                                    <img class="wp-block-cover__image-background wp-image-185611" alt="" src="http://localhost/wp-content/uploads/2022/06/g74.png" style="object-position:26% 50%" data-object-fit="cover" data-object-position="26% 50%"/>
+                                    <div class="wp-block-cover__inner-container">
+                                        <!-- wp:columns {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}}} -->
+                                        <div class="wp-block-columns" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+                                            <!-- wp:column {"width":"60%","style":{"spacing":{"blockGap":"0px","padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} -->
+                                            <div class="wp-block-column" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;flex-basis:60%">
+                                                <!-- wp:image {"id":185611,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+                                                    <figure class="wp-block-image size-large is-style-default"><img src="http://localhost/wp-content/uploads/2022/06/g74-1280x400.png" alt="" class="wp-image-185611"/></figure>
+                                                <!-- /wp:image -->
+                                            </div>
+                                            <!-- /wp:column -->
+                                        </div>
+                                        <!-- /wp:columns -->
+                                        <!-- wp:columns {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}}} -->
+                                        <div class="wp-block-columns" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+                                            <!-- wp:column {"width":"25%","backgroundColor":"background"} -->
+                                                <div class="wp-block-column has-background-background-color has-background" style="flex-basis:25%">
+                                                </div>
+                                            <!-- /wp:column -->
+                                            <!-- wp:column {"width":""} -->
+                                            <div class="wp-block-column">
+                                                <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
+                                                <div class="wp-block-group has-background-alt-background-color has-background">
+                                                    <!-- wp:heading {"textColor":"primary","className":"is-style-ctrls-titulo"} -->
+                                                    <h2 class="is-style-ctrls-titulo has-primary-color has-text-color">Viagens pelo mundo</h2>
+                                                    <!-- /wp:heading -->
+                                                    <!-- wp:paragraph {"textColor":"foreground"} -->
+                                                    <p class="has-foreground-color has-text-color">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
+                                                    <!-- /wp:paragraph -->
+                                                </div>
+                                                <!-- /wp:group -->
+                                            </div>
+                                            <!-- /wp:column -->
+                                            <!-- wp:column {"width":"25%"} -->
+                                            <div class="wp-block-column" style="flex-basis:25%">
+                                            </div>
+                                            <!-- /wp:column -->
+                                        </div>
+                                        <!-- /wp:columns -->
+                                    </div>
+                                </div>
+                                <!-- /wp:cover -->'
+        )
+    );
+
+    // Collection banner with thumbnail
+    register_block_pattern(
+        'taina/collection-header-thumbnail',
+        array(
+            'title'         => esc_html__( 'Collection header (only thumbnail)', 'taina' ),
+			'categories'    => array( 'taina', 'headings'),
+			'viewportWidth' => 1400,
+            'content'       => '<!-- wp:columns {"verticalAlignment":"center","align":"full","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}}} -->
+                                <div class="wp-block-columns alignfull are-vertically-aligned-center" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+                                    <!-- wp:column {"verticalAlignment":"center","width":"33%","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px"}}} -->
+                                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;flex-basis:33%">
+                                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}},"className":"is-style-taina-group-align-items_stretch","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                                        <div class="wp-block-group is-style-taina-group-align-items_stretch" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+                                            <!-- wp:cover {"url":"http://localhost/wp-content/uploads/2022/06/g312.png","id":185610,"dimRatio":0,"focalPoint":{"x":"0.26","y":"0.50"},"minHeight":100,"minHeightUnit":"%","contentPosition":"top left","isDark":false,"style":{"color":{"duotone":["#262626","#A0303A"]},"spacing":{"padding":{"top":"0px","right":"0%","bottom":"0px","left":"2.4vw"}}}} -->
+                                            <div class="wp-block-cover is-light has-custom-content-position is-position-top-left" style="padding-top:0px;padding-right:0%;padding-bottom:0px;padding-left:2.4vw;min-height:100%"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
+                                                <img class="wp-block-cover__image-background wp-image-185610" alt="" src="http://localhost/wp-content/uploads/2022/06/g312.png" style="object-position:26% 50%" data-object-fit="cover" data-object-position="26% 50%"/>
+                                                <div class="wp-block-cover__inner-container">
+                                                </div>
+                                            </div>
+                                            <!-- /wp:cover -->
+                                            <!-- wp:image {"id":185610,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+                                                <figure class="wp-block-image size-large is-style-default"><img src="http://localhost/wp-content/uploads/2022/06/g312-1280x1280.png" alt="" class="wp-image-185610"/></figure>
+                                            <!-- /wp:image -->
+                                            </div>
+                                            <!-- /wp:group -->
+                                        </div>
+                                        <!-- /wp:column -->    
+                                        <!-- wp:column {"verticalAlignment":"center","width":"","style":{"spacing":{"padding":{"top":"0px","right":"0vw","bottom":"0px","left":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
+                                        <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0px;padding-right:0vw;padding-bottom:0px;padding-left:0px">
+                                        <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
+                                        <div class="wp-block-group has-background-alt-background-color has-background">
+                                            <!-- wp:heading {"textColor":"primary","className":"is-style-ctrls-titulo"} -->
+                                                <h2 class="is-style-ctrls-titulo has-primary-color has-text-color">Viagens pelo mundo</h2>
+                                            <!-- /wp:heading -->
+                                            
+                                            <!-- wp:paragraph {"textColor":"foreground"} -->
+                                                <p class="has-foreground-color has-text-color">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, seddiam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
+                                            <!-- /wp:paragraph -->
+                                        </div>
+                                        <!-- /wp:group -->
+                                    </div>
+                                    <!-- /wp:column -->
+                                    <!-- wp:column {"width":"8.3vw"} -->
+                                    <div class="wp-block-column" style="flex-basis:8.3vw">
                                     </div>
                                     <!-- /wp:column -->
                                 </div>
