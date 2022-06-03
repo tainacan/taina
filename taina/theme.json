@@ -232,6 +232,9 @@
 				},
 				"spacing": {
 					"blockGap": "1.125em"
+				},
+				"border": {
+					"width": "0px"
 				}
 			},
 			"core/site-logo": {
@@ -314,6 +317,7 @@
 					"width": "0px"
 				},
 				"color": {
+					"text": "var:preset|color|foreground-alt",					
 					"background": "var:preset|color|background-alt"
 				}
 			},
@@ -638,6 +642,27 @@
 						"bottom": "0px",
 						"left": "0px",
 						"right": "0px"
+					}
+				}
+			},
+			"core/social-links": {
+				"spacing": {
+					"blockGap": "0px",
+					"padding": {
+						"bottom": "0px",
+						"top": "0px",
+						"left": "0px",
+						"right": "0px"
+					}
+				}
+			},
+			"core/social-link": {
+				"border": {
+					"radius": {
+						"topLeft": "0px",
+						"bottomLeft": "0px",
+						"bottomRight": "0px",
+						"topRight": "0px"
 					}
 				}
 			}

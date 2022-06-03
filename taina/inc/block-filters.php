@@ -72,6 +72,39 @@ add_filter( 'render_block_core/post-comments-count', 'taina_append_icon_to_post_
 
 
 /**
+ * Add 'MENU' text to the movile version of all core/navigation blocks.
+ *
+ * @param string $block_content The block content about to be changed.
+ * @param array  $block         The full block, including name and attributes.
+ * @return string Modified block content.
+ */
+function taina_append_text_navigation( $block_content, $block ) {
+    
+    if ( empty($block_content) )
+        return $block_content;
+
+    /* Adds class to inform the state of overlayMenu attr */
+    if ( isset($block['attrs']) && isset($block['attrs']['overlayMenu']) ) {
+        $pos = strpos($block_content, 'wp-block-navigation');
+        if ($pos !== false) {
+            $block_content = substr_replace($block_content, 'wp-block-navigation wp-block-navigation--overlay-menu-' . $block['attrs']['overlayMenu'] . ' ', $pos, strlen('wp-block-navigation'));
+        }
+    }
+
+    /* Searchs for the mobile container div */
+    $matches = [];
+    preg_match('@<div class="wp-block-navigation__responsive-container-content".*?>([^<]*)</div>@si', $block_content, $matches);
+
+    if ( count($matches) <= 0 )
+        return $block_content;
+
+    $content = str_replace($matches[0], '<h1 class="taina-navigation-mobile-label">' . __('Menu', 'taina') . '</h1>' . $matches[0], $block_content);
+    return $content;
+}
+add_filter( 'render_block_core/navigation', 'taina_append_text_navigation', 10, 2 );
+
+
+/**
  * Filter tainacan/faceted-search block metadata to set custom defaults
  *
  * @param array  $metadata         The block metadata from block.json
@@ -151,28 +184,3 @@ function taina_filter_tainacan_faceted_search_block_defaults( $metadata ) {
     return $metadata;
 };
 add_filter( 'block_type_metadata', 'taina_filter_tainacan_faceted_search_block_defaults' );
-
-
-/**
- * Add 'MENU' text to the movile version of all core/navigation blocks.
- *
- * @param string $block_content The block content about to be changed.
- * @param array  $block         The full block, including name and attributes.
- * @return string Modified block content.
- */
-function taina_append_text_navigation( $block_content, $block ) {
-    
-    if ( empty($block_content) )
-        return $block_content;
-
-    /* Searchs for the mobile container div */
-    $matches = [];
-    preg_match('@<div class="wp-block-navigation__responsive-container-content".*?>([^<]*)</div>@si', $block_content, $matches);
-
-    if ( count($matches) <= 0 )
-        return $block_content;
-
-    $content = str_replace($matches[0], '<h1 class="taina-navigation-mobile-label">' . __('Menu', 'taina') . '</h1>' . $matches[0], $block_content);
-    return $content;
-}
-add_filter( 'render_block_core/navigation', 'taina_append_text_navigation', 10, 2 );

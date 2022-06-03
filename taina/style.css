@@ -8,7 +8,7 @@ Description: A block theme for WordPress & Tainacan.
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.7
-Version: 0.0.6
+Version: 0.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -29,6 +29,7 @@ figure figcaption {
   padding: 10px 36px;
   max-width: 750px;
   background-color: var(--wp--preset--color--background-alt);
+  color: var(--wp--preset--color--foreground-alt);
 }
 
 figure:not(.alignleft):not(.alignright) figcaption {
@@ -163,14 +164,24 @@ h4.is-style-taina-detached::before {
   color: var(--wp--preset--color--background);
 }
 
+.wp-block-navigation.wp-block-navigation--overlay-menu-always {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
+}
+
 @media (min-width: 600px) {
-  .wp-block-navigation {
+  .wp-block-navigation:not(.wp-block-navigation--overlay-menu-always) {
     padding: 0.375em var(--wp--custom--spacing--one-column) 0.375em 0.625em;
+  }
+  .wp-block-navigation:not(.wp-block-navigation--overlay-menu-always) .taina-navigation-mobile-label {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
 @media (max-width: 599px) {
-  .wp-block-navigation {
+  .wp-block-navigation:not(.wp-block-navigation--overlay-menu-never) {
     background-color: var(--wp--preset--color--primary);
     color: var(--wp--preset--color--background);
   }
@@ -182,6 +193,10 @@ h4.is-style-taina-detached::before {
   .wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
     padding-top: 0.875em;
   }
+}
+
+.wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation.wp-block-navigation--overlay-menu-always {
+  margin-right: 0.75em;
 }
 
 @media (max-width: 599px) {
@@ -433,6 +448,7 @@ ul.wp-block-post-template {
 
 .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
   background-color: inherit;
+  color: inherit;
   border-width: 0px;
   padding: 0em 1em !important;
   font-weight: inherit;
@@ -731,6 +747,11 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
   margin-left: auto !important;
   margin-right: auto !important;
   width: inherit;
+}
+
+/* Sections right above footer may have a colored background */
+.wp-block-template-part + footer.wp-block-template-part {
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
