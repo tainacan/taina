@@ -88,7 +88,9 @@ h4.is-style-taina-detached::before {
 
 /* Since block gap attribute is for both axis, we add a bit more on the right side */
 .wp-block-navigation {
+  padding: 1.125em 1.25em;
   /* Submenus have small differences */
+  /* Mobile Menu */
 }
 
 .wp-block-navigation .wp-block-navigation-item {
@@ -125,10 +127,67 @@ h4.is-style-taina-detached::before {
   border-right: 1px solid var(--wp--preset--color--primary);
 }
 
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+  bottom: unset;
+  left: unset;
+  padding: 0;
+}
+
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+  min-width: calc(.75em + .75em + 1.55em);
+  min-height: calc(.75em + .75em + 1.55em);
+  padding: 1.25em;
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+  padding: 0;
+  background-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+  padding: 1.125em;
+  margin-top: calc(.75em + .75em + 1.55em + 0.75em);
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+  background-color: var(--wp--preset--color--background-alt);
+}
+
+.wp-block-navigation .taina-navigation-mobile-label {
+  z-index: 1;
+  position: absolute;
+  margin: 0.25em 0.75em;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--background);
+}
+
+@media (min-width: 600px) {
+  .wp-block-navigation {
+    padding: 0.375em var(--wp--custom--spacing--one-column) 0.375em 0.625em;
+  }
+}
+
+@media (max-width: 599px) {
+  .wp-block-navigation {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+  }
+}
+
 /* This is a bit hacky, but while we 
  * can't have padding control to navigation block, we need it...*/
-.wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
-  padding-top: 0.875em;
+@media (min-width: 600px) {
+  .wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
+    padding-top: 0.875em;
+  }
+}
+
+@media (max-width: 599px) {
+  .wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
+    margin-right: 0.75em;
+  }
 }
 
 /* Pagination is heavily tweaked */
@@ -377,6 +436,7 @@ ul.wp-block-post-template {
   border-width: 0px;
   margin-left: 0px;
   line-height: inherit;
+  padding: .375em .75em;
 }
 
 .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button svg {
@@ -403,7 +463,7 @@ ul.wp-block-post-template {
 }
 
 .wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper:not(:hover):not(:focus):not(:focus-within) {
-  max-width: calc(.625em + .625em + 1.5em);
+  max-width: calc(.75em + .75em + 1.55em);
   min-width: 0px !important;
 }
 

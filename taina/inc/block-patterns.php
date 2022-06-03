@@ -438,7 +438,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                     
                                     <!-- wp:group {"style":{"spacing":{"padding":{"top":"10px","right":"4.167%","bottom":"9px","left":"4.167%"},"margin":{"top":"0px","bottom":"0px"}}}} -->
                                     <div class="wp-block-group" style="margin-top: 0px;margin-bottom: 0px;padding-top: 10px;padding-right: 4.167%;padding-bottom: 9px;padding-left: 4.167%;">
-                                        <!-- wp:navigation {"ref":172974,"layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"},"style":{"typography":{"textTransform":"uppercase","lineHeight":"1.6"},"spacing":{"blockGap":"1.125em"}}} /-->
+                                        <!-- wp:navigation {"ref":172974,"overlayBackgroundColor":"background-alt","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"},"style":{"typography":{"textTransform":"uppercase","lineHeight":"1.6"},"spacing":{"blockGap":"1.125em"}}} /-->
                                     </div>
                                     <!-- /wp:group -->
                                 </div>
@@ -466,7 +466,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
                                 
                                     <!-- wp:group {"className":"is-style-taina-group-align-items_stretch","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
                                     <div class="wp-block-group is-style-taina-group-align-items_stretch">
-                                        <!-- wp:navigation {"ref":172974,"layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"},"style":{"typography":{"textTransform":"uppercase","lineHeight":"1.6"},"spacing":{"padding":{"top":"10px","right":"4.167%","bottom":"9px","left":"4.167%"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"1.125em"}}} /-->
+                                        <!-- wp:navigation {"ref":172974,"overlayBackgroundColor":"background-alt","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"},"style":{"typography":{"textTransform":"uppercase","lineHeight":"1.6"},"spacing":{"padding":{"top":"10px","right":"4.167%","bottom":"9px","left":"4.167%"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"1.125em"}}} /-->
                                     
                                         <!-- wp:search {"placeholder": "'. esc_html('Search for...' , 'taina') . '", "label":"'. esc_html('Search' , 'taina') . '","showLabel":false,"buttonText":"'. esc_html('Search' , 'taina') . '","buttonUseIcon":true,"borderColor":"background","backgroundColor":"background-alt","textColor":"primary","className":"is-style-taina-collapsable-search","spacing":{"margin":{"top":"10px"}}} /-->
                                     </div>

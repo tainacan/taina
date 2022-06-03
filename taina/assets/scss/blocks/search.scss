@@ -16,6 +16,7 @@
             border-width: 0px;
             margin-left: 0px;
             line-height: inherit;
+            padding: .375em .75em;
 
             svg {
                 height: 100%;
@@ -41,7 +42,7 @@
             }
         }
         .wp-block-search__inside-wrapper:not(:hover):not(:focus):not(:focus-within) {
-            max-width: calc(.625em + .625em + 1.5em); // Button side padding + icon size
+            max-width: calc(.75em + .75em + 1.55em); // Button side padding + icon size
             min-width: 0px !important;
         }
     }
