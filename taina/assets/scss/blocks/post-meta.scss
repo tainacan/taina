@@ -24,12 +24,17 @@
         fill: var(--wp--preset--color--primary);
     }
     &.post-meta-icon--comments {
-        margin-bottom: -0.5em !important;
-        margin-right: -2.6em !important;
-        z-index: 1;
-    }
-    &.post-meta-icon--comments svg {
-        fill: var(--wp--preset--color--background);
+        background-color: var(--wp--preset--color--primary);
+        padding: 10px 12px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        svg {
+            fill: var(--wp--preset--color--background);
+        }
     }
 } 
 
@@ -39,5 +44,8 @@
     padding: 10px  1.25em 10px 0.125em;
 }
 .wp-block-post-comments-count {
+    color: var(--wp--preset--color--primary);
     padding: 10px 1.25em;
+    position: relative;
+    z-index: 2;
 }

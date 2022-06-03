@@ -46,9 +46,26 @@ add_filter( 'render_block_core/post-author-name', 'taina_append_icon_to_post_aut
  * @return string Modified block content.
  */
 function taina_append_icon_to_post_comments_count( $block_content, $block ) {
-    $content  = '<div class="post-meta-icon post-meta-icon--comments">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-            </div>' . $block_content;
+    
+    if ( empty($block_content) )
+        return $block_content;
+
+    /* Searchs for the wrapper */
+    $matches = [];
+    preg_match('@<div class="[^"]*?p-block-post-comments-count[^"]*?">(.*?)<\/div>@si', $block_content, $matches);
+    if ( count($matches) <= 1 )
+        return $block_content;
+
+    // If the content is 0, no need to show this.
+    if ( $matches[1] === '0' )
+        return '';
+
+    $content =  '<div style="position: relative;">'
+                    . $block_content .
+                    '<div class="post-meta-icon post-meta-icon--comments">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+                    </div>
+                </div>';
     return $content;
 }
 add_filter( 'render_block_core/post-comments-count', 'taina_append_icon_to_post_comments_count', 10, 2 );
@@ -148,6 +165,7 @@ function taina_append_text_navigation( $block_content, $block ) {
     if ( empty($block_content) )
         return $block_content;
 
+    /* Searchs for the mobile container div */
     $matches = [];
     preg_match('@<div class="wp-block-navigation__responsive-container-content".*?>([^<]*)</div>@si', $block_content, $matches);
 

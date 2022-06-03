@@ -360,8 +360,7 @@
 					"fontSize": "var:preset|font-size|tiny"
 				},
 				"color": {
-					"text": "var:preset|color|background",
-					"background": "var:preset|color|primary"
+					"text": "var:preset|color|primary"
 				},
 				"spacing": {
 					"margin": {

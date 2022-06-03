@@ -204,6 +204,7 @@ h4.is-style-taina-detached::before {
   justify-content: center;
   align-items: center;
   margin: 1px;
+  text-decoration: none;
 }
 
 .wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers:not(.dots),
@@ -238,6 +239,7 @@ h4.is-style-taina-detached::before {
   margin: 1px;
   padding: 0.5em 0.875em;
   transition: color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
 }
 
 .wp-block-query-pagination-next:hover,
@@ -277,9 +279,13 @@ h4.is-style-taina-detached::before {
 }
 
 .post-meta-icon.post-meta-icon--comments {
-  margin-bottom: -0.5em !important;
-  margin-right: -2.6em !important;
-  z-index: 1;
+  background-color: var(--wp--preset--color--primary);
+  padding: 10px 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .post-meta-icon.post-meta-icon--comments svg {
@@ -293,7 +299,10 @@ h4.is-style-taina-detached::before {
 }
 
 .wp-block-post-comments-count {
+  color: var(--wp--preset--color--primary);
   padding: 10px 1.25em;
+  position: relative;
+  z-index: 2;
 }
 
 .wp-block-post-comments-form {
@@ -329,7 +338,7 @@ ul.wp-block-post-template {
 }
 
 .wp-block-post-template.is-style-taina-card > li:hover {
-  box-shadow: 0px -2px 0px 4px var(--wp--preset--color--primary);
+  box-shadow: 0px 0px 0px 4px var(--wp--preset--color--primary);
 }
 
 .wp-block-post-template.is-style-taina-card > li .wp-block-post-title a {
