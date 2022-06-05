@@ -630,6 +630,20 @@ a:hover {
   text-decoration-thickness: 3px;
 }
 
+a:focus-visible {
+  outline-offset: 3px;
+  outline-style: solid;
+  outline-width: 3px;
+}
+
+:not(.has-primary-background-color) a:focus-visible {
+  outline-color: var(--wp--preset--color--primary);
+}
+
+.has-primary-background-color :not(.has-background-color) a:focus-visible {
+  outline-color: currentColor;
+}
+
 /* Header and Widget-like links have a cleaner style
  * before hover, as we already expect them to be clickable.
  */
