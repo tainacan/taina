@@ -630,17 +630,23 @@ a:hover {
   text-decoration-thickness: 3px;
 }
 
-a:focus-visible {
+.wp-site-blocks a:focus-visible,
+.wp-site-blocks button:focus-visible,
+.wp-site-blocks input:focus-visible {
   outline-offset: 3px;
   outline-style: solid;
   outline-width: 3px;
 }
 
-:not(.has-primary-background-color) a:focus-visible {
+.wp-site-blocks :not(.has-primary-background-color) a:focus-visible,
+.wp-site-blocks :not(.has-primary-background-color) button:focus-visible,
+.wp-site-blocks :not(.has-primary-background-color) input:focus-visible {
   outline-color: var(--wp--preset--color--primary);
 }
 
-.has-primary-background-color :not(.has-background-color) a:focus-visible {
+.wp-site-blocks .has-primary-background-color :not(.has-background-color) a:focus-visible,
+.wp-site-blocks .has-primary-background-color :not(.has-background-color) button:focus-visible,
+.wp-site-blocks .has-primary-background-color :not(.has-background-color) input:focus-visible {
   outline-color: currentColor;
 }
 

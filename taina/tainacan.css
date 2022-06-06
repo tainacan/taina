@@ -10,33 +10,49 @@
 }
 
 /* Tainacan listing blocks have smaller font sizes by default and alternative background */
-.wp-block-tainacan-dynamic-items-list .item-list-item,
-.wp-block-tainacan-collections-list .collection-list-item,
-.wp-block-tainacan-terms-list .termm-list-item,
-.wp-block-tainacan-carousel-items-list .item-list-item,
-.wp-block-tainacan-carousel-collections-list .collection-list-item,
-.wp-block-tainacan-carousel-terms-list .term-list-item {
+.wp-block-tainacan-dynamic-items-list li.item-list-item,
+.wp-block-tainacan-collections-list li.collection-list-item,
+.wp-block-tainacan-terms-list li.term-list-item,
+.wp-block-tainacan-carousel-items-list li.item-list-item,
+.wp-block-tainacan-carousel-collections-list li.collection-list-item,
+.wp-block-tainacan-carousel-terms-list li.term-list-item {
   background-color: var(--wp--preset--color--background-alt);
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
-.wp-block-tainacan-dynamic-items-list .item-list-item a,
-.wp-block-tainacan-collections-list .collection-list-item a,
-.wp-block-tainacan-terms-list .termm-list-item a,
-.wp-block-tainacan-carousel-items-list .item-list-item a,
-.wp-block-tainacan-carousel-collections-list .collection-list-item a,
-.wp-block-tainacan-carousel-terms-list .term-list-item a {
-  text-decoration: none;
+.wp-block-tainacan-dynamic-items-list li.item-list-item a,
+.wp-block-tainacan-collections-list li.collection-list-item a,
+.wp-block-tainacan-terms-list li.term-list-item a,
+.wp-block-tainacan-carousel-items-list li.item-list-item a,
+.wp-block-tainacan-carousel-collections-list li.collection-list-item a,
+.wp-block-tainacan-carousel-terms-list li.term-list-item a {
+  text-decoration: none !important;
+  margin-bottom: 0px !important;
 }
 
-.wp-block-tainacan-dynamic-items-list .item-list-item a span,
-.wp-block-tainacan-collections-list .collection-list-item a span,
-.wp-block-tainacan-terms-list .termm-list-item a span,
-.wp-block-tainacan-carousel-items-list .item-list-item a span,
-.wp-block-tainacan-carousel-collections-list .collection-list-item a span,
-.wp-block-tainacan-carousel-terms-list .term-list-item a span {
+.wp-block-tainacan-dynamic-items-list li.item-list-item a img,
+.wp-block-tainacan-collections-list li.collection-list-item a img,
+.wp-block-tainacan-terms-list li.term-list-item a img,
+.wp-block-tainacan-carousel-items-list li.item-list-item a img,
+.wp-block-tainacan-carousel-collections-list li.collection-list-item a img,
+.wp-block-tainacan-carousel-terms-list li.term-list-item a img {
+  margin-bottom: 0px !important;
+  display: block;
+}
+
+.wp-block-tainacan-dynamic-items-list li.item-list-item a span:last-child,
+.wp-block-tainacan-collections-list li.collection-list-item a span:last-child,
+.wp-block-tainacan-terms-list li.term-list-item a span:last-child,
+.wp-block-tainacan-carousel-items-list li.item-list-item a span:last-child,
+.wp-block-tainacan-carousel-collections-list li.collection-list-item a span:last-child,
+.wp-block-tainacan-carousel-terms-list li.term-list-item a span:last-child {
   font-weight: normal !important;
   font-size: var(--wp--preset--font-size--tiny);
-  padding: 3px 7px;
+  padding: 6px 12px;
+  margin: 0px !important;
+  display: block;
+  width: 100%;
 }
 
 /* Collection headers have an alternative styles as well */
