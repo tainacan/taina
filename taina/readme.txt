@@ -2,7 +2,7 @@
 Contributors: daltonmartins, leogermani, wetah, ravipassos, omarceloavila, vnmedeiros
 Requires at least: WordPress 5.9
 Tested up to: WordPress 5.9
-Version: 0.0.8
+Version: 0.1.0
 Requires PHP: 5.6
 Stable tag: trunk
 License: GNU General Public License v3
@@ -31,3 +31,5 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+This theme uses images from the Arquivo Nacional do Brasil, all of which were obtained from [this repository](https://www.flickr.com/photos/arquivonacionalbrasil/albums/72157684516505773/with/27692737618/), where they are distributed under a (Public Domain License CC0)[https://creativecommons.org/publicdomain/mark/1.0/].
