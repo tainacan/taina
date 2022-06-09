@@ -31,6 +31,8 @@ if ( function_exists( 'register_block_pattern' ) ) {
         'collection-header-thumb-cover',
         'collection-header-cover',
         'collection-header-thumbnail',
+        'term-header-thumb-text',
+        'term-header-text',
         'post-author-box',
         'post-categories-list',
         'post-tags-list',

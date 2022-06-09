@@ -8,7 +8,7 @@ Description: A block theme for WordPress & Tainacan.
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.7
-Version: 0.1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -21,6 +21,26 @@ Tainá is distributed under the terms of the GNU GPL.
 /* As we customized the list style, we need to this somewhere */
 ol.wp-block-comment-template > li:before {
   content: '' !important;
+}
+
+/* Title as Background Style */
+.wp-block-cover.is-style-taina-cover-title-as-background .wp-block-cover__background::after {
+  content: attr(data-title-content);
+  font-family: var(--wp--preset--font-family--headings);
+  font-size: 10em;
+  line-height: 1.0;
+  font-weight: 900;
+  white-space: nowrap;
+  color: currentColor;
+  text-shadow: -1px -1px 0px var(--wp--preset--color--foreground-alt), 1px -1px 0px var(--wp--preset--color--foreground-alt), -1px 1px 0px var(--wp--preset--color--foreground-alt), 1px 1px 0px var(--wp--preset--color--foreground-alt);
+}
+
+/* Default background color, if not set, shouldn't be black */
+.wp-block-cover-image.has-background-dim:not([class*="-background-color"]):not(.has-background-gradient),
+.wp-block-cover-image .has-background-dim:not([class*="-background-color"]):not(.has-background-gradient),
+.wp-block-cover.has-background-dim:not([class*="-background-color"]):not(.has-background-gradient),
+.wp-block-cover .has-background-dim:not([class*="-background-color"]):not(.has-background-gradient) {
+  background-color: var(--wp--preset--color--background);
 }
 
 /* Image, gallery and cover blocks figcaptions have an alternative background */

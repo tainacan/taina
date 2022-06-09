@@ -65,6 +65,15 @@ if ( function_exists( 'register_block_style' ) ) {
 				'label' => esc_html__( 'Stretch vertically', 'taina' ),
 			)
 		);
+
+		// Cover block with inner title as background
+		register_block_style(
+			'core/cover',
+			array(
+				'name'  => 'taina-cover-title-as-background',
+				'label' => esc_html__( 'Title as Background', 'taina' ),
+			)
+		);
 	}
 	add_action( 'init', 'taina_register_block_styles' );
 }

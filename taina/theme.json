@@ -643,6 +643,9 @@
 						"left": "0px",
 						"right": "0px"
 					}
+				},
+				"color": {
+					"text": "var:preset|color|foreground"
 				}
 			},
 			"core/social-links": {

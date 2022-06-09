@@ -78,6 +78,49 @@ add_filter( 'render_block_core/post-comments-count', 'taina_append_icon_to_post_
 
 
 /**
+ * Add text layer as background to core/cover block, if the style is applied.
+ *
+ * @param string $block_content The block content about to be tweaked.
+ * @param array  $block         The full block, including name and attributes.
+ * @return string Modified block content.
+ */
+if ( !function_exists('taina_apply_text_as_background_style_to_cover') ) {
+    function taina_apply_text_as_background_style_to_cover( $block_content, $block ) {
+        
+        if ( empty($block_content) )
+            return $block_content;
+
+        /* We only want to do this when the style is applied */
+        if ( !isset($block['attrs']) || !isset($block['attrs']['className']) )
+            return $block_content;        
+        
+        if ( strpos($block['attrs']['className'], 'is-style-taina-cover-title-as-background') === false )
+            return $block_content;
+
+        /* Searchs for the first title tag div */
+        $matches = [];
+        preg_match('@<h\d.*?>([^<]*)</h\d>@im', $block_content, $matches);
+ 
+        if ( count($matches) <= 1 )
+            return $block_content;
+
+        $title_content = esc_html($matches[1]);
+
+        /* Get the block background color to set as text color */
+        $text_layer_color = 'var(--wp--preset--color--background)';
+        if ( isset( $block['attrs']['customOverlayColor'] ) )
+            $text_layer_color = $block['attrs']['customOverlayColor'];
+        else if ( isset( $block['attrs']['overlayColor'] ))
+            $text_layer_color = 'var(--wp--preset--color--' . $block['attrs']['overlayColor'] . ')';
+        
+        $content = str_replace('><span', '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '" ', $block_content);
+
+        return $content;
+    }
+}
+add_filter( 'render_block_core/cover', 'taina_apply_text_as_background_style_to_cover', 10, 2 );
+
+/**
  * Add 'MENU' text to the mobile version of all core/navigation blocks.
  *
  * @param string $block_content The block content about to be changed.
