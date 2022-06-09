@@ -99,22 +99,22 @@ if ( !function_exists('taina_apply_text_as_background_style_to_cover') ) {
 
         /* Searchs for the first title tag div */
         $matches = [];
-        preg_match('@<h\d.*?>([^<]*)</h\d>@im', $block_content, $matches);
- 
-        if ( count($matches) <= 1 )
+        preg_match('@<h\d.*?>*</h\d>@im', $block_content, $matches);
+        
+        if ( count($matches) <= 0 )
             return $block_content;
 
-        $title_content = esc_html($matches[1]);
-
+        $title_content = sanitize_text_field($matches[0]);
+        
         /* Get the block background color to set as text color */
         $text_layer_color = 'var(--wp--preset--color--background)';
         if ( isset( $block['attrs']['customOverlayColor'] ) )
             $text_layer_color = $block['attrs']['customOverlayColor'];
         else if ( isset( $block['attrs']['overlayColor'] ))
             $text_layer_color = 'var(--wp--preset--color--' . $block['attrs']['overlayColor'] . ')';
-        
-        $content = str_replace('><span', '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '" ', $block_content);
 
+        $content = str_replace('><span', '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '" ', $block_content);
+        
         return $content;
     }
 }

@@ -10,7 +10,7 @@ return array(
     'inserter' => true,
     'content'       => '<!-- wp:query {"queryId":4,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"list","columns":3},"layout":{"inherit":true}} -->
                         <div class="wp-block-query">
-                          <!-- wp:post-template -->
+                          <!-- wp:post-template {"className":"is-style-taina-cards"} -->
                           <!-- wp:post-featured-image {"isLink":true} /-->
                         
                           <!-- wp:group {"style":{"spacing":{"padding":{"top":"42px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"28px"},"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}},"backgroundColor":"background-alt"} -->

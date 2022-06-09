@@ -467,7 +467,6 @@ ul.wp-block-post-template {
 }
 
 .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__input {
-  background-color: inherit;
   color: inherit;
   border-width: 0px;
   padding: 0em 1em !important;
@@ -501,6 +500,10 @@ ul.wp-block-post-template {
   right: 0;
   overflow: hidden;
   transition: min-width 0.2s ease, max-width 0.2s ease;
+}
+
+.wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper .wp-block-search__input {
+  background-color: inherit;
 }
 
 .wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper .wp-block-search__button {
