@@ -36,6 +36,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
         'post-author-box',
         'post-categories-list',
         'post-tags-list',
+        'posts-list',
         'widgets-sidebar',
         'widgets-footer',
         'header',
