@@ -7,7 +7,22 @@
             "postTypes": [
                 "tainacan-collection"
             ]
-        }
+        },
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
+			"name": "no-title",
+			"title": "No title header",
+			"postTypes": [
+				"page"
+			]
+		}
 	],
 	"settings": {
 		"appearanceTools": true,
