@@ -1,0 +1,5 @@
+/* We couldn't set this globally as it does not have a "has-background-color" 
+ * when te color is set from theme.json */
+.wp-block-site-title a:focus-visible {
+    outline-color: var(--wp--preset--color--background) !important;
+}

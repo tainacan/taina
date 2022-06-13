@@ -371,24 +371,28 @@ ul.wp-block-post-template {
 }
 
 /* Tainá 'Clickable cards' template style */
-.wp-block-post-template.is-style-taina-card > li {
+.wp-block-post-template.is-style-taina-cards > li {
   position: relative;
   box-shadow: 0px 0px 0px 0px var(--wp--preset--color--primary);
   transition: box-shadow 0.2s ease;
 }
 
-.wp-block-post-template.is-style-taina-card > li:hover {
+.wp-block-post-template.is-style-taina-cards > li:hover {
   box-shadow: 0px 0px 0px 4px var(--wp--preset--color--primary);
 }
 
-.wp-block-post-template.is-style-taina-card > li .wp-block-post-title a {
+.wp-block-post-template.is-style-taina-cards > li > .wp-block-group:not(.has-border-color):last-child {
+  border-bottom: 4px solid var(--wp--preset--color--primary);
+}
+
+.wp-block-post-template.is-style-taina-cards > li .wp-block-post-title a {
   position: static;
   cursor: pointer;
   text-decoration: none !important;
   color: inherit !important;
 }
 
-.wp-block-post-template.is-style-taina-card > li .wp-block-post-title a::before {
+.wp-block-post-template.is-style-taina-cards > li .wp-block-post-title a::before {
   cursor: pointer;
   content: '';
   display: block;
@@ -580,6 +584,12 @@ ul.wp-block-post-template {
     top: 100%;
     bottom: calc(var( --wp--style--block-gap ) * -1);
   }
+}
+
+/* We couldn't set this globally as it does not have a "has-background-color" 
+ * when te color is set from theme.json */
+.wp-block-site-title a:focus-visible {
+  outline-color: var(--wp--preset--color--background) !important;
 }
 
 /* Core table has custom head and lighter borders...*/

@@ -13,12 +13,10 @@ return array(
                           <!-- wp:post-template {"className":"is-style-taina-cards"} -->
                           <!-- wp:post-featured-image {"isLink":true} /-->
                         
-                          <!-- wp:group {"style":{"spacing":{"padding":{"top":"42px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"28px"},"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}},"backgroundColor":"background-alt"} -->
+                          <!-- wp:group {"style":{"spacing":{"padding":{"top":"42px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"28px"}},"backgroundColor":"background-alt"} -->
                           <div
                             class="wp-block-group has-background-alt-background-color has-background"
                             style="
-                              border-bottom-color: var(--wp--preset--color--primary);
-                              border-bottom-width: 4px;
                               padding-top: 42px;
                               padding-right: 0px;
                               padding-bottom: 0px;
@@ -29,22 +27,28 @@ return array(
                         
                             <!-- wp:post-excerpt {"textColor":"foreground"} /-->
                         
-                            <!-- wp:group {"style":{"spacing":{"blockGap":"0px","padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"fontSize":"tiny"} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0px","padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}' . /* Not supported yet on 6.0 ,"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}*/ '},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"fontSize":"tiny"} -->
                             <div
                               class="wp-block-group has-tiny-font-size"
-                              style="
-                                padding-top: 0px;
+                              style="'.
+                                // Not supported yet on 6.0 :(
+                                // Because of this, will add the border in the is-style-taina-card class...
+                                // border-bottom-color: var(--wp--preset--color--primary);
+                                // border-bottom-width: 4px;
+                                'padding-top: 0px;
                                 padding-right: 0px;
                                 padding-bottom: 0px;
                                 padding-left: 0px;
                               "
-                            >
-                              <!-- wp:post-author-name /-->
-                        
+                            >' .
+                              // Not supported yet on 6.0! Will use post author instead <!-- wp:post-author-name /--> //
+
+                              '<!-- wp:post-author {"showAvatar":false,"textColor":"primary"} /-->
                               <!-- wp:post-date /-->
                         
-                              <!-- wp:post-comments-count {"backgroundColor":"primary","textColor":"background"} /-->
-                            </div>
+                              ' . 
+                              // Not supported yet on 6.0! <!-- wp:post-comments-count {"backgroundColor":"primary","textColor":"background"} /--> //
+                            '</div>
                             <!-- /wp:group -->
                           </div>
                           <!-- /wp:group -->

@@ -4,13 +4,17 @@ ul.wp-block-post-template {
 }
 
 /* Tainá 'Clickable cards' template style */
-.wp-block-post-template.is-style-taina-card>li {
+.wp-block-post-template.is-style-taina-cards>li {
     position: relative;
     box-shadow: 0px 0px 0px 0px var(--wp--preset--color--primary);
     transition: box-shadow 0.2s ease;
 
     &:hover {
         box-shadow: 0px 0px 0px 4px var(--wp--preset--color--primary);
+    }
+
+    &>.wp-block-group:not(.has-border-color):last-child {
+        border-bottom: 4px solid var(--wp--preset--color--primary);
     }
 
     .wp-block-post-title a {

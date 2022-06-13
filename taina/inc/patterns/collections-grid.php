@@ -10,7 +10,7 @@ return array(
     'inserter' => true,
     'content'       => '<!-- wp:query {"queryId":4,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"flex","columns":4},"layout":{"inherit":false}} -->
                         <div class="wp-block-query">
-                        <!-- wp:post-template -->
+                        <!-- wp:post-template {"className":"is-style-taina-cards"} -->
                         <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
                         <div class="wp-block-group">
                             <!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"200px","style":{"color":{},"spacing":{"margin":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
@@ -18,18 +18,20 @@ return array(
                         </div>
                         <!-- /wp:group -->
                         
-                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"24px","bottom":"24px","left":"0px","right":"0px"},"margin":{"top":"0px","bottom":"0px"}},"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
+                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"24px","bottom":"24px","left":"0px","right":"0px"},"margin":{"top":"0px","bottom":"0px"}}' . /* Not supported yet on 6.0 ,"border":{"bottom":{"color":"var:preset|color|primary","width":"4px"}}*/ '},"backgroundColor":"background-alt","layout":{"inherit":false}} -->
                         <div
                             class="wp-block-group has-background-alt-background-color has-background"
-                            style="
-                            border-bottom-color: var(--wp--preset--color--primary);
-                            border-bottom-width: 4px;
-                            margin-top: 0px;
-                            margin-bottom: 0px;
-                            padding-top: 24px;
-                            padding-right: 0px;
-                            padding-bottom: 24px;
-                            padding-left: 0px;
+                            style="'.
+                                // Not supported yet on 6.0 :(
+                                // Because of this, will add the border in the is-style-taina-card class...
+                                // border-bottom-color: var(--wp--preset--color--primary);
+                                // border-bottom-width: 4px;
+                                'margin-top: 0px;
+                                margin-bottom: 0px;
+                                padding-top: 24px;
+                                padding-right: 0px;
+                                padding-bottom: 24px;
+                                padding-left: 0px;
                             "
                         >
                             <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}}},"fontSize":"normal"} /-->

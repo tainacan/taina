@@ -5,7 +5,6 @@
 return array(
     'title'         => esc_html__( 'Widgets sidebar', 'taina' ),
     'categories'    => array( 'taina'),
-    'blockTypes' => array( 'core/template-part/aside' ),
     'viewportWidth' => 426,
     'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"1.5em","padding":{"top":"42px","right":"4.167vw","bottom":"42px","left":"4.167vw"}}},"layout":{"type":"flex","orientation":"vertical"},"backgroundColor":"background-alt"} -->
                             <div class="wp-block-group has-background-alt-background-color has-background" style="padding-top: 42px; padding-right: 4.167vw; padding-bottom: 42px; padding-left: 4.167vw;">

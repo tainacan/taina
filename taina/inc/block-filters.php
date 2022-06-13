@@ -41,6 +41,30 @@ if ( !function_exists('taina_append_icon_to_post_author_name') ) {
 }
 add_filter( 'render_block_core/post-author-name', 'taina_append_icon_to_post_author_name', 10, 2 );
 
+/**
+ * Add an svg user icon to some core/post-author blocks.
+ *
+ * @param string $block_content The block content about to be appended.
+ * @param array  $block         The full block, including name and attributes.
+ * @return string Modified block content.
+ */
+if ( !function_exists('taina_append_icon_to_post_author') ) {
+    function taina_append_icon_to_post_author( $block_content, $block ) {
+        if ( empty($block_content) )
+            return $block_content;
+
+        /* We only want to do this when there is no avatar nor bio */
+        if ( !isset($block['attrs']) || (isset($block['attrs']['showBio']) && $block['attrs']['showBio'] == true) || (isset($block['attrs']['showAvatar']) && $block['attrs']['showAvatar'] == true) )
+            return $block_content;
+        
+        $content  = '<div class="post-meta-icon">
+                        <svg aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.344 18.028c0-.545.163-1.036.49-1.473a4.798 4.798 0 0 1 1.283-1.2 10.23 10.23 0 0 1 1.827-.955c.691-.273 1.391-.49 2.1-.654a19.487 19.487 0 0 1 2.101-.41A14.42 14.42 0 0 1 12 13.2c.545 0 1.155.046 1.828.137.69.09 1.39.227 2.1.409.727.163 1.427.381 2.1.654.691.273 1.3.592 1.828.955.545.345.982.745 1.31 1.2.327.455.49.946.49 1.473v3.628H2.344zM12 2.344c.673 0 1.3.127 1.882.382.582.255 1.091.6 1.528 1.036.436.437.781.946 1.036 1.528.255.582.382 1.21.382 1.882 0 .673-.127 1.3-.382 1.882a4.947 4.947 0 0 1-1.036 1.528 4.947 4.947 0 0 1-1.528 1.036A4.643 4.643 0 0 1 12 12c-.673 0-1.3-.127-1.882-.382a4.947 4.947 0 0 1-1.528-1.036 4.947 4.947 0 0 1-1.036-1.528 4.643 4.643 0 0 1-.382-1.882c0-.673.127-1.3.382-1.882.255-.582.6-1.091 1.036-1.528a4.947 4.947 0 0 1 1.528-1.036A4.643 4.643 0 0 1 12 2.344z"/></svg>
+                    </div>' . $block_content;
+        return $content;
+    }
+}
+add_filter( 'render_block_core/post-author', 'taina_append_icon_to_post_author', 10, 2 );
+
 
 /**
  * Add an svg comment icon to all core/post-comments-count blocks.
