@@ -28,6 +28,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
         'banner-text-overlay',
         'banner-boxed-column',
         'banner-boxed-column-alt',
+        'paddingless-card',
         'collection-header-thumb-cover',
         'collection-header-cover',
         'collection-header-thumbnail',
