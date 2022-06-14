@@ -5,7 +5,7 @@
 return array(
     'title'         => esc_html__( 'Paddingless card', 'taina' ),
     'categories'    => array( 'taina', 'buttons'),
-    'viewportWidth' => 980,
+    'viewportWidth' => 690,
     'content'       => '<!-- wp:group {"style":{"spacing":{"blockGap":"1em","padding":{"top":"42px","bottom":"0px","left":"0vw","right":"0vw"}}},"backgroundColor":"background-alt","textColor":"foreground","layout":{"inherit":false}} -->
                         <div class="wp-block-group has-foreground-color has-background-alt-background-color has-text-color has-background" style="padding-top:42px;padding-right:0vw;padding-bottom:0px;padding-left:0vw">
                             <!-- wp:group {"style":{"spacing":{"padding":{"right":"4.167vw","left":"4.167vw","bottom":"1.5em"},"blockGap":"16px"}},"layout":{"inherit":false}} -->
@@ -28,7 +28,8 @@ return array(
                                 </ul>
                                 <!-- /wp:social-links -->
                                 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0px","margin":{"top":"0px","bottom":"0px"}}}} -->
-                                <div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px"><!-- wp:button {"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.65em","bottom":"0.65em","left":"0.65em","right":"0.65em"}}}} -->
+                                <div class="wp-block-buttons" style="margin-top:0px;margin-bottom:0px">
+                                    <!-- wp:button {"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"0.65em","bottom":"0.65em","left":"0.65em","right":"0.65em"}}}} -->
                                     <div class="wp-block-button">
                                         <a class="wp-block-button__link" style="border-radius:0px;padding-top:0.65em;padding-right:0.65em;padding-bottom:0.65em;padding-left:0.65em">' . esc_html__( 'See more...', 'taina' ) . '</a>
                                     </div>

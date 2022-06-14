@@ -6,8 +6,9 @@ return array(
     'title'         => esc_html__( 'Term header (thumbnail and text)', 'taina' ),
     'categories'    => array( 'taina', 'headings'),
     'viewportWidth' => 1400,
-    'content'       => '<!-- wp:cover {"dimRatio":20,"contentPosition":"center center","isDark":false,"align":"full","className":"is-style-taina-cover-title-as-background","style":{"spacing":{"padding":{"top":"86px","right":"0px","bottom":"0px","left":"0px"}}}} -->
-                        <div class="wp-block-cover alignfull is-light is-style-taina-cover-title-as-background" style="padding-top:86px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:13em"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
+    'content'       => '<!-- wp:cover {"dimRatio":20,"minHeight":13,"minHeightUnit":"em","contentPosition":"center center","isDark":false,"align":"full","className":"is-style-taina-cover-title-as-background","style":{"spacing":{"padding":{"top":"86px","right":"0px","bottom":"0px","left":"0px"}}}} -->
+                        <div class="wp-block-cover alignfull is-light is-style-taina-cover-title-as-background" style="padding-top:86px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:13em">
+                            <span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
                             <div class="wp-block-cover__inner-container">
                                 <!-- wp:columns {"style":{"spacing":{"padding":{"top":"42px","bottom":"42px","right":"4.167%","left":"4.167%"},"blockGap":"0px"}}} -->
                                 <div class="wp-block-columns" style="padding-top:42px;padding-right:4.167%;padding-bottom:42px;padding-left:4.167%">
