@@ -1,17 +1,17 @@
 === Tainá ===
-Contributors: daltonmartins, leogermani, wetah, ravipassos, omarceloavila, vnmedeiros
-Requires at least: WordPress 5.9
-Tested up to: WordPress 5.9
-Version: 0.1.4
-Requires PHP: 5.6
+Contributors: tainacan, wetah, vnmedeiros, daltonmartins, leogermani, ravipassos, omarceloavila
+Requires at least: WordPress 6.0
+Tested up to: WordPress 6.0
+Version: 0.1.5
+Requires PHP: 7.3
 Stable tag: trunk
 License: GNU General Public License v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Tags: two-columns, right-sidebar, grid-layout, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, threaded-comments, translation-ready, photography, portfolio 
+Tags: full-site-editing, block-patterns, block-styles, wide-blocks, right-sidebar, custom-colors, editor-style, translation-ready 
 
 == Description ==
 
-An open source, modern [block theme](https://developer.wordpress.org/themes/block-themes/) for your digital expositions that works with [Tainacan](https://tainacan.org/en).
+An open-source, modern full-site-editing [block theme](https://developer.wordpress.org/themes/block-themes/) for your digital expositions that works with [Tainacan](https://tainacan.org/en).
 
 Tainá is made for museums, libraries and galleries for sharing their stories with the World.
 

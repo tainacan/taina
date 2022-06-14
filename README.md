@@ -1,6 +1,6 @@
 # Tainá - A beautiful block theme for WordPress digital archives with support for Tainacan
 
-An open source, modern [**block theme**](https://developer.wordpress.org/themes/block-themes/) for your digital expositions that works with [Tainacan](https://tainacan.org/en).
+An open-source, modern, full-site-editing [**block theme**](https://developer.wordpress.org/themes/block-themes/) for your digital expositions that ~~works~~ will work with [Tainacan](https://tainacan.org/en).
 
 > Tainá is made for museums, libraries and galleries for sharing their stories with the World.
 
@@ -21,7 +21,7 @@ The idea is to deliver it in three phases:
 - [ ] **Version 2.0.0** - A block theme that offers nice Tainacan templates, fully customizable
 - [ ] **Version 3.0.0** - A powerful block theme with some extra options and plugin integrations such as Carousel Banners, Collapsable Search, Sharing, etc. In other words, all the goodies that you can see in the design.
 
-Feel free to contribute with suggestions, pull requests and ideas. We are all new to the block-theme development world here, and we're still trying to learn the best practices. A good way to help is to take a look at our development board: (link missing)
+Feel free to contribute with suggestions, pull requests and ideas. We are all new to the block-theme development world here, and we're still trying to learn the best practices. A good way to help is to take a look at [our development board](https://github.com/orgs/tainacan/projects/2/views/1).
 
 ### How to build it
 
@@ -77,4 +77,4 @@ While the Tainacan plugin [had its name inspired](https://tainacan.org/en/visual
 
 ### How about WooCommerce, bbPress, _etc_ integration... ?
 
-Other plugins integration are a bit out of our scope, but feel free to open pull requests and bring some ideas!
+Other plugins integration is a bit out of our scope, but feel free to open pull requests and bring some ideas!
