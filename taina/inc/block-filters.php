@@ -137,7 +137,11 @@ if ( !function_exists('taina_apply_text_as_background_style_to_cover') ) {
         else if ( isset( $block['attrs']['overlayColor'] ))
             $text_layer_color = 'var(--wp--preset--color--' . $block['attrs']['overlayColor'] . ')';
 
-        $content = str_replace('><span', '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '" ', $block_content);
+        $content = str_replace(
+            '><span',
+            '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . ( strlen($title_content) <= 5 ? ($title_content . '&nbsp;' . $title_content . '&nbsp;') : '') . $title_content . '" ',
+            $block_content
+        );
         
         return $content;
     }

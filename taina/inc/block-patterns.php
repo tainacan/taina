@@ -24,6 +24,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 if ( function_exists( 'register_block_pattern' ) ) {
 
     $block_patterns = array(
+        '404',
         'title-and-description',
         'banner-text-overlay',
         'banner-boxed-column',

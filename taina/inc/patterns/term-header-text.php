@@ -7,8 +7,7 @@ return array(
     'categories'    => array( 'taina', 'headings'),
     'viewportWidth' => 1400,
     'content'       => '<!-- wp:cover {"dimRatio":20,"minHeight":13,"minHeightUnit":"em","contentPosition":"center center","isDark":false,"align":"full","className":"is-style-taina-cover-title-as-background","style":{"spacing":{"padding":{"top":"120px","right":"0px","bottom":"0px","left":"0px"}}}} -->
-                        <div class="wp-block-cover alignfull is-light is-style-taina-cover-title-as-background" style="padding-top:120px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:13em">
-                            <span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
+                        <div class="wp-block-cover alignfull is-light is-style-taina-cover-title-as-background" style="padding-top:120px;padding-right:0px;padding-bottom:0px;padding-left:0px;min-height:13em"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span>
                             <div class="wp-block-cover__inner-container">
                                 <!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"layout":{"inherit":true}} -->
                                 <div class="wp-block-group" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">

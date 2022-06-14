@@ -7,8 +7,7 @@ return array(
     'categories'    => array( 'taina', 'headings'),
     'viewportWidth' => 1400,
     'content'       => '<!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/assets/images/cerimonia_indigena.jpg","dimRatio":0,"focalPoint":{"x":"0.66","y":"0.38"},"minHeight":464,"minHeightUnit":"px","isDark":true,"align":"full","style":{"color":{"duotone":["#262626","#A0303A"]}}} -->
-                            <div class="wp-block-cover alignfull is-dark" style="min-height:464px">
-                                <span aria-hidden="true" class="wp-block-cover__background has-background-dim has-background-dim-0"></span>
+                            <div class="wp-block-cover alignfull is-dark" style="min-height:464px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim has-background-dim-0"></span>
                                 <img class="wp-block-cover__image-background" alt="" src="' . esc_url( get_template_directory_uri() ) . '/assets/images/cerimonia_indigena.jpg" style="object-position:66% 38%" data-object-fit="cover" data-object-position="66% 38%"/>
                                 <div class="wp-block-cover__inner-container">
                                     <!-- wp:group {"layout":{"inherit":true}} -->
