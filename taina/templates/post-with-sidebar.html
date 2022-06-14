@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"header","theme":"taina","tagName":"header"} /-->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":"0px","margin":{"top":"3.13rem","bottom":"0px"}}}} -->
+<div class="wp-block-columns" style="margin-top: 3.13rem; margin-bottom: 0px">
+  <!-- wp:column {"width":"","style":{"spacing":{"padding":{"top":"42px","right":"0px","bottom":"0px","left":"0px"}}},"layout":{"inherit":false}} -->
+  <div
+    class="wp-block-column"
+    style="
+      padding-top: 42px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    "
+  >
+    <!-- wp:group {"style":{"spacing":{"blockGap":"24px"}},"layout":{"inherit":true}} -->
+    <div class="wp-block-group">
+      <!-- wp:post-title {"level":1,"align":"wide"} /-->
+
+      <!-- wp:group {"align":"wide","textColor":"primary","className": "post-meta-container","style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","flexWrap":"nowrap"},"fontSize":"tiny"} -->
+      <div
+        class="wp-block-group post-meta-container alignwide has-primary-color has-text-color has-tiny-font-size"
+      >
+        <!-- wp:post-date /-->
+
+        <!-- wp:post-author {"showAvatar":false, "style":{"spacing":{"padding": {"top": "10px", "right": "1.25em", "bottom": "10px", "left": "0.125em"}}}} /-->
+      </div>
+      <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:post-content {"layout":{"inherit":true}} /-->
+
+    <!-- wp:pattern {"slug":"taina/post-author-box"} /-->
+
+    <!-- wp:pattern {"slug":"taina/post-categories-list"} /-->
+
+    <!-- wp:pattern {"slug":"taina/post-tags-list"} /-->
+
+  </div>
+  <!-- /wp:column -->
+
+  <!-- wp:column {"width":"426px","style":{"spacing":{"padding":{"top":"42px","right":"0px","bottom":"0px","left":"0px"}}}} -->
+  <div
+    class="wp-block-column"
+    style="
+      padding-top: 42px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      flex-basis: 426px;
+    "
+  >
+    <!-- wp:template-part {"slug":"sidebar","tagName":"aside","theme":"taina"} /-->
+  </div>
+  <!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:template-part {"slug":"comments-section", "tagName": "section"} /-->
+
+<!-- wp:template-part {"slug":"footer-full","theme":"taina","tagName":"footer"} /-->
