@@ -28,7 +28,7 @@ ol.wp-block-comment-template > li:before {
   content: attr(data-title-content);
   font-family: var(--wp--preset--font-family--headings);
   font-size: 10em;
-  line-height: 1.0;
+  line-height: 1.15;
   font-weight: 900;
   white-space: nowrap;
   overflow: hidden;
