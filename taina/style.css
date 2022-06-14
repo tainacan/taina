@@ -8,7 +8,7 @@ Description: A block theme for WordPress & Tainacan.
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.7
-Version: 0.1.3
+Version: 0.1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -31,6 +31,9 @@ ol.wp-block-comment-template > li:before {
   line-height: 1.0;
   font-weight: 900;
   white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
   color: currentColor;
   text-shadow: -1px -1px 0px var(--wp--preset--color--foreground-alt), 1px -1px 0px var(--wp--preset--color--foreground-alt), -1px 1px 0px var(--wp--preset--color--foreground-alt), 1px 1px 0px var(--wp--preset--color--foreground-alt);
 }

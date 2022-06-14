@@ -25,7 +25,7 @@ return array(
                                         <!-- wp:group {"style":{"spacing":{"blockGap":"1em","padding":{"top":"42px","right":"4.167vw","bottom":"42px","left":"4.167vw"}}},"backgroundColor":"background-alt","textColor":"foreground","layout":{"inherit":false}} -->
                                         <div class="wp-block-group has-foreground-color has-background-alt-background-color has-text-color has-background" style="padding-top:42px;padding-right:4.167vw;padding-bottom:42px;padding-left:4.167vw">
                                             <!-- wp:heading -->
-                                                <h2>Guaycuru</h2>
+                                                <h2>' . esc_html__( 'Guaycuru', 'taina' ) . '</h2>
                                             <!-- /wp:heading -->
                                             <!-- wp:paragraph -->
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

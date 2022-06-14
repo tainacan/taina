@@ -6,6 +6,9 @@
     line-height: 1.0;
     font-weight: 900;
     white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    max-width: 100%;
     color: currentColor;
     text-shadow: -1px -1px 0px var(--wp--preset--color--foreground-alt), 1px -1px 0px var(--wp--preset--color--foreground-alt), -1px 1px 0px var(--wp--preset--color--foreground-alt), 1px 1px 0px var(--wp--preset--color--foreground-alt);
 }
