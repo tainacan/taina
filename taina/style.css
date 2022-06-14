@@ -186,7 +186,7 @@ h4.is-style-taina-detached::before {
 .wp-block-navigation .taina-navigation-mobile-label {
   z-index: 1;
   position: absolute;
-  margin: 0.25em 0.75em;
+  margin: 0.25em calc(1.55em + 0.75em) 0.25em 0.75em;
   font-size: 1.75em;
   text-transform: uppercase;
   color: var(--wp--preset--color--background);
@@ -228,7 +228,7 @@ h4.is-style-taina-detached::before {
 }
 
 @media (max-width: 599px) {
-  .wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation {
+  .wp-block-group.is-style-taina-group-align-items_stretch > .wp-block-navigation:not(:last-child) {
     margin-right: 0.75em;
   }
 }
