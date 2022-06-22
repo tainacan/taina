@@ -139,11 +139,11 @@
 							"src": [ "file:./assets/fonts/Montserrat-VariableFont_wght.ttf" ]
 						},
 						{
-							"fontFamily": "Source Serif Pero",
+							"fontFamily": "\"Montserrat\"",
 							"fontWeight": "300 400 600 800 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./assets/fonts/Montserrat-Italic-VariableFont_wght" ]
+							"src": [ "file:./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf" ]
 						}
 					]
 				},
@@ -160,11 +160,11 @@
 							"src": [ "file:./assets/fonts/Mulish-VariableFont_wght.ttf" ]
 						},
 						{
-							"fontFamily": "Source Serif Pero",
+							"fontFamily": "\"Mulish\"",
 							"fontWeight": "300 400 600 800 900",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
-							"src": [ "file:./assets/fonts/Mulish-Italic-VariableFont_wght" ]
+							"src": [ "file:./assets/fonts/Mulish-Italic-VariableFont_wght.ttf" ]
 						}
 					]
 				}
