@@ -263,5 +263,5 @@ if ( defined ('TAINACAN_VERSION') && !function_exists('taina_filter_tainacan_fac
         }
         return $metadata;
     };
+    add_filter( 'block_type_metadata', 'taina_filter_tainacan_faceted_search_block_defaults' );
 }
-add_filter( 'block_type_metadata', 'taina_filter_tainacan_faceted_search_block_defaults' );

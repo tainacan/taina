@@ -2,7 +2,7 @@
 Contributors: tainacan, wetah, vnmedeiros, daltonmartins, leogermani, ravipassos, omarceloavila
 Requires at least: WordPress 6.0
 Tested up to: WordPress 6.0
-Version: 0.1.6
+Version: 0.1.7
 Requires PHP: 7.3
 Stable tag: trunk
 License: GNU General Public License v3
