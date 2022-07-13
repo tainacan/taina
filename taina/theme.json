@@ -763,23 +763,28 @@
 		},
 		{
 			"name": "posts-list",
-			"title": "Posts list" 	
+			"title": "Posts list",
+			"area": "uncategorized" 	
 		},
 		{
 			"name": "collections-grid",
-			"title": "Collections grid" 	
+			"title": "Collections grid",
+			"area": "uncategorized"
 		},
 		{
 			"name": "collections-list",
-			"title": "Collections list" 	
+			"title": "Collections list",
+			"area": "uncategorized"
 		},
 		{
 			"name": "comments-section",
-			"title": "Comments section" 	
+			"title": "Comments section",
+			"area": "uncategorized" 	
 		},
 		{
 			"name": "sidebar",
-			"title": "Sidebar" 	
+			"title": "Sidebar",
+			"area": "uncategorized" 	
 		},
 		{
 			"name": "footer-social",
