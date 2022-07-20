@@ -12,6 +12,7 @@ else
     rm -rf $1/taina
     cp -r ./taina $1
     echo "Cleaning some files not necessary for the theme to work..."
+    rm -f $1/taina/*.map
     rm -f $1/taina/package.json
     rm -f $1/taina/package-lock.json
     rm -rf $1/taina/node_modules
