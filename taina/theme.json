@@ -496,7 +496,8 @@
 			},
 			"core/button": {
 				"color": {
-					"background": "var:preset|color|primary"
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|background"				
 				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|headings",
@@ -671,12 +672,7 @@
 			},
 			"core/social-link": {
 				"border": {
-					"radius": {
-						"topLeft": "0px",
-						"bottomLeft": "0px",
-						"bottomRight": "0px",
-						"topRight": "0px"
-					}
+					"radius": "0px"
 				}
 			}
 		},
