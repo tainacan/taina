@@ -17,7 +17,7 @@ It was designed with [Tainacan plugin](https://wordpress.org/plugins/tainacan/) 
 
 The idea is to deliver it in three phases:
 
-- [ ] **Version 1.0.0** - A simple, yet beautiful block theme for WordPress, available on the [themes repository](https://wordpress.org/themes/)
+- [x] **Version 1.0.0** - A simple, yet beautiful block theme for WordPress, available on the [themes repository](https://wordpress.org/themes/)
 - [ ] **Version 2.0.0** - A block theme that offers nice Tainacan templates, fully customizable
 - [ ] **Version 3.0.0** - A powerful block theme with some extra options and plugin integrations such as Carousel Banners, Collapsable Search, Sharing, etc. In other words, all the goodies that you can see in the design.
 
@@ -61,7 +61,7 @@ If things are already bundled, just move the `taina` folder to your WordPress th
 
 ### Will it Work only on latest WordPress versions?
 
-The idea is to make it compatible with **WP >= 6.0**, since we're using the latest features from the block editor.
+The idea is to make it compatible with **WP >= 6.1**, since we're using the latest features from the block editor.
 
 ### What is Tainacan and do I need it to use this theme?
 
