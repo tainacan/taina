@@ -2,13 +2,6 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"customTemplates": [
 		{
-            "name": "archive-tainacan-collection",
-            "title": "Tainacan collections list",
-            "postTypes": [
-                "tainacan-collection"
-            ]
-        },
-		{
 			"name": "blank",
 			"title": "Blank",
 			"postTypes": [
@@ -29,9 +22,17 @@
 			"postTypes": [
 				"post"
 			]
-		}
+		},
+		{
+            "name": "archive-tainacan-collection",
+            "title": "Tainacan collections list",
+            "postTypes": [
+                "tainacan-collection"
+            ]
+        }
 	],
 	"settings": {
+		"useRootPaddingAwareAlignments": true,
 		"appearanceTools": true,
 		"color": {
 			"background": true,
@@ -123,6 +124,7 @@
 			]
 		},
 		"typography": {
+			"fluid": true,
 			"customFontSize": true,
 			"dropCap": true,
 			"fontFamilies": [
@@ -173,31 +175,55 @@
 				{
 					"name": "Tiny",
 					"size": "0.9375rem",
+					"fluid": {
+						"min": "0.75rem",
+						"max": "0.9375rem"
+					},
 					"slug": "tiny"
 				},
 				{
 					"name": "Small",
 					"size": "1.125rem",
+					"fluid": {
+						"min": "1.0rem",
+						"max": "1.125rem"
+					},
 					"slug": "small"
 				},
 				{
 					"name": "Normal",
 					"size": "1.25rem",
+					"fluid": {
+						"min": "1.125rem",
+						"max": "1.25rem"
+					},
 					"slug": "normal"
 				},
 				{
 					"name": "Medium",
 					"size": "1.5625rem",
+					"fluid": {
+						"min": "1.375rem",
+						"max": "1.5625rem"
+					},
 					"slug": "medium"
 				},
 				{
 					"name": "large",
 					"size": "2.1875rem",
+					"fluid": {
+						"min": "1.875rem",
+						"max": "2.1875rem"
+					},
 					"slug": "large"
 				},
 				{
 					"name": "x-large",
 					"size": "3.125rem",
+					"fluid": {
+						"min": "2.875rem",
+						"max": "3.125rem"
+					},
 					"slug": "x-large"
 				}
 			],
@@ -208,8 +234,8 @@
 			"textTransform": true
 		},
 		"layout": {
-			"contentSize": "750px",
-			"wideSize": "1110px"
+			"contentSize": "1110px",
+			"wideSize": "1400px"
 		}
 	},
 	"styles": {
@@ -672,7 +698,7 @@
 			},
 			"core/social-link": {
 				"border": {
-					"radius": "0px"
+					"radius": "0px !important"
 				}
 			}
 		},
@@ -723,16 +749,75 @@
 					"fontWeight": "600"
 				}
 			},
+			"button": {
+				"color": {
+					"background": "var:preset|color|primary",
+					"text": "var:preset|color|background"				
+				},
+				"typography": {
+					"fontFamily": "var:preset|font-family|headings",
+					"fontSize": "var:preset|font-size|normal",
+					"fontWeight": "700"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.6875em",
+						"left": "2.625em",
+						"right": "2.625em",
+						"top": "0.6875em"
+					}
+				},
+				"border": {
+					"color": "var:preset|color|primary",
+					"radius": "0px"
+				}
+			},
+			"caption": {
+				"color": {
+					"background": "var:preset|color|background-alt",
+					"text": "var:preset|color|foreground"
+				}
+			},
 			"link": {
 				"color": {
 					"text": "inherit"
 				},
 				"typography": {
 					"textDecoration": "solid underline var(--wp--preset--color--primary) 2px"
+				},
+				":hover": {
+					"color": {
+						"text": "inherit"
+					},
+					"typography": {
+						"textDecoration": "solid underline var(--wp--preset--color--primary) 3px"
+					}
+				},
+				":active": {
+					"color": {
+						"text": "inherit"
+					},
+					"typography": {
+						"textDecoration": "solid underline var(--wp--preset--color--primary) 3px"
+					}
+				},
+				":focus": {
+					"color": {
+						"text": "var:preset|color|primary"
+					},
+					"typography": {
+						"textDecoration": "solid underline var(--wp--preset--color--primary) 3px"
+					}
 				}
 			}
 		},
 		"spacing": {
+			"padding": {
+				"top": "0px",
+				"left": "var(--wp--custom--spacing--one-column)",
+				"bottom": "0px",
+				"right": "var(--wp--custom--spacing--one-column)"
+			},
 			"blockGap": "3.125rem"
 		},
 		"typography": {
@@ -796,7 +881,12 @@
 			"name": "footer-full",
 			"title": "Complete footer with three lines",
 			"area": "footer"
-		}
+		},
+		{
+            "name": "single-tainacan-item",
+            "title": "Tainacan item page",
+            "area": "uncategorized"
+        }
 	],
 	"version": 2
 }

@@ -1,6 +1,8 @@
 /* Settings the colors used by most Tainacan blocks */
 :root {
   --tainacan-block-primary: var(--wp--preset--color--primary);
+  --tainacan-secondary: var(--wp--preset--color--primary);
+  --tainacan-primary: var(--wp--preset--color--background-alt);
   --tainacan-block-gray0: var(--wp--preset--color--background-alt);
   --tainacan-block-gray1: var(--wp--preset--color--background-alt);
   --tainacan-block-gray2: var(--wp--preset--color--foreground);
@@ -146,6 +148,37 @@
   max-width: 42px;
 }
 
+/* The media component should not have top margin and its accent color should inherit from theme */
+.wp-block-tainacan-item-gallery.tainacan-media-component {
+  --swiper-theme-color: var(--wp--preset--color--primary);
+  margin-block-start: 0px !important;
+}
+
+/* This negative margin forces images to be aligned on top. We don't want to remove the padding from the a tag. */
+.tainacan-media-component__swiper-main .swiper-slide-content a:first-of-type > img {
+  margin-top: -1rem;
+}
+
+/* Media Gallery arrows are also squared */
+.wp-block-tainacan-item-gallery .tainacan-media-component__swiper-main .swiper-button-next.swiper-button-has-svg,
+.wp-block-tainacan-item-gallery .tainacan-media-component__swiper-main .swiper-button-prev.swiper-button-has-svg,
+.wp-block-tainacan-item-gallery .tainacan-media-component__swiper-thumbs .swiper-button-next.swiper-button-has-svg,
+.wp-block-tainacan-item-gallery .tainacan-media-component__swiper-thumbs .swiper-button-prev.swiper-button-has-svg {
+  background-color: var(--wp--preset--color--background-alt) !important;
+  --tainacan-block-primary: var(--wp--preset--color--foreground-alt);
+  color: var(--wp--preset--color--foreground-alt);
+  min-width: calc(var(--swiper-navigation-size) * 1.35);
+  min-height: calc(var(--swiper-navigation-size) * 1.35);
+}
+
+/* Modal content when using filters as sidebar */
+@media screen and (max-width: 768px) {
+  .tainacan-modal #filters-modal .modal-content,
+  .theme-items-list #filters-modal .modal-content {
+    padding-left: 0px;
+  }
+}
+
 /* The items list, with a faceted search */
 .wp-block-tainacan-faceted-search .theme-items-list {
   --tainacan-font-family: var(--wp--preset--font-family--default);
@@ -170,6 +203,11 @@
   order: 1;
   margin-right: 0px;
   padding-right: 0px;
+}
+
+.wp-block-tainacan-faceted-search .theme-items-list .search-control #tainacanFiltersButton .button {
+  margin-left: 0px;
+  padding-left: 0px !important;
 }
 
 .wp-block-tainacan-faceted-search .theme-items-list .search-control .button,
@@ -318,6 +356,11 @@
 
 .wp-block-tainacan-faceted-search .theme-items-list .pagination-area .pagination .pagination-link.pagination-previous, .wp-block-tainacan-faceted-search .theme-items-list .pagination-area .pagination .pagination-link.pagination-next {
   background-color: var(--wp--preset--color--background) !important;
+}
+
+/* Removes top margin from footer */
+.wp-block-tainacan-faceted-search + footer.wp-block-template-part {
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=tainacan.css.map */

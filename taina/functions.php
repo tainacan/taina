@@ -54,5 +54,8 @@ require get_template_directory() . '/inc/block-filters.php';
 /* Block styles */
 require get_template_directory() . '/inc/block-styles.php';
 
+/* Block banners */
+require get_template_directory() . '/inc/block-banners.php';
+
 /* Block patterns */
 require get_template_directory() . '/inc/block-patterns.php';

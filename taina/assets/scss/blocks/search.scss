@@ -40,6 +40,9 @@
             .wp-block-search__input {
                 background-color: inherit;
             }
+            input:focus-visible {
+                outline-offset: -3px;
+            }
             .wp-block-search__button {
                 order: -1;
             }
