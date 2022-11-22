@@ -35,8 +35,8 @@ function get_header_banner_pattern($title, $args = array()) {
             <div class="wp-block-columns alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:4.167%;padding-bottom:0px;padding-left:4.167%">
                 <!-- wp:column {"verticalAlignment":"top","width":"22%","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px"}}} -->
                 <div class="wp-block-column is-vertically-aligned-top" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;flex-basis:22%">
-                    <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
-                        <figure class="wp-block-image size-large is-style-default">' . $cover . '</figure>
+                    <!-- wp:image {"linkDestination":"none"} -->
+                        <figure class="wp-block-image">' . $thumbnail . '</figure>
                     <!-- /wp:image -->
                 </div>
                 <!-- /wp:column -->    
@@ -46,12 +46,12 @@ function get_header_banner_pattern($title, $args = array()) {
                     <div class="wp-block-cover has-custom-content-position is-position-top-left" style="padding-top:0px;padding-right:0%;padding-bottom:0px;padding-left:0px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(7,146,227,0) 79%,var(--wp--preset--color--background)  79%)"></span>
                         <img class="wp-block-cover__image-background" alt="" src="' . $cover_url . '" style="object-position:48% 31%" data-object-fit="cover" data-object-position="48% 31%"/>
                         <div class="wp-block-cover__inner-container">
-                            <!-- wp:image {"width":754,"height":236,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
-                                <figure class="wp-block-image size-large is-resized is-style-default">' . $thumbnail . '</figure>
+                            <!-- wp:image {"width":754,"height":236,"sizeSlug":"large","linkDestination":"none","className":"is-resized is-style-default"} -->
+                                <figure class="wp-block-image">' . $cover. '</figure>
                             <!-- /wp:image -->
-                            
-                            <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":true}} -->
-                            <div class="wp-block-group has-background-alt-background-color has-background has-foreground-alt-color has-text-color">
+                        
+                            <!-- wp:group {"style":{"spacing":{"blockGap":"1em","padding":{"top":"42px","bottom":"42px","right":"4.167vw","left":"4.167vw"}}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":true,"type":"constrained"}} -->
+                            <div class="wp-block-group has-foreground-alt-color has-background-alt-background-color has-text-color has-background" style="padding-top:42px;padding-right:4.167vw;padding-bottom:42px;padding-left:4.167vw">
                                 ' . (
                                         $title ?
                                         '<!-- wp:heading {"textColor":"primary"} -->
@@ -104,8 +104,8 @@ function get_header_banner_pattern($title, $args = array()) {
                             <!-- /wp:column -->
                             <!-- wp:column {"width":""} -->
                             <div class="wp-block-column">
-                                <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":false}} -->
-                                <div class="wp-block-group has-background-alt-background-color has-background has-foreground-alt-color has-text-color">
+                                <!-- wp:group {"style":{"spacing":{"blockGap":"1em","padding":{"top":"42px","bottom":"42px","right":"4.167vw","left":"4.167vw"}}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":true,"type":"constrained"}} -->
+                                <div class="wp-block-group has-foreground-alt-color has-background-alt-background-color has-text-color has-background" style="padding-top:42px;padding-right:4.167vw;padding-bottom:42px;padding-left:4.167vw">
                                 ' . (
                                         $title ?
                                         '<!-- wp:heading {"textColor":"primary"} -->
