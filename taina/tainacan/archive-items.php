@@ -6,11 +6,11 @@
     $description = tainacan_get_the_collection_description();
     $thumbnail = has_post_thumbnail( $collection_id ) ? get_the_post_thumbnail( $collection_id ) : false;
     $thumbnail_url = has_post_thumbnail( $collection_id ) ? get_the_post_thumbnail_url( $collection_id ) : false;
-    $cover = has_header_image() ? get_header_image_tag(array( 'height' => 304, 'width' => 'auto' )) : false;
+    $cover = has_header_image() ? get_header_image_tag(array( 'width' => '1200', 'style' => 'width:78%;height:auto;' )) : false;
     $cover_url = has_header_image() ? get_header_image() : false;
 
     $banner = do_blocks(
-        get_header_banner_pattern(
+        taina_get_header_banner_pattern(
             $title,
             array(
                 'description' => $description,

@@ -13,7 +13,7 @@
     $thumbnail = wp_get_attachment_image($thumbnail_id, 'tainacan-large');
 
     $banner = do_blocks(
-        get_header_banner_pattern(
+        taina_get_header_banner_pattern(
             $title,
             array(
                 'description' => $description,

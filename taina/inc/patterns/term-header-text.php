@@ -10,7 +10,7 @@ return array(
     'title'         => esc_html__( 'Term header (only text)', 'taina' ),
     'categories'    => array( 'taina', 'headings'),
     'viewportWidth' => 1400,
-    'content'       => get_header_banner_pattern(
+    'content'       => taina_get_header_banner_pattern(
         $title, array( 'description' => $description )
     )
 );

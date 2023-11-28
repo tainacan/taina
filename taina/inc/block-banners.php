@@ -11,7 +11,7 @@
  * 
  * @return string A block pattern containing diferent set of cover and image blocks for a nice banner.
  */
-function get_header_banner_pattern($title, $args = array()) {
+function taina_get_header_banner_pattern($title, $args = array()) {
 
     $defaults = array(
         'description' => false,
@@ -40,18 +40,18 @@ function get_header_banner_pattern($title, $args = array()) {
                     <!-- /wp:image -->
                 </div>
                 <!-- /wp:column -->    
-                <!-- wp:column {"verticalAlignment":"top","width":"","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
+                <!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
                 <div class="wp-block-column is-vertically-aligned-top" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
                     <!-- wp:cover {"url":"' . $cover_url . '","focalPoint":{"x":"0.48","y":"0.31"},"customGradient":"linear-gradient(180deg,rgba(7,146,227,0) 79%,var(--wp--preset--color--background)  79%)","contentPosition":"top left","style":{"color":{"duotone":["#262626","#A0303A"]},"spacing":{"padding":{"top":"0px","right":"0%","bottom":"0px","left":"0px"}}}} -->
                     <div class="wp-block-cover has-custom-content-position is-position-top-left" style="padding-top:0px;padding-right:0%;padding-bottom:0px;padding-left:0px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-100 has-background-dim wp-block-cover__gradient-background has-background-gradient" style="background:linear-gradient(180deg,rgba(7,146,227,0) 79%,var(--wp--preset--color--background)  79%)"></span>
                         <img class="wp-block-cover__image-background" alt="" src="' . $cover_url . '" style="object-position:48% 31%" data-object-fit="cover" data-object-position="48% 31%"/>
                         <div class="wp-block-cover__inner-container">
-                            <!-- wp:image {"width":754,"height":236,"sizeSlug":"large","linkDestination":"none","className":"is-resized is-style-default"} -->
+                            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-resized is-style-default"} -->
                                 <figure class="wp-block-image">' . $cover. '</figure>
                             <!-- /wp:image -->
-                        
-                            <!-- wp:group {"style":{"spacing":{"blockGap":"1em","padding":{"top":"42px","bottom":"42px","right":"4.167vw","left":"4.167vw"}}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":true,"type":"constrained"}} -->
-                            <div class="wp-block-group has-foreground-alt-color has-background-alt-background-color has-text-color has-background" style="padding-top:42px;padding-right:4.167vw;padding-bottom:42px;padding-left:4.167vw">
+
+                            <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"42px","bottom":"42px","left":"4.2vw","right":"4.2vw"}}},"className":"has-foreground-alt-color has-background-alt-background-color has-text-color has-background"} -->
+                            <div class="wp-block-group has-foreground-alt-color has-background-alt-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:42px;padding-right:4.2vw;padding-bottom:42px;padding-left:4.2vw">
                                 ' . (
                                         $title ?
                                         '<!-- wp:heading {"textColor":"primary"} -->
@@ -160,7 +160,7 @@ function get_header_banner_pattern($title, $args = array()) {
                     <!-- /wp:column -->    
                     <!-- wp:column {"verticalAlignment":"center","width":"","style":{"spacing":{"padding":{"top":"0px","right":"0vw","bottom":"0px","left":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
                     <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0px;padding-right:0vw;padding-bottom:0px;padding-left:0px">
-                    <!-- wp:group {"style":{"spacing":{"blockGap":"1em"}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":false}} -->
+                    <!-- wp:group {"style":{"spacing":{"blockGap":"1em"},{"padding":{"top":"42px","right":"4.167vw","bottom":"42px","left":"4.167vw"}},"backgroundColor":"background-alt","textColor":"foreground-alt","layout":{"inherit":false}} -->
                     <div class="wp-block-group has-background-alt-background-color has-background has-foreground-alt-color has-text-color">
                         ' . (
                             $title ? 

@@ -8,10 +8,6 @@
  */
 if ( ! function_exists( 'taina_support' ) ) :
 	function taina_support()  {
-
-		// Adding support for core block visual styles.
-		add_theme_support( 'wp-block-styles' );
-
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 	}

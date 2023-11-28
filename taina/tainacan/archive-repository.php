@@ -3,7 +3,7 @@
 
     $title = __( 'Repository items', 'taina' );
 
-    $banner = do_blocks(get_header_banner_pattern( $title ));
+    $banner = do_blocks(taina_get_header_banner_pattern( $title ));
     
     $faceted_search_block = do_blocks('<!-- wp:tainacan/faceted-search {"listType":"repository"} -->
         <div style="font-size:18px;--tainacan-base-font-size:18px;--tainacan-background-color:var(--wp--preset--color--background-alt);--tainacan-filter-menu-width-theme:20%;--tainacan-input-color:var(--wp--preset--color--foreground);--tainacan-input-background-color:var(--wp--preset--color--background);--tainacan-input-border-color:var(--wp--preset--color--background-alt);--tainacan-label-color:var(--wp--preset--color--foreground);--tainacan-info-color:var(--wp--preset--color--foreground);--tainacan-heading-color:var(--wp--preset--color--foreground);--tainacan-skeleton-color:#eeeeee;--tainacan-item-background-color:var(--wp--preset--color--background);--tainacan-item-hover-background-color:var(--wp--preset--color--background);--tainacan-item-heading-hover-background-color:var(--wp--preset--color--background);--tainacan-primary:#d9eced;--tainacan-secondary:var(--wp--preset--color--primary)" class="wp-block-tainacan-faceted-search">

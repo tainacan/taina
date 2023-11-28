@@ -114,6 +114,7 @@
 			}
 		},
 		"spacing": {
+			"spacingSizes": [],
 			"units": [
 				"px",
 				"em",
@@ -122,6 +123,12 @@
 				"vh",
 				"vw"
 			]
+		},
+		"dimensions": {
+            "minHeight": true
+		},
+		"position": {
+			"sticky": true
 		},
 		"typography": {
 			"fluid": true,
@@ -236,6 +243,9 @@
 		"layout": {
 			"contentSize": "1110px",
 			"wideSize": "1400px"
+		},
+		"background": {
+			"backgroundImage": true
 		}
 	},
 	"styles": {
@@ -258,8 +268,29 @@
 				"color": {
 					"text": "var:preset|color|foreground"
 				},
+				"typography": {
+					"textDecoration": "none"
+				},
 				"spacing": {
 					"blockGap": "1.0em"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|foreground"
+						},
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"color": {
+								"text": "var:preset|color|primary"
+							},
+							"typography": {
+								"textDecoration": "none"
+							}
+						}
+					}
 				}
 			},
 			"core/navigation-submenu": {
@@ -350,7 +381,8 @@
 					"textTransform": "uppercase"
 				},
 				"border": {
-					"width": "0px"
+					"width": "0px",
+					"style": "unset"
 				},
 				"color": {
 					"text": "var:preset|color|foreground-alt",					
@@ -454,6 +486,11 @@
 							"textDecoration": "none"
 						}
 					}
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"blockGap": "var:preset|font-size|small"
 				}
 			},
 			"core/post-terms": {
