@@ -11,6 +11,28 @@
     --tainacan-block-gray5: var(--wp--preset--color--foreground-alt);
 }
 
+
+/* General Tainacan Comnponents */
+.theme-items-list,
+.tainacan-item-submission-form, 
+.tainacan-modal-content {
+    --tainacan-font-family: var(--wp--preset--font-family--default);
+    --tainacan-block-primary: var(--wp--preset--color--primary);
+    --tainacan-secondary: var(--wp--preset--color--primary);
+    --tainacan-primary: var(--wp--preset--color--background-alt);
+    --tainacan-block-gray0: var(--wp--preset--color--background-alt);
+    --tainacan-block-gray1: var(--wp--preset--color--background-alt);
+    --tainacan-block-gray2: var(--wp--preset--color--foreground);
+    --tainacan-block-gray3: var(--wp--preset--color--foreground);
+    --tainacan-block-gray4: var(--wp--preset--color--foreground-alt);
+    --tainacan-block-gray5: var(--wp--preset--color--foreground-alt);
+    --tainacan-input-border-radius: 0px;
+    --tainacan-button-border-radius: 0px;
+    --tainacan-dropdownmenu-border-radius: 0px;
+    --tainacan-modal-border-radius: 0px;
+    --tainacan-item-border-radius: 0px;
+}
+
 /* Tainacan listing blocks have smaller font sizes by default and alternative background */
 .wp-block-tainacan-dynamic-items-list li.item-list-item,
 .wp-block-tainacan-collections-list li.collection-list-item,
@@ -147,7 +169,6 @@
 
 /* The items list, with a faceted search */
 .wp-block-tainacan-faceted-search .theme-items-list {
-    --tainacan-font-family: var(--wp--preset--font-family--default);
 
     /* Textual search should be the last control */
     .search-control {

@@ -5,9 +5,9 @@ Author: tainacan
 Contributors: wetah, vnmedeiros, daltonmartins, leogermani, ravipassos, omarceloavila
 Description: A full-site-editing block theme for WordPress. Tainá has emerged as a new alternative for viewing cultural digital archives created with WordPress and its amazing tools such as the Tainacan plugin. In addition to a fully customizable interface, this theme brings support for several design patterns available for insertion in a single click, such as banners ready to introduce your content, whether it has one, two or no image to be represented by. You can also change the global styles of your website to make it match your visual identity in a single click, including beautiful dark theme variations. Tainá theme brings your audience the ability to easily, quickly and intuitively access your collection files by creating a unique viewing experience for your digital repository.
 Requires at least: 6.0
-Tested up to: 6.4.1
+Tested up to: 6.8
 Requires PHP: 7.3
-Version: 0.2.2
+Version: 0.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: taina
@@ -17,10 +17,10 @@ Tainá is distributed under the terms of the GNU GPL.
 */
 
 /* Block styles */
-@import 'assets/scss/blocks.scss';
+@import './blocks.scss';
 
 /* HTML elements */
-@import 'assets/scss/elements.scss';
+@import './elements.scss';
 
 /* Layout and alignment issues */
-@import 'assets/scss/layout.scss';
+@import './layout.scss';

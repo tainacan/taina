@@ -1,11 +1,11 @@
 {
   "name": "taina",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A block theme for WordPress & Tainacan.",
   "main": "style.css",
   "scripts": {
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/style.scss style.css",
-    "compile-styles-tainacan": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 assets/scss/tainacan.scss tainacan.css",
+    "compile-styles": "npx sass -s compressed assets/scss/style.scss style.css",
+    "compile-styles-tainacan": "npx sass -s compressed assets/scss/tainacan.scss tainacan.css",
     "css-minify": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output style.min.css style.css",
     "css-minify-tainacan": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output tainacan.min.css tainacan.css",
     "build-theme": "npm run compile-styles && npm run css-minify",
@@ -27,8 +27,8 @@
     "url": "https://github.com/tainacan/taina/issues"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.6.2",
-    "node-sass": "^9.0.0"
+    "clean-css-cli": "^5.6.3",
+    "sass": "1.58.3"
   },
   "homepage": "https://github.com/tainacan/taina#readme"
 }
