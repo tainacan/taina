@@ -8,8 +8,8 @@
  */
 if ( ! function_exists( 'taina_support' ) ) :
 	function taina_support()  {
-		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
+		// Enqueue editor styles (using minified version for consistency with Gutenberg editor).
+		add_editor_style( 'style.min.css' );
 	}
 	add_action( 'after_setup_theme', 'taina_support' );
 endif;

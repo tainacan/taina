@@ -4,7 +4,7 @@
   "description": "A block theme for WordPress & Tainacan.",
   "main": "style.css",
   "scripts": {
-    "compile-styles": "npx sass -s compressed assets/scss/style.scss style.css",
+    "compile-styles": "npx sass assets/scss/style.scss style.css",
     "compile-styles-tainacan": "npx sass -s compressed assets/scss/tainacan.scss tainacan.css",
     "css-minify": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output style.min.css style.css",
     "css-minify-tainacan": "cleancss --format breaksWith=lf --source-map --source-map-inline-sources --output tainacan.min.css tainacan.css",

@@ -1,13 +1,14 @@
 === Tainá ===
 Contributors: tainacan, wetah, vnmedeiros, daltonmartins, leogermani, ravipassos, omarceloavila
-Requires at least: WordPress 6.0
-Tested up to: WordPress 6.8
-Version: 0.2.3
+Requires at least: 6.0
+Tested up to: 6.8
 Requires PHP: 7.3
-Stable tag: trunk
-License: GNU General Public License v3
+Stable tag: 0.2.3
+License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-Tags: full-site-editing, block-patterns, block-styles, wide-blocks, right-sidebar, custom-colors, editor-style, translation-ready 
+Tags: full-site-editing, block-patterns, block-styles, wide-blocks, right-sidebar, editor-style, translation-ready
+
+A beautiful block theme for WordPress digital archives with support for Tainacan.
 
 == Description ==
 
