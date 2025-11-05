@@ -8,57 +8,67 @@
  */
 
 /**
- * Register Block Pattern Category.
+ * Register Block Pattern Category and Patterns.
+ * 
+ * This function is hooked to 'init' to ensure translations are loaded before
+ * registering patterns that use translation functions.
  */
-if ( function_exists( 'register_block_pattern_category' ) ) {
+if ( ! function_exists( 'taina_register_block_patterns' ) ) {
+	function taina_register_block_patterns() {
+		/**
+		 * Register Block Pattern Category.
+		 */
+		if ( function_exists( 'register_block_pattern_category' ) ) {
+			register_block_pattern_category(
+				'taina',
+				array( 'label' => esc_html__( 'Tainá', 'taina' ) )
+			);
+		}
 
-	register_block_pattern_category(
-		'taina',
-		array( 'label' => esc_html__( 'Tainá', 'taina' ) )
-	);
-}
+		/**
+		 * Register Block Patterns.
+		 */
+		if ( function_exists( 'register_block_pattern' ) ) {
 
-/**
- * Register Block Patterns.
- */
-if ( function_exists( 'register_block_pattern' ) ) {
+			$block_patterns = array(
+				'404',
+				'title-and-description',
+				'banner-text-overlay',
+				'banner-boxed-column',
+				'banner-boxed-column-alt',
+				'paddingless-card',
+				'collection-header-thumb-cover',
+				'collection-header-cover',
+				'collection-header-thumbnail',
+				'term-header-thumb-text',
+				'term-header-text',
+				'post-author-box',
+				'post-categories-list',
+				'post-tags-list',
+				'posts-list',
+				'widgets-sidebar',
+				'widgets-footer',
+				'header',
+				'header-alt',
+				'collections-grid',
+				'collections-list'
+			);
 
-    $block_patterns = array(
-        '404',
-        'title-and-description',
-        'banner-text-overlay',
-        'banner-boxed-column',
-        'banner-boxed-column-alt',
-        'paddingless-card',
-        'collection-header-thumb-cover',
-        'collection-header-cover',
-        'collection-header-thumbnail',
-        'term-header-thumb-text',
-        'term-header-text',
-        'post-author-box',
-        'post-categories-list',
-        'post-tags-list',
-        'posts-list',
-        'widgets-sidebar',
-        'widgets-footer',
-        'header',
-        'header-alt',
-        'collections-grid',
-        'collections-list'
-    );
+			/**
+			 * Filters the theme block patterns.
+			 * @param array $block_patterns List of block patterns by name.
+			 */
+			$block_patterns = apply_filters( 'taina_block_patterns', $block_patterns );
 
-    /**
-	 * Filters the theme block patterns.
-	 * @param array $block_patterns List of block patterns by name.
-	 */
-    $block_patterns = apply_filters( 'taina_block_patterns', $block_patterns );
+			foreach ( $block_patterns as $block_pattern ) {
+				$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
-	foreach ( $block_patterns as $block_pattern ) {
-		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
-
-		register_block_pattern(
-			'taina/' . $block_pattern,
-			require $pattern_file
-		);
+				register_block_pattern(
+					'taina/' . $block_pattern,
+					require $pattern_file
+				);
+			}
+		}
 	}
+	add_action( 'init', 'taina_register_block_patterns' );
 }
