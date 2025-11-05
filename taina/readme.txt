@@ -3,7 +3,7 @@ Contributors: tainacan, wetah, vnmedeiros, daltonmartins, leogermani, ravipassos
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.3
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: full-site-editing, block-patterns, block-styles, wide-blocks, right-sidebar, editor-style, translation-ready
