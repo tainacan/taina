@@ -137,9 +137,13 @@ if ( !function_exists('taina_apply_text_as_background_style_to_cover') ) {
         else if ( isset( $block['attrs']['overlayColor'] ))
             $text_layer_color = 'var(--wp--preset--color--' . $block['attrs']['overlayColor'] . ')';
 
+        // Escape the title content for use in HTML attribute
+        $title_content_escaped = esc_attr( $title_content );
+        // Escape the style attribute value (CSS values are safe, but we escape the entire attribute)
+        $style_value = esc_attr( 'overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color );
         $content = str_replace(
             '><span',
-            '><span style="overflow: hidden; color:' . $text_layer_color . ';background-color:' . $text_layer_color . ';" data-title-content="' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . $title_content . '&nbsp;' . ( strlen($title_content) <= 5 ? ($title_content . '&nbsp;' . $title_content . '&nbsp;') : '') . $title_content . '" ',
+            '><span style="' . $style_value . ';" data-title-content="' . $title_content_escaped . '&nbsp;' . $title_content_escaped . '&nbsp;' . $title_content_escaped . '&nbsp;' . $title_content_escaped . '&nbsp;' . ( strlen($title_content_escaped) <= 5 ? ($title_content_escaped . '&nbsp;' . $title_content_escaped . '&nbsp;') : '') . $title_content_escaped . '" ',
             $block_content
         );
         

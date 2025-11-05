@@ -22,11 +22,13 @@ function taina_get_header_banner_pattern($title, $args = array()) {
     );
     $args = wp_parse_args( $args, $defaults );
 
-    $description = $args['description'];
+    // Sanitize title and description to prevent XSS
+    $title = $title ? esc_html( $title ) : '';
+    $description = $args['description'] ? wp_kses_post( $args['description'] ) : false;
     $thumbnail = $args['thumbnail'];
-    $thumbnail_url = $args['thumbnail_url'];
+    $thumbnail_url = $args['thumbnail_url'] ? esc_url( $args['thumbnail_url'] ) : false;
     $cover = $args['cover'];
-    $cover_url = $args['cover_url'];
+    $cover_url = $args['cover_url'] ? esc_url( $args['cover_url'] ) : false;
 
     if ($cover && $cover_url && $thumbnail) {
     
