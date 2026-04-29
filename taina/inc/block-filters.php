@@ -264,6 +264,10 @@ if ( defined ('TAINACAN_VERSION') && !function_exists('taina_filter_tainacan_fac
                 'type' => 'Number',
                 'default' => 24
             );
+            $metadata['attributes']['border']['width'] = array(
+                'type' => 'Number',
+                'default' => 0
+            );
         }
         return $metadata;
     };

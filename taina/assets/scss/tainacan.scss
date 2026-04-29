@@ -179,6 +179,7 @@
         .search-control-item:first-of-type {
             order: 1;
             margin-right: 0px;
+            margin-left: auto;
             padding-right: 0px;
         }
 
@@ -311,7 +312,7 @@
         --tainacan-font-family: var(--wp--preset--font-family--headings);
         font-weight: 500;
         border-top: none;
-        margin: 3.125rem var(--wp--custom--spacing--one-column);
+        margin-block: 3.125rem;
 
         .button,
         .label {
