@@ -15,15 +15,23 @@ if ( ! function_exists( 'taina_support' ) ) :
 endif;
 
 /**
+ * Version string from the parent theme (Taina), for cache-busting parent assets.
+ * wp_get_theme() alone uses the active theme; with a child active that mismatches get_template_directory_uri().
+ */
+function taina_get_parent_theme_version() {
+	return wp_get_theme( get_template() )->get( 'Version' );
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function taina_scripts() {
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'taina-style', get_template_directory_uri() . '/style.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'taina-style', get_template_directory_uri() . '/style.min.css', array(), taina_get_parent_theme_version() );
 
 	// If the Tainacan plugin is enabled, enqueues style related to it
 	if ( defined ('TAINACAN_VERSION') ) {
-		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/tainacan.min.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'taina-tainacan-style', get_template_directory_uri() . '/tainacan.min.css', array(), taina_get_parent_theme_version() );
 	}
 
 }
@@ -35,11 +43,11 @@ add_action( 'wp_enqueue_scripts', 'taina_scripts' );
 function taina_enqueue_block_editor_assets_scripts() {
 
 	// Editor styles
-	wp_enqueue_style( 'taina-editor-style', get_template_directory_uri() . '/style.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'taina-editor-style', get_template_directory_uri() . '/style.min.css', array(), taina_get_parent_theme_version() );
 
 	// If the Tainacan plugin is enabled, enqueues style related to it
 	if ( defined ('TAINACAN_VERSION') ) {
-		wp_enqueue_style( 'taina-tainacan-editor-style', get_template_directory_uri() . '/tainacan.min.css', array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'taina-tainacan-editor-style', get_template_directory_uri() . '/tainacan.min.css', array(), taina_get_parent_theme_version() );
 	}
 }
 add_action( 'enqueue_block_editor_assets', 'taina_enqueue_block_editor_assets_scripts' );
