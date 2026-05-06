@@ -1,5 +1,5 @@
 <?php
-    $header = do_blocks('<!-- wp:template-part {"slug":"header","theme":"taina"} /-->');
+    $header = do_blocks('<!-- wp:template-part {"slug":"header"} /-->');
 
     $collection_id = tainacan_get_collection_id();
     $title = tainacan_get_the_collection_name();
@@ -27,7 +27,7 @@
             <main id="tainacan-items-page" data-module="faceted-search" collection-id="' . $collection_id . '" default-view-mode="masonry" enabled-view-modes="masonry,records,cards,table,slideshow,list" hide-filters="false" hide-hide-filters-button="false" hide-search="false" hide-advanced-search="false" hide-displayed-metadata-button="false" hide-pagination-area="false" hide-sorting-area="false" hide-items-thumbnail="false" hide-sort-by-button="false" hide-exposers-button="false" hide-items-per-page-button="false" default-items-per-page="24" hide-go-to-page-button="false" show-filters-button-inside-search-control="true" start-with-filters-hidden="true" filters-as-modal="false" show-inline-view-mode-options="false" show-fullscreen-with-view-modes="false"></main>
         </div>
     <!-- /wp:tainacan/faceted-search -->');
-    $footer = do_blocks('<!-- wp:template-part {"slug":"footer-full","tagName":"footer","theme":"taina"} /-->');
+    $footer = do_blocks('<!-- wp:template-part {"slug":"footer-full","tagName":"footer"} /-->');
 
 ?>
 <!DOCTYPE html>

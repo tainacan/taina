@@ -1,9 +1,9 @@
 <?php
 
-    $header = do_blocks('<!-- wp:template-part {"slug":"header","theme":"taina"} /-->');
-    $comments = ( comments_open() && get_comments_number() ) ? do_blocks('<!-- wp:template-part {"slug":"comments-section","theme":"taina","tagName":"section"} /-->') : '';
+    $header = do_blocks('<!-- wp:template-part {"slug":"header"} /-->');
+    $comments = ( comments_open() && get_comments_number() ) ? do_blocks('<!-- wp:template-part {"slug":"comments-section","tagName":"section"} /-->') : '';
     $related_items = tainacan_has_related_items() ? do_blocks('') : '';
-    $footer = do_blocks('<!-- wp:template-part {"slug":"footer-full","tagName":"footer","theme":"taina"} /-->');
+    $footer = do_blocks('<!-- wp:template-part {"slug":"footer-full","tagName":"footer"} /-->');
 
 ?>
 <!DOCTYPE html>
