@@ -1,4 +1,5 @@
 # Tainá - A beautiful block theme for WordPress digital archives with support for Tainacan
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 An open-source, modern, full-site-editing [**block theme**](https://developer.wordpress.org/themes/block-themes/) for your digital expositions that ~~works~~ will work with [Tainacan](https://tainacan.org/en).
 
