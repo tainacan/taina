@@ -455,6 +455,7 @@ ul.wp-block-post-template {
 }
 .wp-block-search.is-style-taina-collapsable-search {
   position: relative;
+  z-index: 1;
 }
 .wp-block-search.is-style-taina-collapsable-search .wp-block-search__inside-wrapper {
   background-color: inherit;
